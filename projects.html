@@ -1,118 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Projects — Pritish Kumbhare</title>
-<meta name="description" content="Pritish Kumbhare — Salesforce Marketing Cloud projects, email lab and CloudPage lab.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pritish Kumbhare — Salesforce Marketing Cloud project showcase.">
+  <title>Projects | Pritish Kumbhare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="grain"></div>
+  <div class="bg-grid"></div>
+  <header class="nav">
+    <a class="brand" href="index.html"><span>PK</span> Pritish Kumbhare</a>
+    <nav><a href="index.html#about">About</a><a href="index.html#expertise">Expertise</a><a class="active" href="projects.html">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+    <a class="nav-cta" href="index.html">← Home</a>
+  </header>
 
-<header class="site-header">
-  <a class="wordmark" href="index.html">PRITISH<span>.</span></a>
-  <nav>
-    <a href="index.html#work">Work</a>
-    <a href="index.html#about">About</a>
-    <a class="current" href="projects.html">Projects</a>
-    <a href="index.html#credentials">Credentials</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-  <a class="availability" href="index.html">← Back home</a>
-</header>
+  <main class="container projects-page">
+    <section class="page-hero">
+      <div class="section-label">PROJECT LIBRARY</div>
+      <h1>Work I've built,<br><span>optimized & automated.</span></h1>
+      <p>A growing collection of Salesforce Marketing Cloud emails, CloudPages, journeys, automations, integrations and technical experiments.</p>
+    </section>
 
-<main class="projects-page">
-<section class="projects-hero">
-  <span class="section-no">PROJECT ARCHIVE</span>
-  <h1>The things behind<br><em>the send button.</em></h1>
-  <p>Some are production experiences. Some are new builds. The email and CloudPage labs will grow as I create and publish new work.</p>
-</section>
-
-<section class="case-study" id="direct-debit">
-  <div class="case-number">01</div>
-  <div class="case-head"><span>JOURNEY / MIGRATION</span><span>SALESFORCE MARKETING CLOUD</span></div>
-  <h2>Direct Debit<br><em>communication migration.</em></h2>
-  <div class="case-grid">
-    <div>
-      <p class="label">THE PROBLEM</p>
-      <p>Customer communications were being moved from a legacy campaign setup into SFMC. The goal was to centralize journeys, improve maintainability and make reporting easier.</p>
+    <div class="filter-bar">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="email">Emails</button>
+      <button class="filter" data-filter="cloudpage">CloudPages</button>
+      <button class="filter" data-filter="journey">Journeys</button>
+      <button class="filter" data-filter="automation">Automation</button>
+      <button class="filter" data-filter="integration">Integrations</button>
     </div>
-    <div>
-      <p class="label">THE BUILD</p>
-      <p>Journey Builder · SQL · Data Extensions · AMPscript · Automation Studio · Salesforce integration</p>
-    </div>
-  </div>
-  <div class="result"><span>OUTCOME</span><strong>More centralized automation, cleaner campaign ownership and better reporting visibility.</strong></div>
-</section>
 
-<section class="case-study" id="feedback-loop">
-  <div class="case-number">02</div>
-  <div class="case-head"><span>AUTOMATION / INTEGRATION</span><span>AMPSCRIPT</span></div>
-  <h2>The feedback<br><em>loop.</em></h2>
-  <div class="case-grid">
-    <div>
-      <p class="label">THE IDEA</p>
-      <p>Reduce the friction between Salesforce and Marketing Cloud when a campaign interaction needs to feed information back into the customer workflow.</p>
-    </div>
-    <div>
-      <p class="label">THE BUILD</p>
-      <p>AMPscript · Salesforce · Marketing Cloud · data updates · automated workflow</p>
-    </div>
-  </div>
-  <div class="metric-callout"><span>15–20 min</span><b>→</b><strong>~2 min</strong><small>interaction cycle</small></div>
-</section>
+    <section class="project-list">
+      <article class="project-detail" id="dd-migration" data-category="journey automation">
+        <div class="project-meta"><span>01</span><span>JOURNEY • AUTOMATION</span></div>
+        <div class="project-content">
+          <div><h2>Direct Debit Campaign Migration</h2><p>Migrated customer communication campaigns from a legacy platform into Salesforce Marketing Cloud, including setup confirmation, due reminders and bank verification communications.</p></div>
+          <div><h4>Stack</h4><div class="tags"><span>Journey Builder</span><span>SQL</span><span>AMPscript</span><span>Data Extensions</span></div><h4>Impact</h4><p>Created a more centralized and maintainable communication framework with better visibility and reporting.</p></div>
+        </div>
+      </article>
 
-<section class="lab-section" id="email-lab">
-  <div class="lab-head"><span class="section-no">03 / EMAIL LAB</span><span>MJML · HTML · CSS</span></div>
-  <div class="lab-copy">
-    <h2>Emails I'm<br><em>building now.</em></h2>
-    <p>I don't currently have an SFMC org to publish screenshots from, so this space is intentionally designed as a living lab. I'll build responsive emails in MJML, render them, and add the final previews here.</p>
-  </div>
+      <article class="project-detail" id="feedback-loop" data-category="automation integration">
+        <div class="project-meta"><span>02</span><span>AUTOMATION • INTEGRATION</span></div>
+        <div class="project-content">
+          <div><h2>Salesforce ↔ SFMC Feedback Loop</h2><p>Built an AMPscript-based feedback workflow to improve the interaction between Salesforce and Marketing Cloud and reduce manual processing.</p></div>
+          <div><h4>Stack</h4><div class="tags"><span>AMPscript</span><span>Salesforce</span><span>SFMC</span><span>Automation</span></div><h4>Impact</h4><p>Reduced the interaction cycle from roughly 15–20 minutes to around 2 minutes.</p></div>
+        </div>
+      </article>
 
-  <div class="email-placeholder">
-    <div class="browser-bar"><i></i><i></i><i></i><span>email-preview / coming-soon</span></div>
-    <div class="placeholder-body"><span>YOUR EMAIL SCREENSHOT</span><p>Add the rendered MJML screenshot here.</p></div>
-  </div>
+      <article class="project-detail" id="campaign-optimization" data-category="email journey">
+        <div class="project-meta"><span>03</span><span>EMAIL • JOURNEY</span></div>
+        <div class="project-content">
+          <div><h2>Campaign & Journey Optimization</h2><p>Designed personalized email campaigns and used Journey Builder experimentation to improve engagement across a 13k+ subscriber audience.</p></div>
+          <div><h4>Stack</h4><div class="tags"><span>Journey Builder</span><span>A/B Testing</span><span>AMPscript</span><span>Personalization</span></div><h4>Impact</h4><p>Achieved click rates above 10% and open rates above 38% on selected campaigns.</p></div>
+        </div>
+      </article>
 
-  <div class="lab-note">
-    <span>01</span>
-    <div><b>Future project format</b><p>Brief → design → MJML → responsive preview → code → what I learned.</p></div>
-  </div>
-</section>
+      <article class="project-detail" data-category="cloudpage email">
+        <div class="project-meta"><span>04</span><span>CLOUDPAGE • EMAIL</span></div>
+        <div class="project-content">
+          <div><h2>Customer Feedback CloudPage</h2><p>A responsive CloudPage-based feedback experience connected to Marketing Cloud data for collecting customer responses.</p></div>
+          <div><h4>Stack</h4><div class="tags"><span>CloudPages</span><span>AMPscript</span><span>HTML</span><span>CSS</span></div><h4>Impact</h4><p>Designed for simple customer interaction and campaign-level response tracking.</p></div>
+        </div>
+      </article>
 
-<section class="lab-section cloud" id="cloudpage-lab">
-  <div class="lab-head"><span class="section-no">04 / CLOUDPAGE LAB</span><span>CLOUDPAGES · AMPSCRIPT</span></div>
-  <div class="lab-copy">
-    <h2>Landing pages<br><em>with a purpose.</em></h2>
-    <p>This will become the home for CloudPage concepts: feedback forms, campaign landing pages, preference centers and small customer experiences.</p>
-  </div>
+      <article class="project-detail" data-category="integration automation">
+        <div class="project-meta"><span>05</span><span>INTEGRATION • SMS</span></div>
+        <div class="project-content">
+          <div><h2>SMS Provider Migration</h2><p>Worked on migrating SMS communication from a third-party provider to Salesforce Marketing Cloud MobileConnect/API-based messaging.</p></div>
+          <div><h4>Stack</h4><div class="tags"><span>MobileConnect</span><span>APIs</span><span>Automation Studio</span><span>SQL</span></div><h4>Impact</h4><p>Supported large-scale customer notifications and reduced ongoing messaging costs.</p></div>
+        </div>
+      </article>
 
-  <div class="cloud-placeholder">
-    <div class="cp-nav"><span>PRITISH / CLOUDPAGE</span><span>FORM · EXPERIENCE</span></div>
-    <div class="cp-content">
-      <span>PROJECT PREVIEW</span>
-      <h3>Your next<br>CloudPage goes here.</h3>
-      <p>Add a screenshot or a live sanitized demo when ready.</p>
-    </div>
-  </div>
-</section>
+      <article class="project-detail" data-category="email cloudpage">
+        <div class="project-meta"><span>06</span><span>EMAIL • CLOUDPAGE</span></div>
+        <div class="project-content">
+          <div><h2>More Campaign Builds</h2><p>This portfolio is designed to grow. Add screenshots, code snippets, CloudPage demos, email previews and sanitized case studies here as you publish more work.</p></div>
+          <div><h4>Recommended format</h4><div class="tags"><span>Screenshot</span><span>Problem</span><span>Solution</span><span>Impact</span></div><h4>Tip</h4><p>Never expose real customer data, credentials, production identifiers or confidential client information.</p></div>
+        </div>
+      </article>
+    </section>
+  </main>
 
-<section class="add-more">
-  <span class="section-no">05</span>
-  <h2>This page is meant<br>to <em>keep growing.</em></h2>
-  <p>As you build new emails, CloudPages and technical experiments, add them as case studies rather than simply adding another item to a skills list.</p>
-  <a href="mailto:hire.pritish@gmail.com">Have an idea? Let's talk ↗</a>
-</section>
-</main>
-
-<footer>
-  <span>© 2026 Pritish Kumbhare</span>
-  <span>Project archive</span>
-  <a href="index.html">Home ↗</a>
-</footer>
+  <footer class="footer container">
+    <span>© 2026 Pritish Kumbhare</span>
+    <div class="socials"><a href="https://github.com/pritishx">GitHub</a><a href="https://www.linkedin.com/in/pritishkumbhare/">LinkedIn</a><a href="index.html">Home</a></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

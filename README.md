@@ -1,28 +1,31 @@
-# Pritish Kumbhare — Portfolio v2
+# Pritish Kumbhare — Portfolio
 
-A deliberately editorial, personal-brand portfolio for `pritish.is-my.id`.
+Static portfolio website for **pritish.is-my.id**.
 
-## Pages
-- `index.html` — portfolio home
-- `projects.html` — project archive / case studies / labs
+## Files
 
-## Visual direction
-Editorial / magazine-inspired, restrained Salesforce blue, large typography, asymmetric layouts, minimal card UI, and a growing project archive.
+- `index.html` — main portfolio page
+- `projects.html` — project library with category filters
+- `styles.css` — responsive dark/premium design
+- `script.js` — project filtering
+- `assets/pritish-anime-avatar.png` — profile artwork
 
-## Profile image
-`assets/pritish-anime-profile.png` is the user-provided anime portrait used in the hero section.
+## Project showcase
 
-## Project labs
-The email and CloudPage sections are intentionally placeholders for future MJML renders and sanitized screenshots.
+The project page is intentionally separate so individual SFMC work can be added later.
 
-For each future project, consider:
-- brief / problem
-- visual preview
-- MJML or HTML approach
-- SFMC components
-- responsive behavior
-- what you learned
-- measurable outcome when available
+Recommended structure for each project:
+1. Project title
+2. Type: Email / CloudPage / Journey / Automation / Integration
+3. Problem
+4. Solution
+5. SFMC components used
+6. Screenshots or sanitized previews
+7. Business impact
+8. Optional GitHub/demo link
+
+Do not publish customer data, production identifiers, credentials, confidential campaign content, or client-sensitive screenshots.
 
 ## Deployment
-Static HTML/CSS. Suitable for GitHub Pages and custom-domain DNS.
+
+This is plain HTML/CSS/JS and can be hosted through a static GitHub-compatible deployment. Follow the `is-my.id` registration instructions for the custom subdomain.
