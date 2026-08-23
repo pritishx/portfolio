@@ -1,190 +1,737 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pritish Kumbhare — Salesforce Marketing Cloud Developer and Marketing Automation Specialist.">
-  <meta name="theme-color" content="#07111f">
-  <title>Pritish Kumbhare | Salesforce Marketing Cloud Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pritish Kumbhare - SFMC Consultant</title>
+    <!--
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="bg-grid"></div>
-  <header class="nav">
-    <a class="brand" href="index.html"><span>PK</span> Pritish Kumbhare</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="projects.html">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="nav-cta" href="projects.html">View Projects →</a>
-  </header>
+    <!--
+    - #MAIN
+  -->
+    <main>
+        <!--
+      - #SIDEBAR
+    -->
+        <aside class="sidebar" data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img src="./assets/images/my-avatar.png" alt="Pritish Kumbare" width="80">
+                </figure>
+                <div class="info-content">
+                    <h1 class="name" title="Pritish Kumbare">Pritish Kumbare</h1>
+                    <p class="title">Marketing Cloud Consultant</p>
+                </div>
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+            </div>
+            <div class="sidebar-info_more">
+                <div class="separator"></div>
+                <ul class="contacts-list">
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+                            <a class="contact-link" href="mailto:hire.pritish@gmail.com" style="color:#FFFFFF; text-decoration:none;">Contact me!</a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+                            <span class="contact-link">10 November</span>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+                            <address>India</address>
+                        </div>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a target="_blank" href="https://www.linkedin.com/in/pritishkumbhare/" class="social-link" aria-label="LinkedIn">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a target="_blank" href="https://github.com/pritishx" class="social-link" aria-label="GitHub">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a target="_blank" href="https://www.salesforce.com/trailblazer/pritishkumbhare" class="social-link" aria-label="GitHub">
+                            <ion-icon name="cloud-outline"></ion-icon>
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a target="_blank" href="https://wa.me/918657143989?text=Hi%20Pritish%2C%20I%20came%20across%20your%20online%20personal%20profile%20and%20would%20love%20to%20connect%20with%20you." class="social-link" aria-label="Whatsapp">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!--
+      - #main-content
+    -->
+        <div class="main-content">
+            <!--
+        - #NAVBAR
+      -->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <button class="navbar-link  active" data-nav-link>About</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Resume</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Portfolio</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Certifications</button>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Blog</button>
+                    </li>
+                </ul>
+            </nav>
+            <!--
+        - #ABOUT
+      -->
+            <article class="about  active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">About me</h2>
+                </header>
+                <section class="about-text">
+                    <p>
+                        I've spent 10+ years in IT, with 6+ years focused on marketing automation tools including Salesforce Marketing Cloud.
+                        My work sits between engineering and customer engagement: translating business requirements into journeys, automations, personalized communications, data flows and integrations that teams can actually maintain.
+                    </p>
+                    <p>
+                        I'm also exploring Agentforce, AI-assisted development and MCP — mostly with one question in mind: can this make the work <strong>better, faster or more useful?</strong>
+                        I enjoy solving real campaign and automation problems and turning complex
+                        requirements into reliable, measurable customer journeys.
+                    </p>
+                </section>
+                <!--
+          - service
+        -->
+                <section class="service">
+                    <h3 class="h3 service-title">What I Specialize In</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-design.svg" alt="Salesforce Marketing Cloud" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Salesforce Marketing Cloud</h4>
+                                <p class="service-item-text">Journey Builder, Automation Studio, Email Studio, Contact Builder, CloudPages and MobileConnect.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-dev.svg" alt="SFMC Development" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">SFMC Development</h4>
+                                <p class="service-item-text">AMPscript, SSJS, SQL, dynamic content, personalization, APIs and reusable campaign components.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-quote.svg" alt="Integrations" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Integrations</h4>
+                                <p class="service-item-text">Connecting Marketing Cloud with Salesforce clouds, messaging platforms, APIs and external systems.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-app.svg" alt="Data & Integrations" width="40">
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">AI & Modern Dev</h4>
+                                <p class="service-item-text">Exploring Agentforce, AI-assisted development, MCP and smarter ways to design, document and maintain solutions.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <!-- Salesforce ecosystem -->
+                <section class="clients">
+                    <h3 class="h3 clients-title">Clients</h3>
+                    <ul class="clients-list has-scrollbar">
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-1-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-2-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-3-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-4-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-5-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-6-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-7-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-8-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-9-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-10-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-11-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-12-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-13-color.png" alt="client logo">
+                            </a>
+                        </li>
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-14-color.png" alt="client logo">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <!--
+        - #RESUME
+      -->
+            <article class="resume" data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+                        <h3 class="h3">Education</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Post Graduate Diploma in Advanced Computing</h4>
+                            <span>CDAC Pune</span>
+                            <p class="timeline-text">Advanced computing studies with a strong foundation in software development and IT technologies.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Bachelor of Engineering in Information Technology</h4>
+                            <span>TIETECH, Jabalpur</span>
+                            <p class="timeline-text">Engineering degree focused on information technology, software development and computing fundamentals.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+                        <h3 class="h3">Experience</h3>
+                    </div>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Senior Salesforce Marketing Cloud Developer</h4>
+                            <span>Dec 2023 — Jul 2026</span>
+                            <p class="timeline-text">Delivering Salesforce Marketing Cloud solutions across Journey Builder, Automation Studio, Email Studio, AMPScript, SSJS, SQL, APIs, Salesforce integrations and customer communications.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Salesforce Marketing Cloud Engineer</h4>
+                            <span>Jul 2021 — Dec 2023</span>
+                            <p class="timeline-text">Built and supported marketing automation solutions, customer journeys, email and SMS campaigns, data processes, reporting and platform integrations.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Lead Project Engineer</h4>
+                            <span>Mar 2020 — Jul 2021</span>
+                            <p class="timeline-text">Built experience across software development, data quality, product support and marketing technology before specializing in Salesforce Marketing Cloud.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Member of Technical Staff</h4>
+                            <span>May 2018 — Mar 2020</span>
+                            <p class="timeline-text">Engineered campaign automation & data operations for US enterprise clients using IBM Unica.</p>
+                        </li>
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Software Developer</h4>
+                            <span>Sep 2016 — May 2018</span>
+                            <p class="timeline-text">Built backend services and led platform migrations using Java, Spring, and Hibernate for enterprise applications.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section class="skill">
+                    <h3 class="h3 skills-title">My skills</h3>
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Salesforce Marketing Cloud</h5>
+                                <data value="95">95%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 95%;"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">AMPScript & SSJS</h5>
+                                <data value="90">90%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">SQL & Data Extensions</h5>
+                                <data value="90">90%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Journey Builder & Automation Studio</h5>
+                                <data value="92">92%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 92%;"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Email, HTML, CSS & MJML</h5>
+                                <data value="88">88%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 88%;"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Salesforce / API Integrations</h5>
+                                <data value="82">82%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill" style="width: 82%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <!--
+        - #CERTIFICATIONS
+      -->
+            <article class="certifications-page" data-page="certifications">
+                <header>
+                    <h2 class="h2 article-title">Certifications</h2>
+                </header>
+                <section class="about-text">
+                    <p>I currently hold <strong>13 Salesforce certifications</strong> across Marketing Cloud and the wider Salesforce ecosystem.</p>
+                    <p>These credentials complement my hands-on experience building marketing automation, customer journeys, integrations, data processes and personalised communications.</p>
+                </section>
+                <section class="service">
+                    <h3 class="h3 service-title">Salesforce Credentials</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="code-slash-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Marketing Cloud Developer</h4>
+                                <p class="service-item-text">Development and implementation of solutions on Salesforce Marketing Cloud.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="trophy-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Marketing Cloud Consultant</h4>
+                                <p class="service-item-text">Solution design, implementation and marketing automation strategy.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="cog-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Marketing Cloud Administrator</h4>
+                                <p class="service-item-text">Marketing Cloud administration and platform management capabilities.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Marketing Cloud Email Specialist</h4>
+                                <p class="service-item-text">Email marketing, content, segmentation and campaign execution.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="color-filter-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Data 360 Consultant</h4>
+                                <p class="service-item-text">Salesforce AI and Agentforce capabilities for modern customer and business automation.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="sparkles-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Agentforce Specialist</h4>
+                                <p class="service-item-text">Salesforce AI and Agentforce capabilities for modern customer and business automation.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Additional Salesforce Credentials</h4>
+                                <p class="service-item-text">Additional Salesforce certifications across administration, platform and related capabilities.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> Salesforce Marketing Cloud • Marketing Automation</div>
-        <h1>Hi, I'm <span>Pritish.</span><br> I build customer journeys<br>that <em>actually work.</em></h1>
-        <p class="hero-text">
-          Salesforce Marketing Cloud Developer with 10+ years in IT and 6+ years focused on
-          marketing automation, customer engagement, integrations, and scalable campaign solutions.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="projects.html">Explore my work ↗</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/pritishkumbhare/" target="_blank" rel="noopener">Let's connect</a>
+                <section class="service">
+                    <h3 class="h3 service-title">Additional Credentials</h3>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="code-slash-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Email Marketing Professional Certificate by Intuit Mailchimp</h4>
+                                <p class="service-item-text">Provided by Intuit Mailchimp and LinkedIn.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="trophy-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Aha! Product Management Professional Certificate</h4>
+                                <p class="service-item-text">Provided by Aha! and LinkedIn.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="trophy-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">JavaScript Foundations Professional Certificate by Mozilla</h4>
+                                <p class="service-item-text">Provided by Mozilla and LinkedIn.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <ion-icon name="trophy-outline"></ion-icon>
+                            </div>
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Digital Marketing Professional Certificate by Content Marketing Institute</h4>
+                                <p class="service-item-text">Provided by Content Marketing Institute and LinkedIn.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <!--
+        - #PORTFOLIO
+      -->
+            <article class="portfolio" data-page="portfolio">
+                <header>
+                    <h2 class="h2 article-title">Portfolio</h2>
+                </header>
+                <section class="projects">
+                    <ul class="filter-list">
+                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+                        <li class="filter-item"><button data-filter-btn>Migration</button></li>
+                        <li class="filter-item"><button data-filter-btn>Email Marketing</button></li>
+                        <li class="filter-item"><button data-filter-btn>Automation</button></li>
+                        <li class="filter-item"><button data-filter-btn>Reporting</button></li>
+                    </ul>
+                    <div class="filter-select-box">
+                        <button class="filter-select" data-select>
+                            <div class="select-value" data-selecct-value>Select category</div>
+                            <div class="select-icon">
+                                <ion-icon name="chevron-down"></ion-icon>
+                            </div>
+                        </button>
+                        <ul class="select-list">
+                            <li class="select-item"><button data-select-item>All</button></li>
+                            <li class="select-item"><button data-select-item>Migration</button></li>
+                            <li class="select-item"><button data-select-item>Email Marketing</button></li>
+                            <li class="select-item"><button data-select-item>Automation</button></li>
+                            <li class="select-item"><button data-select-item>Reporting</button></li>
+                        </ul>
+                    </div>
+                    <ul class="project-list">
+                        <li class="project-item active" data-filter-item data-category="migration">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-1.jpg" alt="Infobip → Mobile Connect API Migration" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Infobip → Mobile Connect API Migration</h3>
+                                <p class="project-category">Migration</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="email marketing">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-2.png" alt="Email Engagement Optimisation" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Email Engagement Optimisation</h3>
+                                <p class="project-category">Email Marketing</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="sms marketing">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-3.jpg" alt="Customer SMS Engagement" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Customer SMS Engagement</h3>
+                                <p class="project-category">SMS Marketing</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="automation">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-4.png" alt="AMPScript Feedback Loop" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">AMPScript Feedback Loop</h3>
+                                <p class="project-category">Automation</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="migration">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-5.png" alt="Direct Debit Migration" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Direct Debit Migration</h3>
+                                <p class="project-category">Migration</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="automation">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-6.png" alt="Annual Statement Automation" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Annual Statement Automation</h3>
+                                <p class="project-category">Automation</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="cloudpages">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-7.png" alt="CloudPage Survey Campaign" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">CloudPage Survey Campaign</h3>
+                                <p class="project-category">CloudPages</p>
+                            </a>
+                        </li>
+                        <li class="project-item active" data-filter-item data-category="reporting">
+                            <a href="#">
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+                                    <img src="./assets/images/project-8.jpg" alt="SFMC Analytics & Reporting" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">SFMC Analytics & Reporting</h3>
+                                <p class="project-category">Reporting</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+            <!--
+        - #BLOG
+      -->
+            <article class="blog" data-page="blog">
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+                <section class="blog-posts">
+                    <ul class="blog-posts-list">
+                        <li class="blog-post-item">
+                            <a target="_blank" href="https://www.linkedin.com/pulse/beginner-friendly-guide-data-360-pritish-kumbhare-fx1qc/">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Career & Learning</p><time datetime="2026-08-21">21 Aug, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">A Beginner-Friendly Guide to Data 360</h3>
+                                    <p class="blog-text">Practical notes, lessons and experiences from working with Salesforce Marketing Cloud, marketing automation and customer communications.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-post-item">
+                            <a target="_blank" href="https://www.linkedin.com/pulse/ampscript-production-4-safety-patterns-every-cloud-should-kumbhare-hrtcc/">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Career & Learning</p><time datetime="2026-08-21">21 Aug, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">AMPscript in Production: 4 Safety Patterns Every Marketing Cloud Developer Should Use</h3>
+                                    <p class="blog-text">Practical notes, lessons and experiences from working with Salesforce Marketing Cloud, marketing automation and customer communications.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-post-item">
+                            <a target="_blank" href="https://www.linkedin.com/pulse/create-customized-trailhead-ranger-border-your-profile-kumbhare/">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Career & Learning</p><time datetime="2026-08-21">21 Aug, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Create a customized Trailhead Ranger border for your LinkedIn Profile.</h3>
+                                    <p class="blog-text">Practical notes, lessons and experiences from working with Salesforce Marketing Cloud, marketing automation and customer communications.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-post-item">
+                            <a target="_blank" href="https://www.linkedin.com/pulse/path-lightning-flow-stages-pritish-kumbhare/">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Career & Learning</p><time datetime="2026-08-21">21 Aug, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">Path in a Lightning Flow with Stages.</h3>
+                                    <p class="blog-text">Practical notes, lessons and experiences from working with Salesforce Marketing Cloud, marketing automation and customer communications.</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="blog-post-item">
+                            <a target="_blank" href="https://www.linkedin.com/pulse/how-repeat-screen-lightning-flow-salesforce-pritish-kumbhare/">
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                                </figure>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Career & Learning</p><time datetime="2026-08-21">21 Aug, 2026</time>
+                                    </div>
+                                    <h3 class="h3 blog-item-title">How to Repeat Screen in Lightning Flow in Salesforce</h3>
+                                    <p class="blog-text">Practical notes, lessons and experiences from working with Salesforce Marketing Cloud, marketing automation and customer communications.</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
         </div>
-        <div class="metrics">
-          <div><strong>10+</strong><span>Years in IT</span></div>
-          <div><strong>6+</strong><span>Years in Automation</span></div>
-          <div><strong>13x</strong><span>Salesforce Certified*</span></div>
-          <div><strong>3M+</strong><span>Emails Delivered</span></div>
-        </div>
-        <small class="muted">*Certification count should be verified against the final certification list before publishing.</small>
-      </div>
-      <div class="hero-art">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="profile-card">
-          <img src="assets/pritish-anime-avatar.png" alt="Anime-style avatar representing Pritish Kumbhare">
-          <div class="profile-chip">☁ Salesforce Marketing Cloud</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section container">
-      <div class="section-label">01 / ABOUT</div>
-      <div class="two-col">
-        <div>
-          <h2>Technical enough to build it.<br><span>Business-minded enough to make it matter.</span></h2>
-        </div>
-        <div class="copy">
-          <p>I design and develop customer engagement solutions across Salesforce Marketing Cloud — from data and segmentation to journeys, personalized communications, integrations, and reporting.</p>
-          <p>I enjoy taking messy business requirements and turning them into reliable, maintainable automation. Lately, I'm also exploring AI-assisted development, Agentforce, MCP, and ways AI can improve Salesforce delivery workflows.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="expertise" class="section container">
-      <div class="section-label">02 / EXPERTISE</div>
-      <h2>What I specialize in</h2>
-      <div class="cards expertise-grid">
-        <article class="card">
-          <div class="icon">☁</div>
-          <h3>Marketing Cloud</h3>
-          <p>Journey Builder, Automation Studio, Email Studio, Contact Builder, CloudPages and MobileConnect.</p>
-          <div class="tags"><span>SFMC</span><span>Journey Builder</span><span>Automation</span></div>
-        </article>
-        <article class="card">
-          <div class="icon">{ }</div>
-          <h3>SFMC Development</h3>
-          <p>AMPscript, SSJS, SQL, dynamic content, personalization, APIs and reusable campaign components.</p>
-          <div class="tags"><span>AMPscript</span><span>SSJS</span><span>SQL</span></div>
-        </article>
-        <article class="card">
-          <div class="icon">↗</div>
-          <h3>Integrations</h3>
-          <p>Connecting Marketing Cloud with Salesforce clouds, messaging platforms, APIs and external systems.</p>
-          <div class="tags"><span>REST</span><span>Salesforce</span><span>APIs</span></div>
-        </article>
-        <article class="card">
-          <div class="icon">✦</div>
-          <h3>AI & Modern Dev</h3>
-          <p>Exploring Agentforce, AI-assisted development, MCP and smarter ways to design, document and maintain solutions.</p>
-          <div class="tags"><span>Agentforce</span><span>AI</span><span>MCP</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section featured container">
-      <div class="section-label">03 / SELECTED WORK</div>
-      <div class="section-heading-row">
-        <div>
-          <h2>Projects, campaigns & builds</h2>
-          <p>Emails, CloudPages, journeys, integrations and automation work — presented as a living portfolio.</p>
-        </div>
-        <a class="text-link" href="projects.html">See all projects →</a>
-      </div>
-      <div class="project-grid">
-        <a class="project-card" href="projects.html#dd-migration">
-          <span class="project-type">MIGRATION</span>
-          <h3>Direct Debit Campaign Migration</h3>
-          <p>Migrating customer communication journeys from a legacy platform into SFMC with automation, logging and reporting.</p>
-          <span class="project-arrow">↗</span>
-        </a>
-        <a class="project-card" href="projects.html#feedback-loop">
-          <span class="project-type">AUTOMATION</span>
-          <h3>SFMC Feedback Loop</h3>
-          <p>AMPscript-based feedback workflow connecting Salesforce and Marketing Cloud to reduce operational interaction time.</p>
-          <span class="project-arrow">↗</span>
-        </a>
-        <a class="project-card" href="projects.html#campaign-optimization">
-          <span class="project-type">OPTIMIZATION</span>
-          <h3>Campaign & Journey Optimization</h3>
-          <p>Personalization, A/B testing and Journey Builder optimization focused on measurable engagement improvements.</p>
-          <span class="project-arrow">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="experience" class="section container">
-      <div class="section-label">04 / EXPERIENCE</div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div><span class="period">2023 — PRESENT</span><h3>Senior Salesforce Marketing Cloud Developer</h3><p>Building and optimizing enterprise customer engagement solutions, integrations, campaigns and reporting.</p></div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div><span class="period">6+ YEARS</span><h3>Marketing Automation & Salesforce</h3><p>Specialized in SFMC development, campaign execution, data automation, personalization and platform integrations.</p></div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div><span class="period">10+ YEARS</span><h3>IT & Technology</h3><p>Experience across software development, data quality, product support, marketing technology and automation.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container">
-      <div class="section-label">05 / CERTIFICATIONS</div>
-      <div class="cert-wrap">
-        <div class="cert-main"><span class="cert-number">13x</span><div><h3>Salesforce Certified</h3><p>Marketing Cloud, Platform, Sales Cloud, Service Cloud, Experience Cloud, Data 360 and Agentforce.</p></div></div>
-        <div class="cert-list">
-          <span>Marketing Cloud Developer</span><span>Marketing Cloud Consultant</span><span>Marketing Cloud Administrator</span>
-          <span>Email Specialist</span><span>Platform Developer I</span><span>Agentforce Specialist</span><span>Data 360</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact container">
-      <div class="contact-box">
-        <div>
-          <div class="section-label">06 / LET'S CONNECT</div>
-          <h2>Have a Salesforce problem<br>worth solving?</h2>
-          <p>I'm open to Salesforce Marketing Cloud opportunities, consulting, freelance work, technical conversations and collaboration.</p>
-        </div>
-        <div class="contact-actions">
-          <a class="btn primary" href="mailto:hire.pritish@gmail.com">Email me ↗</a>
-          <a class="btn whatsapp" href="https://wa.me/918657143989?text=Hi%20Pritish%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." target="_blank" rel="noopener">WhatsApp ↗</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/pritishkumbhare/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer container">
-    <span>© 2026 Pritish Kumbhare</span>
-    <span>Salesforce Marketing Cloud • Automation • AI</span>
-    <div class="socials">
-      <a href="https://github.com/pritishx" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/pritishkumbhare/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://sites.google.com/view/pritish" target="_blank" rel="noopener">Old Portfolio</a>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+    </main>
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+    <!--
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
