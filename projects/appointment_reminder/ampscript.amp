@@ -1,0 +1,52 @@
+%%[
+var @subscriberKey, @firstName, @meetingDate, @formattedMeetingDate, @techStackId, @techStackName, @sessionDuration, @supportNumber, @email, @sessionMessage, @appointmentId, @rescheduleURL, @cancelURL, @appointmentRows, @appointmentRow, @techRows, @techRow
+
+/*Customer DE*/
+set @subscriberKey = AttributeValue('SubscriberKey')
+set @firstName = ProperCase(AttributeValue('FirstName'))
+set @email = AttributeValue('Email')
+
+if(empty(@firstName)) then
+  set @firstName = 'there'
+endif
+
+/*Appointment DE*/
+set @appointmentRows = LookupRows('Appointments', 'SubscriberKey', @subscriberKey)
+
+if(RowCount(@appointmentRows) > 0) then
+  set @appointmentRow = Row(@appointmentRows, 1)
+  set @meetingDate = Field(@appointmentRow, 'MeetingDate')
+  set @techStackId = Field(@appointmentRow, 'TechStackID')
+  set @appointmentId = Field(@appointmentRow, 'AppointmentID')
+  set @sessionDuration = Field(@appointmentRow, 'SessionDuration')
+endif
+
+/*Format appointment date*/
+if(not empty(@meetingDate)) then
+  set @formattedMeetingDate = FormatDate(@meetingDate, "MMMM dd, yyyy hh:mm tt")
+endif
+
+/*Technology DE*/
+set @techRows = LookupRows('Technology', 'TechStackID', @techStackId)
+
+if(RowCount(@techRows) > 0) then
+  set @techRow = Row(@techRows, 1)
+  set @techStackName = Field(@techRow, 'TechStackName')
+  set @supportNumber = Field(@techRow, 'SupportNumber')
+endif
+
+/*Session preparation message*/
+if @techStackId == "SFMC" then
+  set @sessionMessage = "Please have your Marketing Cloud requirements and current email or automation examples ready."
+elseif @techStackId == "SFDC" then
+  set @sessionMessage = "Please have your Salesforce CRM requirements and current business process details ready."
+elseif @techStackId == "MULESOFT" then
+  set @sessionMessage = "Please have your API documentation and integration requirements available."
+else
+  set @sessionMessage = "Please have your technical requirements ready for discussion."
+endif
+
+/*Appointment action URLs*/
+set @rescheduleURL = Concat("https://example.com/reschedule?id=", @appointmentId)
+set @cancelURL = Concat("https://example.com/cancel?id=", @appointmentId)
+]%%

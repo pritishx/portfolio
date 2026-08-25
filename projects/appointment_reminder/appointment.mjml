@@ -1,0 +1,54 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Source Sans 3" href="https://fonts.googleapis.com/css?family=Source+Sans+3"></mj-font>
+    <mj-attributes>
+      <mj-all font-family="'Source Sans 3', Helvetica, Arial, sans-serif"></mj-all>
+      <mj-text align="center" font-size="18px" line-height="26px" color="#1D3C6B" padding="0px"></mj-text>
+    </mj-attributes>
+    <mj-style>
+      .aa-btn { font-weight: 600; }
+      .aa-info { border-radius: 30px }
+      .aa-btn a { background-color: transparent !important}
+      .aa-btn-red:hover td { background-color:#850D0D !important }
+      .aa-btn-blue:hover td { background-color:#0D3D85 !important}
+    </mj-style>
+  </mj-head>
+  <mj-body>
+  	<mj-section background-color="transparent" padding="0px">
+    	<mj-column padding="0px">
+      	<mj-image padding="0px" src="https://github.com/ricfreire/mautic-theme-appointmentalert/blob/main/assets/calendar.png?raw=true"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#F4F9FF" padding="30px 40px">
+    	<mj-column>
+      	<mj-text font-size="28px" line-height="36px" font-weight="600">Hello %%=v(@firstName)=%%! 👋</mj-text>
+        <mj-spacer height="30px"></mj-spacer>
+        <mj-text css-class="aa-text">Just a friendly reminder that we have an upcoming appointment.</mj-text>
+        <mj-spacer height="30px"></mj-spacer>
+        <mj-text css-class="aa-text"><strong>Date:</strong> %%v(@meetingDate)%%</mj-text>
+        <mj-spacer height="14px"></mj-spacer>
+        <mj-text css-class="aa-text"><strong>Type:</strong> %%=v(@techStackName)=%%</mj-text>
+        <mj-spacer height="14px"></mj-spacer>
+        <mj-text css-class="aa-text"><strong>Duration:</strong> %%=v(@sessionDuration)=%%</mj-text>
+        <mj-spacer height="14px"></mj-spacer>
+        <mj-text>Before your session</mj-text>
+        <mj-text>%%=v(@sessionMessage)=%%</mj-text>
+        <mj-spacer height="30px"></mj-spacer>
+        <mj-text padding="14px 10px" container-background-color="#FFF8E8" color="#484234" css-class="aa-text aa-info">Thank you for scheduling the meeting. If you need assistance before the meeting, please call our support line at %%=v(@supportNumber)=%%.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#F4F9FF" border-radius="0px 0px 30px 30px" padding="0px 30px 40px 40px">
+    	<mj-column width="48%">
+      	<mj-button href="%%=RedirectTo(@rescheduleURL)=%%" padding="0px" border-radius="12px" border="1px solid #0D3D85" background-color="#4F77B4" css-class="aa-btn aa-btn-blue" width="100%" font-size="18px">Reschedule</mj-button>
+      </mj-column>
+    	<mj-column width="4%" padding="10px"></mj-column>
+    	<mj-column width="48%">
+      	<mj-button href="%%=RedirectTo(@cancelURL)=%%" padding="0px" border-radius="12px" border="1px solid #850D0D" background-color="#C75353" css-class="aa-btn aa-btn-red" width="100%" font-size="18px">Cancel</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+    	<mj-column>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

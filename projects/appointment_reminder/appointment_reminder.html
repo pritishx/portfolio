@@ -1,3 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Appointment Reminder | Pritish Kumbhare</title>
+
+    <link rel="shortcut icon" href="../../assets/images/logo.ico" type="image/x-icon">
+
+    <!-- Existing portfolio CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =========================================================
+           PROJECT PAGE
+           ========================================================= */
+
+        .project-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+            color: var(--light-gray);
+            font-size: 13px;
+        }
+
+        .project-back-link:hover {
+            color: var(--orange-yellow-crayola);
+        }
+
+
+        .project-intro {
+            margin-bottom: 30px;
+        }
+
+        .project-intro p {
+            color: var(--light-gray);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+
+        .project-tag {
+            padding: 5px 12px;
+            border-radius: 8px;
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            color: var(--light-gray);
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           EMAIL PREVIEW
+           ========================================================= */
+
+        .email-preview-wrapper {
+            margin-top: 25px;
+            padding: 20px;
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 14px;
+        }
+
+
+        .email-preview-title {
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--light-gray);
+        }
+
+
+        .email-preview {
+            background: #e5e7eb;
+            border-radius: 10px;
+            padding: 25px 15px;
+            overflow: hidden;
+        }
+
+
+        /* =========================================================
+           EMAIL PLACEHOLDER
+           Replace this with your actual email HTML
+           ========================================================= */
+
+        .email-placeholder {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            color: #222222;
+            padding: 45px 30px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+
+        .email-placeholder h3 {
+            margin-bottom: 10px;
+            color: #222222;
+        }
+
+
+        .email-placeholder p {
+            color: #666666;
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           PROJECT SECTIONS
+           ========================================================= */
+
+        .project-section {
+            margin-top: 45px;
+        }
+
+
+        .project-section-title {
+            margin-bottom: 15px;
+        }
+
+
+        .project-section-text {
+            color: var(--light-gray);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           ARCHITECTURE
+           ========================================================= */
+
+        .architecture-box {
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 10px;
+            padding: 22px;
+            overflow-x: auto;
+        }
+
+
+        .architecture-box pre {
+            margin: 0;
+            color: var(--light-gray);
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           DATA EXTENSIONS
+           ========================================================= */
+
+        .de-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+
+        .de-card {
+            padding: 20px;
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 10px;
+        }
+
+
+        .de-card h4 {
+            margin-bottom: 12px;
+        }
+
+
+        .de-card code {
+            color: var(--light-gray);
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+
+        /* =========================================================
+           CODE BLOCKS
+           ========================================================= */
+
+        .code-container {
+            background: #111111;
+            border: 1px solid var(--jet);
+            border-radius: 10px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+
+        .code-container pre {
+            margin: 0;
+            color: #d1d5db;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 11px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+        }
+
+
+        /* =========================================================
+           FEATURES
+           ========================================================= */
+
+        .project-feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+
+        .project-feature {
+            padding: 15px;
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 10px;
+        }
+
+
+        .project-feature strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--white-2);
+            font-size: 13px;
+        }
+
+
+        .project-feature span {
+            color: var(--light-gray);
+            font-size: 11px;
+        }
+
+
+        /* =========================================================
+           GITHUB
+           ========================================================= */
+
+        .github-project {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+
+        .github-project a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: var(--border-gradient-onyx);
+            color: var(--white-2);
+            border: 1px solid var(--jet);
+            font-size: 12px;
+            transition: 0.25s ease;
+        }
+
+
+        .github-project a:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .de-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-feature-list {
+                grid-template-columns: 1fr;
+            }
+
+            .email-preview-wrapper {
+                padding: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <main>
+
+        <!-- =====================================================
+             FULL WIDTH MAIN CONTENT
+             Sidebar intentionally removed
+        ====================================================== -->
+
+        <div class="main-content project-main-content">
+
+
+            <!-- =================================================
+                 NAVIGATION
+            ================================================== -->
+
+            <nav class="navbar">
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+
+                        <a
+                            class="navbar-link active"
+                            href="../../index.html"
+                        >
+                            Home
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- =================================================
+                 PROJECT
+            ================================================== -->
+
+            <article class="portfolio active">
+
+
+                <!-- =================================================
+                     PROJECT HEADER
+                ================================================== -->
+
+                <header>
+
+                    <h2 class="h2 article-title">
+                        Appointment Reminder
+                    </h2>
+
+                </header>
+
+
+                <!-- =================================================
+                     INTRO
+                ================================================== -->
+
+                <section class="project-intro">
+
+
+                    <a
+                        href="../../index.html#portfolio"
+                        class="project-back-link"
+                    >
+
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+
+                        Back to Home
+
+                    </a>
+
+
+                    <p>
+
+                        A personalized appointment reminder built using Salesforce Marketing Cloud concepts, AMPscript, SQL, Data Extensions, MJML and HTML.
+
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span class="project-tag">
+                            AMPscript
+                        </span>
+
+                        <span class="project-tag">
+                            SQL
+                        </span>
+
+                        <span class="project-tag">
+                            Data Extensions
+                        </span>
+
+                        <span class="project-tag">
+                            Automation Studio
+                        </span>
+
+                        <span class="project-tag">
+                            MJML
+                        </span>
+
+                        <span class="project-tag">
+                            HTML Email
+                        </span>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     EMAIL PREVIEW
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        <a href="file:///C:/Users/Admin/vcard-personal-portfolio/projects/appoint_reminder/index.html" target="_blank" style="text-decoration: underline; color: inherit">Email Preview</a>
+                    </h3>
+
+
+                    <div class="email-preview-wrapper">
+
+
+                        <p class="email-preview-title">
+                            Sample rendered email
+                        </p>
+
+
+                        <div class="email-preview">
+
+
+                            <!-- =====================================
+                                 REPLACE THIS WITH YOUR EMAIL HTML
+                            ====================================== -->
+
 <!doctype html>
 <html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
@@ -349,6 +804,504 @@
     </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
   </div>
+</body>
+
+</html>
+
+
+                            <!-- =====================================
+                                 END EMAIL PLACEHOLDER
+                            ====================================== -->
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     DESCRIPTION
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        Description
+                    </h3>
+
+
+                    <p class="project-section-text">
+
+                        A technical consulting company allows
+                        customers to schedule consultation sessions
+                        for different technologies.
+
+                        <br><br>
+
+                        The reminder email is sent one day before
+                        the appointment and dynamically displays
+                        the customer's name, appointment details,
+                        technology, session duration and preparation
+                        instructions.
+
+                        <br><br>
+
+                        A customer can have multiple appointments
+                        over time, but only one session can be
+                        booked per day.
+
+                    </p>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     AUTOMATION FLOW
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        Automation Flow
+                    </h3>
+
+
+                    <div class="architecture-box">
+
+<pre>
+Appointments DE
+       ↓
+SQL Query
+       ↓
+Tomorrow's Scheduled Appointments
+       ↓
+Sendable DE
+       ↓
+Verification
+       ↓
+Staging DE
+       ↓
+Email Send
+       ↓
+AMPscript Personalization
+       ↓
+Personalized Email
+</pre>
+
+                    </div>
+
+
+                    <p
+                        class="project-section-text"
+                        style="margin-top:15px;"
+                    >
+
+                        SQL handles the audience selection while
+                        AMPscript handles the personalization inside
+                        the email.
+
+                    </p>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     DATA MODEL
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        Data Model
+                    </h3>
+
+
+                    <div class="de-grid">
+
+
+                        <div class="de-card">
+
+                            <h4 class="h4">
+                                Customers
+                            </h4>
+
+                            <code>
+                                SubscriberKey<br>
+                                FirstName<br>
+                                LastName<br>
+                                Email
+                            </code>
+
+                        </div>
+
+
+                        <div class="de-card">
+
+                            <h4 class="h4">
+                                Appointments
+                            </h4>
+
+                            <code>
+                                AppointmentID<br>
+                                SubscriberKey<br>
+                                MeetingDate<br>
+                                TechStackID<br>
+                                SessionDuration<br>
+                                Status
+                            </code>
+
+                        </div>
+
+
+                        <div class="de-card">
+
+                            <h4 class="h4">
+                                Technology
+                            </h4>
+
+                            <code>
+                                TechStackID<br>
+                                TechStackName<br>
+                                SupportNumber
+                            </code>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        class="architecture-box"
+                        style="margin-top:15px;"
+                    >
+
+<pre>
+Customers
+    │
+    │ SubscriberKey
+    ▼
+Appointments
+    │
+    │ TechStackID
+    ▼
+Technology
+</pre>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     SQL
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        SQL
+                    </h3>
+
+
+                    <p class="project-section-text">
+
+                        The SQL query selects tomorrow's scheduled
+                        appointments before the email send.
+
+                    </p>
+
+
+                    <div class="code-container">
+
+<pre>
+SELECT
+    AppointmentID,
+    SubscriberKey,
+    MeetingDate,
+    TechStackID,
+    SessionDuration,
+    Status
+FROM Appointments
+WHERE CAST(MeetingDate AS DATE)
+      = CAST(DATEADD(DAY, 1, GETDATE()) AS DATE)
+AND Status = 'Scheduled'
+</pre>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     AMPSCRIPT
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        AMPscript
+                    </h3>
+
+
+                    <p class="project-section-text">
+
+                        AMPscript retrieves the customer,
+                        appointment and technology information
+                        and prepares the dynamic content used
+                        in the email.
+
+                    </p>
+
+
+                    <div class="code-container">
+
+<pre>
+set @subscriberKey = AttributeValue('SubscriberKey')
+set @firstName = ProperCase(AttributeValue('FirstName'))
+set @email = AttributeValue('Email')
+
+/*Appointment DE*/
+set @appointmentRows = LookupRows('Appointments', 'SubscriberKey', @subscriberKey)
+
+if(RowCount(@appointmentRows) > 0) then
+  set @appointmentRow = Row(@appointmentRows, 1)
+  set @meetingDate = Field(@appointmentRow, 'MeetingDate')
+  set @techStackId = Field(@appointmentRow, 'TechStackID')
+  set @appointmentId = Field(@appointmentRow, 'AppointmentID')
+  set @sessionDuration = Field(@appointmentRow, 'SessionDuration')
+endif
+
+/*Format appointment date*/
+if(not empty(@meetingDate)) then
+  set @formattedMeetingDate = FormatDate(@meetingDate, "MMMM dd, yyyy hh:mm tt")
+endif
+</pre>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     DYNAMIC SESSION MESSAGE
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        Dynamic Session Message
+                    </h3>
+
+
+                    <p class="project-section-text">
+
+                        The preparation message changes depending
+                        on the technology selected for the appointment.
+
+                    </p>
+
+
+                    <div class="code-container">
+
+<pre>
+/*Session preparation message*/
+if @techStackId == "SFMC" then
+  set @sessionMessage = "Please have your Marketing Cloud requirements and current email or automation examples ready."
+elseif @techStackId == "SFDC" then
+  set @sessionMessage = "Please have your Salesforce CRM requirements and current business process details ready."
+elseif @techStackId == "MULESOFT" then
+  set @sessionMessage = "Please have your API documentation and integration requirements available."
+else
+  set @sessionMessage = "Please have your technical requirements ready for discussion."
+endif
+</pre>
+
+                    </div>
+
+
+                </section>
+
+
+                <!-- =================================================
+                     KEY FEATURES
+                ================================================== -->
+
+                <section class="project-section">
+
+
+                    <h3 class="h3 project-section-title">
+                        Key Features
+                    </h3>
+
+
+                    <div class="project-feature-list">
+
+
+                        <div class="project-feature">
+
+                            <strong>
+                                Dynamic Personalization
+                            </strong>
+
+                            <span>
+                                Customer and appointment details.
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-feature">
+
+                            <strong>
+                                Multiple DE Lookups
+                            </strong>
+
+                            <span>
+                                Customer → Appointment → Technology.
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-feature">
+
+                            <strong>
+                                Conditional Content
+                            </strong>
+
+                            <span>
+                                Technology-specific preparation messages.
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-feature">
+
+                            <strong>
+                                Dynamic URLs
+                            </strong>
+
+                            <span>
+                                Appointment-specific Reschedule
+                                and Cancel links.
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-feature">
+
+                            <strong>
+                                Date Formatting
+                            </strong>
+
+                            <span>
+                                Customer-friendly appointment date
+                                and time.
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-feature">
+
+                            <strong>
+                                Responsive Email
+                            </strong>
+
+                            <span>
+                                Email structure developed using
+                                MJML and HTML.
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     GITHUB
+                ================================================== -->
+
+                <section class="project-section github-project">
+
+
+                    <h3 class="h3 project-section-title">
+                        Source Code
+                    </h3>
+
+
+                    <p class="project-section-text">
+
+                        The complete AMPscript, SQL, MJML and HTML
+                        files are available on GitHub.
+
+                    </p>
+
+
+                    <br>
+
+
+                    <a
+                        href="https://github.com/pritishx/portfolio/tree/main/projects/appointment_reminder"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <ion-icon name="logo-github"></ion-icon>
+
+                        View Project on GitHub
+
+                    </a>
+
+
+                </section>
+
+
+            </article>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- Existing portfolio JavaScript -->
+    <script src="../../assets/js/script.js"></script>
+
+
+    <!-- Ionicons -->
+    <script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+
 </body>
 
 </html>
