@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Pawsome Birthday Club | Pritish Kumbhare</title>
+
+        <link rel="shortcut icon" href="../../assets/images/logo.ico" type="image/x-icon" />
+
+        <!-- Existing portfolio CSS -->
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* =========================================================
+           PROJECT PAGE
+           ========================================================= */
+
+            .project-back-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                margin-bottom: 20px;
+                color: var(--light-gray);
+                font-size: 13px;
+            }
+
+            .project-back-link:hover {
+                color: var(--orange-yellow-crayola);
+            }
+
+            .project-intro {
+                margin-bottom: 30px;
+            }
+
+            .project-intro p {
+                color: var(--light-gray);
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 18px;
+            }
+
+            .project-tag {
+                padding: 5px 12px;
+                border-radius: 8px;
+                background: var(--eerie-black-2);
+                border: 1px solid var(--jet);
+                color: var(--light-gray);
+                font-size: 11px;
+            }
+
+            /* =========================================================
+           EMAIL PREVIEW
+           ========================================================= */
+
+            .email-preview-wrapper {
+                margin-top: 25px;
+                padding: 20px;
+                background: var(--eerie-black-2);
+                border: 1px solid var(--jet);
+                border-radius: 14px;
+            }
+
+            .email-preview-title {
+                margin-bottom: 15px;
+                font-size: 13px;
+                color: var(--light-gray);
+            }
+
+            .email-preview {
+                background: #e5e7eb;
+                border-radius: 10px;
+                padding: 25px 15px;
+                overflow: hidden;
+            }
+
+            /* =========================================================
+           EMAIL PLACEHOLDER
+           Rendered email preview container
+           ========================================================= */
+
+            .email-placeholder {
+                max-width: 600px;
+                margin: auto;
+                background: #ffffff;
+                color: #222222;
+                padding: 45px 30px;
+                text-align: center;
+                border-radius: 5px;
+            }
+
+            .email-placeholder h3 {
+                margin-bottom: 10px;
+                color: #222222;
+            }
+
+            .email-placeholder p {
+                color: #666666;
+                font-size: 13px;
+            }
+
+            /* =========================================================
+           PROJECT SECTIONS
+           ========================================================= */
+
+            .project-section {
+                margin-top: 45px;
+            }
+
+            .project-section-title {
+                margin-bottom: 15px;
+            }
+
+            .project-section-text {
+                color: var(--light-gray);
+                font-size: 13px;
+                line-height: 1.8;
+            }
+
+            /* =========================================================
+           ARCHITECTURE
+           ========================================================= */
+
+            .architecture-box {
+                background: var(--eerie-black-2);
+                border: 1px solid var(--jet);
+                border-radius: 10px;
+                padding: 22px;
+                overflow-x: auto;
+            }
+
+            .architecture-box pre {
+                margin: 0;
+                color: var(--light-gray);
+                font-family: monospace;
+                font-size: 12px;
+                line-height: 1.8;
+            }
+
+            /* =========================================================
+           DATA EXTENSIONS
+           ========================================================= */
+
+            .de-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .de-card {
+                padding: 20px;
+                background: var(--eerie-black-2);
+                border: 1px solid var(--jet);
+                border-radius: 10px;
+            }
+
+            .de-card h4 {
+                margin-bottom: 12px;
+            }
+
+            .de-card code {
+                color: var(--light-gray);
+                font-size: 11px;
+                line-height: 1.9;
+            }
+
+            /* =========================================================
+           CODE BLOCKS
+           ========================================================= */
+
+            .code-container {
+                background: #111111;
+                border: 1px solid var(--jet);
+                border-radius: 10px;
+                padding: 20px;
+                overflow-x: auto;
+            }
+
+            .code-container pre {
+                margin: 0;
+                color: #d1d5db;
+                font-family: Consolas, Monaco, monospace;
+                font-size: 11px;
+                line-height: 1.7;
+                white-space: pre-wrap;
+            }
+
+            /* =========================================================
+           FEATURES
+           ========================================================= */
+
+            .project-feature-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .project-feature {
+                padding: 15px;
+                background: var(--eerie-black-2);
+                border: 1px solid var(--jet);
+                border-radius: 10px;
+            }
+
+            .project-feature strong {
+                display: block;
+                margin-bottom: 5px;
+                color: var(--white-2);
+                font-size: 13px;
+            }
+
+            .project-feature span {
+                color: var(--light-gray);
+                font-size: 11px;
+            }
+
+            /* =========================================================
+           GITHUB
+           ========================================================= */
+
+            .github-project {
+                margin-top: 50px;
+                text-align: center;
+            }
+
+            .github-project a {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 12px 18px;
+                border-radius: 10px;
+                background: var(--border-gradient-onyx);
+                color: var(--white-2);
+                border: 1px solid var(--jet);
+                font-size: 12px;
+                transition: 0.25s ease;
+            }
+
+            .github-project a:hover {
+                transform: translateY(-2px);
+            }
+
+            /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+            @media (max-width: 700px) {
+                .de-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .project-feature-list {
+                    grid-template-columns: 1fr;
+                }
+
+                .email-preview-wrapper {
+                    padding: 10px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <!-- =====================================================
+             FULL WIDTH MAIN CONTENT
+             Sidebar intentionally removed
+        ====================================================== -->
+
+            <div class="main-content project-main-content">
+                <!-- =================================================
+                 NAVIGATION
+            ================================================== -->
+
+                <nav class="navbar">
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a class="navbar-link active" href="../../index.html"> Portfolio </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- =================================================
+                 PROJECT
+            ================================================== -->
+
+                <article class="portfolio active">
+
+                    <!-- =================================================
+                     PROJECT HEADER
+                ================================================== -->
+
+                    <header>
+                        <h2 class="h2 article-title">Pawsome Birthday Club</h2>
+                    </header>
+
+                    <!-- =================================================
+                     INTRO
+                ================================================== -->
+
+                    <section class="project-intro">
+                        <a href="../../index.html" class="project-back-link">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                            Back to Portfolio
+                        </a>
+
+                        <p>
+                            A personalized monthly Birthday Campaign for Pawsome Pet Co., built to demonstrate
+                            AMPscript-first email development using Data Extensions, dynamic content, personalized offers,
+                            pet-based recommendations, MJML and responsive HTML email.
+                        </p>
+
+                        <div class="project-tags">
+                            <span class="project-tag">AMPscript</span>
+                            <span class="project-tag">Data Extensions</span>
+                            <span class="project-tag">Dynamic Content</span>
+                            <span class="project-tag">Personalization</span>
+                            <span class="project-tag">MJML</span>
+                            <span class="project-tag">HTML Email</span>
+                            <span class="project-tag">Remove.bg</span>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     EMAIL PREVIEW
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Email Preview</h3>
+
+                        <div class="email-preview-wrapper">
+                            <p class="email-preview-title">
+                                Sample rendered email — Max / Dog / Gold-tier test record
+                            </p>
+
+                            <div class="email-preview">
+<!doctype html>
+<html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <title></title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    p {
+      display: block;
+      margin: 13px 0;
+    }
+  </style>
+  <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+  <!--[if lte mso 11]>
+    <style type="text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
+
+      .mj-column-per-50 {
+        width: 50% !important;
+        max-width: 50%;
+      }
+    }
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+
+    .moz-text-html .mj-column-per-50 {
+      width: 50% !important;
+      max-width: 50%;
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width:479px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body style="word-spacing:normal;background-color:#d6dde5;">
+  <div aria-roledescription="email" role="article" lang="und" dir="auto" style="word-spacing:normal;background-color:#d6dde5;">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#fa8739" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#fa8739;background-color:#fa8739;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fa8739;background-color:#fa8739;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Comic Sans Ms;font-size:16px;font-weight:800;line-height:22px;text-align:center;color:#333333;">Pawsome Pet Co.</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:0px;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="width:600px;">
+                                        <img alt="" src="https://as1.ftcdn.net/v2/jpg/03/22/78/92/1000_F_322789275_pRYGzHcwPOBFiSD34xXIMILVMGxfqJBV.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:16px;" width="600" height="auto" />
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Comic Sans Ms;font-size:20px;line-height:26px;text-align:center;color:#333333;">
+                          <p>🎊 LET THE PAW-TY BEGIN!</p>
+                          <p>September is Max's Birthday Month! 🐶</p>
+                          <p>Today's forecast: 100% chance of zoomies.</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <p style="border-top:dashed 1px lightgrey;font-size:1px;margin:0px auto;width:100%;">
+                        </p>
+                        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:dashed 1px lightgrey;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Helvetica;font-size:14px;line-height:22px;text-align:left;color:#333333;">
+                          <p>Hey Yuki,</p>
+                          <p>Someone special is celebrating another trip around the sun!</p>
+                          <p>To make the celebration even more pawsome, enjoy 20% OFF on your next purchase.</p>
+                          <p>Use your personal birthday code: <span style="font-family:Comic Sans Ms; display: inline; background:#fa8739;">BDAY-MAX-45</span></p>
+                          <p style="font-family:Comic Sans Ms">Valid throughout September 2026.</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                          <tbody>
+                            <tr>
+                              <td align="center" bgcolor="#fa8739" role="presentation" style="border:none;border-radius:20px;cursor:auto;mso-padding-alt:10px 25px;background:#fa8739;" valign="middle">
+                                <p style="display:inline-block;background:#fa8739;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;line-height:22px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:20px;"> Claim Max's Coupon </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#fa8739" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#fa8739;background-color:#fa8739;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fa8739;background-color:#fa8739;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-top:0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:300px;" ><![endif]-->
+              <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#fa8739;vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:300px;">
+                                <img alt="giftImage1" src="https://m.media-amazon.com/images/I/71qJ51Ywq8L._AC_SX569_PIbundle-3,TopRight,0,0_SH20_.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:300px;width:100%;font-size:16px;" width="300" height="300" />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:300px;" ><![endif]-->
+              <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;padding-top:0;padding-right:25px;padding-bottom:0px;padding-left:25px;word-break:break-word;">
+                        <div style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#ffffff;">
+                          <p style="font-size: 19px;">Chew-Tough Bone Bundle</p>
+                          <p style="font-size: 36px;"><s style="font-size: 26px; color:#d6dde5">$24.90</s> $19.92</p>
+                          <p>Let your baby chew on this bone!</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:15px 30px;padding-top:0;padding-bottom:10px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                          <tbody>
+                            <tr>
+                              <td align="center" bgcolor="#ffffff" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:#ffffff;" valign="middle">
+                                <a href="%%=v(@shopURL1)=%%" style="display:inline-block;background:#ffffff;color:#fa8739;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;line-height:22px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;" target="_blank"> BUY NOW </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#2f323b" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#2f323b;background-color:#2f323b;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#2f323b;background-color:#2f323b;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-top:0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:300px;" ><![endif]-->
+              <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;padding-top:0;padding-right:25px;padding-bottom:0px;padding-left:25px;word-break:break-word;">
+                        <div style="font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;text-align:left;color:#ffffff;">
+                          <p style="font-size: 19px;">Plush Squeaky Duck</p>
+                          <p style="font-size: 36px;"><s style="font-size: 26px; color:#d6dde5">$12.50</s> $10.00</p>
+                          <p>Duck that can talk back!</p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:15px 30px;padding-top:0;padding-bottom:10px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
+                          <tbody>
+                            <tr>
+                              <td align="center" bgcolor="#fa8739" role="presentation" style="border:none;border-radius:3px;cursor:auto;mso-padding-alt:10px 25px;background:#fa8739;" valign="middle">
+                                <a href="%%=v(@shopURL2)=%%" style="display:inline-block;background:#fa8739;color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:normal;line-height:22px;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:3px;" target="_blank"> BUY NOW </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:300px;" ><![endif]-->
+              <div class="mj-column-per-50 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;padding-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:300px;">
+                                <img alt="giftImage2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf07I-SC0iOcOwf_dn2ZHJ22jnjxCWRSlvyoUumBiYHw&s" style="border:none;display:block;outline:none;text-decoration:none;height:300px;width:100%;font-size:16px;" width="300" height="300" />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:1px;padding-top:0px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#fa8739" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#fa8739;background-color:#fa8739;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fa8739;background-color:#fa8739;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                <div style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:20px;text-align:center;color:#333333;">
+                                  <p>Here's to another year of happy tails, tiny paws, big personalities and plenty of treats. 🐾</p>
+                                  <p>Happy Birthday, Max!</p>
+                                  <p>© The Pawsome Pet Co. Team</p>
+                                  <p style="font-size:12px">
+                                    <a href="#" style="color: inherit; display: contents;">Manage Preferences</a> | <a href="#" style="color: inherit; display: contents;">Unsubscribe</a></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#fa8739" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="background:#fa8739;background-color:#fa8739;margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#fa8739;background-color:#fa8739;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align:top;padding:0px 0px 20px 0px;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                          <tbody>
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#3b5998;border-radius:3px;width:20px;">
+                                          <tbody>
+                                            <tr>
+                                              <td style="font-size:0;height:20px;vertical-align:middle;width:20px;">
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=#" target="_blank">
+                                                  <img alt="" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/facebook.png" style="border:0;border-radius:3px;display:block;" width="20" />
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!--[if mso | IE]></td><td><![endif]-->
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#55acee;border-radius:3px;width:20px;">
+                                          <tbody>
+                                            <tr>
+                                              <td style="font-size:0;height:20px;vertical-align:middle;width:20px;">
+                                                <a href="https://twitter.com/intent/tweet?url=#" target="_blank">
+                                                  <img alt="" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/twitter.png" style="border:0;border-radius:3px;display:block;" width="20" />
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!--[if mso | IE]></td><td><![endif]-->
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="padding:4px;vertical-align:middle;">
+                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#3f729b;border-radius:3px;width:20px;">
+                                          <tbody>
+                                            <tr>
+                                              <td style="font-size:0;height:20px;vertical-align:middle;width:20px;">
+                                                <a href="#" target="_blank">
+                                                  <img alt="" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/instagram.png" style="border:0;border-radius:3px;display:block;" width="20" />
+                                                </a>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </div>
+</body>
+
+</html>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     PROJECT OVERVIEW
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Project Overview</h3>
+
+                        <p class="project-section-text">
+                            Pawsome Pet Co. runs a monthly Birthday Club campaign for customers whose pets have birthdays
+                            during the current month. This campaign combines a personalized birthday message,
+                            customer-specific discount, loyalty-tier messaging and two pet-relevant gift recommendations.
+                            The campaign is designed as an AMPscript-heavy SFMC email rather than a static HTML creative.
+                        </p>
+                    </section>
+
+                    <!-- =================================================
+                     OBJECTIVE
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Objective</h3>
+
+                        <p class="project-section-text">
+                            Build a Monthly Birthday Club email that feels personal and brand-led while demonstrating
+                            practical AMPscript skills. The supplied Birthday Club DE acts as the send audience, while
+                            lookup Data Extensions provide reusable pet personality content and gift recommendations.
+                        </p>
+                    </section>
+
+                    <!-- =================================================
+                     CAMPAIGN FLOW
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Campaign Flow</h3>
+
+                        <div class="architecture-box">
+                            <pre>
+Birthday Club DE
+       ↓
+Subscriber + Pet Attributes
+       ↓
+AMPscript
+       ├── First Name fallback
+       ├── Pet Personality lookup
+       ├── Loyalty-tier subject line
+       ├── Gift recommendation lookup
+       ├── Discount calculation
+       └── Pet-type banner selection
+       ↓
+Personalized MJML / HTML Email
+       ↓
+September Birthday Club Send
+</pre>
+                        </div>
+
+                        <p class="project-section-text" style="margin-top: 15px">
+                            The provided send audience already contains customers with September pet birthdays, so no SQL
+                            audience-selection step is required for this campaign. AMPscript performs the runtime content
+                            assembly and personalization inside the email.
+                        </p>
+                    </section>
+
+                    <!-- =================================================
+                     DATA MODEL
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Data Model</h3>
+
+                        <div class="de-grid">
+                            <div class="de-card">
+                                <h4 class="h4">Birthday Club</h4>
+                                <code>
+                                    SubscriberKey<br />
+                                    FirstName<br />
+                                    EmailAddress<br />
+                                    PetName<br />
+                                    PetType<br />
+                                    Breed<br />
+                                    PetBirthday<br />
+                                    DiscountCode<br />
+                                    DiscountPercent<br />
+                                    LoyaltyTier
+                                </code>
+                            </div>
+
+                            <div class="de-card">
+                                <h4 class="h4">Pet Personality</h4>
+                                <code>
+                                    PetType<br />
+                                    BirthdayHeadline<br />
+                                    BirthdayPersonality<br />
+                                    PetDescription<br />
+                                    PetEmoji
+                                </code>
+                            </div>
+
+                            <div class="de-card">
+                                <h4 class="h4">Gift Ideas</h4>
+                                <code>
+                                    GiftID<br />
+                                    GiftName<br />
+                                    PetType<br />
+                                    Category<br />
+                                    Price<br />
+                                    Description<br />
+                                    ShopURL<br />
+                                    ImageURL
+                                </code>
+                            </div>
+                        </div>
+
+                        <div class="architecture-box" style="margin-top: 15px">
+                            <pre>
+Birthday Club
+     │
+     ├── PetType ──────────→ Pet Personality
+     │
+     └── PetType ──────────→ Gift Ideas
+                              ↓
+                       2 Recommendations
+</pre>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     AMPSCRIPT
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">AMPscript</h3>
+
+                        <p class="project-section-text">
+                            AMPscript is the primary orchestration layer. It reads the sendable subscriber attributes,
+                            retrieves reusable content from the lookup Data Extensions, builds the personalized subject line,
+                            calculates recommendation prices after the birthday discount and selects the appropriate hero image.
+                        </p>
+
+                        <div class="code-container">
+                            <pre>%%[
+var @subscriberKey, @firstName, @emailAddress, @petName, @petType, @discountPercent, @loyaltyTier
+
+SET @subscriberKey = AttributeValue(&quot;SubscriberKey&quot;)
+SET @firstName = AttributeValue(&quot;FirstName&quot;)
+SET @emailAddress = AttributeValue(&quot;EmailAddress&quot;)
+SET @petName = AttributeValue(&quot;PetName&quot;)
+SET @petType = AttributeValue(&quot;PetType&quot;)
+SET @discountPercent = AttributeValue(&quot;DiscountPercent&quot;)
+SET @loyaltyTier = AttributeValue(&quot;LoyaltyTier&quot;)
+SET @date = SystemDateToLocalDate(Now(1))
+SET @offerMonth = FormatDate(@date, &#x27;MMMM&#x27;)
+SET @offerValidity = FormatDate(@date, &#x27;Y&#x27;)
+
+/*Validate firstName*/
+IF EMPTY(@firstName) THEN
+	SET @firstName = &#x27;there&#x27;
+ENDIF
+
+/*Content(personality) based on pet type*/
+SET @petPersonalityRows = LookupRows(&#x27;Pet Personality&#x27;, &#x27;PetType&#x27;, @petType)
+IF rowCount(@petPersonalityRows) &gt; 0 THEN
+	VAR @row, @birthdayHeadline, @birthdayPersonality, @petDescription
+	SET @row = Row(@petPersonalityRows, 1)
+	SET @birthdayHeadline = Field(@row, &#x27;BirthdayHeadline&#x27;)
+	SET @birthdayPersonality = Field(@row, &#x27;BirthdayPersonality&#x27;)
+	SET @petDescription = Field(@row, &#x27;PetDescription&#x27;)
+	SET @petEmoji = Field(@row, &#x27;petEmoji&#x27;)
+ENDIF
+
+/*Dynamic subjectline based on loyalty tier*/
+IF @loyaltyTier == &#x27;Platinum&#x27; THEN
+	SET @subjectline = Concat(&#x27;A VIP birthday treat, just for &#x27;, @petName, &#x27; &#x27;, @petEmoji)
+ELSEIF @loyaltyTier == &#x27;Gold&#x27; THEN
+	SET @subjectline = Concat(&#x27;Celebrate &#x27;, @petName,&#x27; with a birthday treat from us &#x27;, @petEmoji)
+ELSEIF @loyaltyTier == &#x27;Silver&#x27; THEN
+	SET @subjectline = Concat(&quot;Extra cuddles. Extra treats. It&#x27;s &quot;, @petName, &quot;&#x27;s birthday! &quot;, @petEmoji)
+ELSE
+	SET @subjectline = Concat(&quot;It&#x27;s paw-ty time &quot;, @petName, &quot;! Your birthday treat is waiting &quot;, @petEmoji)
+ENDIF
+
+/*Get 2 gift recommendations*/
+SET @giftIdeasRows = LookupOrderedRows(&#x27;Gift Ideas&#x27;, 2, &#x27;Price DESC&#x27;, &#x27;PetType&#x27;, @petType)
+SET @giftIdeasCount = rowCount(@giftIdeasRows)
+SET @giftRow1 = Row(@giftIdeasRows, 1)
+SET @giftName1 = Field(@giftRow1, &#x27;GiftName&#x27;)
+SET @giftPrice1 = Field(@giftRow1, &#x27;Price&#x27;)
+SET @formatGiftPrice1 = FormatNumber(@giftPrice1, &quot;C&quot;)
+SET @finalPrice1 = FormatNumber(Subtract(@giftPrice1, Multiply(@giftPrice1, Divide(@discountPercent, 100))), &quot;C&quot;)
+SET @giftDescription1 = Field(@giftRow1, &#x27;Description&#x27;)
+SET @shopURL1 = Field(@giftRow1, &#x27;ShopURL&#x27;)
+SET @imageURL1 = Field(@giftRow1, &#x27;ImageURL&#x27;)
+
+IF @giftIdeasCount == 2 THEN
+	SET @giftRow2 = Row(@giftIdeasRows, 2)
+	SET @giftName2 = Field(@giftRow2, &#x27;GiftName&#x27;)
+	SET @giftPrice2 = Field(@giftRow2, &#x27;Price&#x27;)
+	SET @formatGiftPrice2 = FormatNumber(@giftPrice2, &quot;C&quot;)
+	SET @finalPrice2 = FormatNumber(Subtract(@giftPrice2, Multiply(@giftPrice2, Divide(@discountPercent, 100))), &quot;C&quot;)
+	SET @giftDescription2 = Field(@giftRow2, &#x27;Description&#x27;)
+	SET @shopURL2 = Field(@giftRow2, &#x27;ShopURL&#x27;)
+	SET @imageURL2 = Field(@giftRow2, &#x27;ImageURL&#x27;)
+ELSE
+	SET @giftIdeasRowsAll = LookupOrderedRows(&#x27;Gift Ideas&#x27;, 1, &#x27;Price DESC&#x27;, &#x27;PetType&#x27;, &#x27;All&#x27;)
+	SET @giftRow2 = Row(@giftIdeasRowsAll, 1)
+	SET @giftName2 = Field(@giftRow2, &#x27;GiftName&#x27;)
+	SET @giftPrice2 = Field(@giftRow2, &#x27;Price&#x27;)
+	SET @formatGiftPrice2 = FormatNumber(@giftPrice2, &quot;C&quot;)
+	SET @finalPrice2 = FormatNumber(Subtract(@giftPrice2, Multiply(@giftPrice2, Divide(@discountPercent, 100))), &quot;C&quot;)
+	SET @giftDescription2 = Field(@giftRow2, &#x27;Description&#x27;)
+	SET @shopURL2 = Field(@giftRow2, &#x27;ShopURL&#x27;)
+	SET @imageURL2 = Field(@giftRow2, &#x27;ImageURL&#x27;)
+ENDIF
+
+/*Dynamic banner based on pet type*/
+IF @petType == &#x27;Dog&#x27; THEN
+	SET @banner = &#x27;https://as1.ftcdn.net/v2/jpg/03/22/78/92/1000_F_322789275_pRYGzHcwPOBFiSD34xXIMILVMGxfqJBV.jpg&#x27;
+ELSE
+	SET @banner = &#x27;https://images.ampscriptacademy.com.au/uploads/hero-gemini-removebg-preview.png&#x27;
+ENDIF
+]%%</pre>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     DYNAMIC CONTENT
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Dynamic Content &amp; Personalization</h3>
+
+                        <div class="project-feature-list">
+                            <div class="project-feature">
+                                <strong>Pet Personalization</strong>
+                                <span>PetName is used throughout the birthday experience and CTA copy.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Optional First Name</strong>
+                                <span>FirstName is checked and falls back to “there” when the source value is empty.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Pet Personality</strong>
+                                <span>Headline, personality copy and emoji are retrieved from the Pet Personality DE by PetType.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Loyalty-Tier Subject</strong>
+                                <span>Platinum, Gold, Silver and Bronze/default customers receive different subject-line treatments.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Personalized Offer</strong>
+                                <span>Discount percentage and unique DiscountCode are read directly from the send audience.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>September Validity</strong>
+                                <span>The offer is presented as valid throughout the campaign month rather than calculating a daily expiry date.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Pet-Based Recommendations</strong>
+                                <span>Up to two gift records are selected using PetType and ordered by price.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Recommendation Fallback</strong>
+                                <span>If only one pet-specific gift exists, an “All” gift fills the second recommendation slot.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Dynamic Pricing</strong>
+                                <span>Recommendation prices show the original price and the customer-specific discounted price.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Dynamic Hero Banner</strong>
+                                <span>The banner image changes based on the subscriber’s PetType.</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     MJML
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">MJML</h3>
+
+                        <p class="project-section-text">
+                            MJML is used for the responsive email structure. AMPscript variables are embedded directly into
+                            the MJML so the compiled HTML retains the dynamic SFMC logic.
+                        </p>
+
+                        <div class="code-container">
+                            <pre>&lt;mjml&gt;
+	&lt;mj-head&gt;
+		&lt;mj-attributes&gt;
+			&lt;mj-all font-size=&quot;16px&quot; font-family=&quot;Helvetica, Arial, sans-serif&quot; color=&quot;#333333&quot; line-height=&quot;22px&quot; /&gt; &lt;/mj-attributes&gt;
+	&lt;/mj-head&gt;
+	&lt;mj-body background-color=&quot;#d6dde5&quot;&gt;
+		&lt;mj-section background-color=&quot;#fa8739&quot;&gt;
+			&lt;mj-column&gt;
+				&lt;mj-text align=&quot;center&quot; font-weight=&quot;800&quot; font-family=&quot;Comic Sans Ms&quot;&gt;Pawsome Pet Co.&lt;/mj-text&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+		&lt;mj-section padding=&quot;0px&quot;&gt;
+			&lt;mj-column padding=&quot;0px&quot;&gt;
+				&lt;mj-image padding=&quot;0px&quot; src=&quot;%%=v(@banner)=%%&quot;&gt;&lt;/mj-image&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+		&lt;mj-section background-color=&quot;#fff&quot;&gt;
+			&lt;mj-column&gt;
+				&lt;mj-text align=&quot;center&quot; font-size=&quot;20px&quot; line-height=&quot;26px&quot; font-family=&quot;Comic Sans Ms&quot;&gt;
+					&lt;p&gt;%%=v(@birthdayHeadline)=%%&lt;/p&gt;
+					&lt;p&gt;%%=v(@offerMonth)=%% is %%=v(@petName)=%%&#x27;s Birthday Month! %%=v(@petEmoji)=%%&lt;/p&gt;
+					&lt;p&gt;%%=v(@birthdayPersonality)=%%&lt;/p&gt;
+				&lt;/mj-text&gt;
+				&lt;mj-divider border-width=&quot;1px&quot; border-style=&quot;dashed&quot; border-color=&quot;lightgrey&quot; /&gt;
+				&lt;mj-text font-family=&quot;Helvetica&quot; font-size=&quot;14px&quot;&gt;
+					&lt;p&gt;Hey %%=v(@firstName)=%%,&lt;/p&gt;
+					&lt;p&gt;Someone special is celebrating another trip around the sun!&lt;/p&gt;
+					&lt;p&gt;To make the celebration even more pawsome, enjoy &lt;strong&gt;%%=v(@discountPercent)=%% OFF&lt;/strong&gt; on your next purchase.&lt;/p&gt;
+					&lt;p&gt;Use your personal birthday code: &lt;span style=&quot;font-family:Comic Sans Ms; background:#fa8739&quot;&gt;%%=v(@discountCode)=%%&lt;/span&gt;&lt;/p&gt;
+					&lt;p style=&quot;font-family:Comic Sans Ms&quot;&gt;Valid throughout %%=v(@offerValidity)=%%.&lt;/p&gt;
+				&lt;/mj-text&gt;
+				&lt;mj-button background-color=&quot;#fa8739&quot; color=&quot;#fff&quot; border-radius=&quot;20px&quot;&gt;Claim %%=v(@petName)=%%&#x27;s Birthday&lt;/mj-button&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+		&lt;mj-section background-color=&quot;#fa8739&quot; padding-bottom=&quot;0px&quot; padding-top=&quot;0&quot;&gt;
+			&lt;mj-column background-color=&quot;#fa8739&quot;&gt;
+				&lt;mj-image src=&quot;%%=v(@imageURL1)=%%&quot; alt=&quot;giftImage1&quot; width=&quot;301px&quot; padding-left=&quot;0px&quot; padding-right=&quot;0px&quot; padding-bottom=&quot;0px&quot; padding-top=&quot;0&quot;&gt;&lt;/mj-image&gt;
+			&lt;/mj-column&gt;
+			&lt;mj-column width=&quot;50%&quot;&gt;
+				&lt;mj-text align=&quot;left&quot; color=&quot;#fff&quot; font-size=&quot;13px&quot; padding-left=&quot;25px&quot; padding-right=&quot;25px&quot; padding-bottom=&quot;0px&quot; padding-top=&quot;0&quot;&gt;
+					&lt;p style=&quot;font-size: 19px;&quot;&gt;%%=v(@giftName1)=%%&lt;/p&gt;
+					&lt;p style=&quot;font-size: 36px;&quot;&gt;&lt;s style=&quot;font-size: 26px; color:#d6dde5&quot;&gt;%%=v(@formatGiftPrice1)=%%&lt;/s&gt; %%=v(@finalPrice1)=%%&lt;/p&gt;
+					&lt;p&gt;%%=v(@giftDescription1)=%%&lt;/p&gt;
+				&lt;/mj-text&gt;
+				&lt;mj-button background-color=&quot;#fff&quot; color=&quot;#fa8739&quot; padding=&quot;15px 30px&quot; border-radius=&quot;3px&quot; href=&quot;%%=v(@shopURL1)=%%&quot; padding-bottom=&quot;10px&quot; padding-top=&quot;0&quot;&gt;BUY NOW&lt;/mj-button&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+		&lt;mj-section background-color=&quot;#2f323b&quot; padding-bottom=&quot;0px&quot; padding-top=&quot;0&quot;&gt;
+			&lt;mj-column&gt;
+				&lt;mj-text align=&quot;left&quot; color=&quot;#fff&quot; font-size=&quot;13px&quot; padding-left=&quot;25px&quot; padding-right=&quot;25px&quot; padding-bottom=&quot;0px&quot; padding-top=&quot;0&quot;&gt;
+					&lt;p style=&quot;font-size: 19px;&quot;&gt;%%=v(@giftName2)=%%&lt;/p&gt;
+					&lt;p style=&quot;font-size: 36px;&quot;&gt;&lt;s style=&quot;font-size: 26px; color:#d6dde5&quot;&gt;%%=v(@formatGiftPrice2)=%%&lt;/s&gt; %%=v(@finalPrice2)=%%&lt;/p&gt;
+					&lt;p&gt;%%=v(@giftDescription2)=%%&lt;/p&gt;
+				&lt;/mj-text&gt;
+				&lt;mj-button background-color=&quot;#fa8739&quot; color=&quot;#fff&quot; padding=&quot;15px 30px&quot; border-radius=&quot;3px&quot; href=&quot;%%=v(@shopURL2)=%%&quot; padding-bottom=&quot;10px&quot; padding-top=&quot;0&quot;&gt;BUY NOW&lt;/mj-button&gt;
+			&lt;/mj-column&gt;
+			&lt;mj-column&gt;
+				&lt;mj-image src=&quot;%%=v(@imageURL2)=%%&quot; alt=&quot;giftImage2&quot; align=&quot;center&quot; border=&quot;none&quot; width=&quot;302px&quot; padding-left=&quot;0px&quot; padding-right=&quot;0px&quot; padding-bottom=&quot;0px&quot; padding-top=&quot;0&quot;&gt;&lt;/mj-image&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+		&lt;mj-section background-color=&quot;#fff&quot; padding-bottom=&quot;1px&quot; padding-top=&quot;0px&quot;&gt;&lt;/mj-section&gt;
+		&lt;mj-section padding=&quot;0px&quot; background-color=&quot;#fa8739&quot;&gt;
+			&lt;mj-column padding=&quot;0px&quot;&gt;
+				&lt;mj-text align=&quot;center&quot; line-height=&quot;20px&quot;&gt;
+					&lt;p&gt;Here&#x27;s to another year of happy tails, tiny paws, big personalities and plenty of treats. 🐾&lt;/p&gt;
+					&lt;p&gt;Happy Birthday, %%=v(@petName)=%%!&lt;/p&gt;
+					&lt;p&gt;© The Pawsome Pet Co. Team&lt;/p&gt;
+					&lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;#&quot; style=&quot;color: inherit;&quot;&gt;Manage Preferences&lt;/a&gt; | &lt;a href=&quot;#&quot; style=&quot;color: inherit;&quot;&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;
+				&lt;/mj-text&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+		&lt;mj-section padding=&quot;0px&quot; background-color=&quot;#fa8739&quot;&gt;
+			&lt;mj-column padding=&quot;0px 0px 20px 0px&quot;&gt;
+				&lt;mj-social&gt;
+					&lt;mj-social-element name=&quot;facebook&quot; href=&quot;#&quot;&gt;&lt;/mj-social-element&gt;
+					&lt;mj-social-element name=&quot;twitter&quot; href=&quot;#&quot;&gt;&lt;/mj-social-element&gt;
+					&lt;mj-social-element name=&quot;instagram&quot; href=&quot;#&quot;&gt;&lt;/mj-social-element&gt;
+				&lt;/mj-social&gt;
+			&lt;/mj-column&gt;
+		&lt;/mj-section&gt;
+	&lt;/mj-body&gt;
+&lt;/mjml&gt;</pre>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     IMPLEMENTATION NOTES
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Implementation Notes</h3>
+
+                        <p class="project-section-text">
+                            The campaign intentionally keeps the creative structure simple: one birthday hero/message area,
+                            one personalized offer and two recommendation sections with alternating layouts. This keeps the
+                            email visually engaging while leaving AMPscript as the primary technical focus.
+                            <br /><br />
+                            The Gift Ideas lookup uses two pet-specific records when available. If only one exists, the first
+                            recommendation remains pet-specific and the second is populated from a generic “All” record.
+                            The email therefore maintains its two-product layout without hard-coding product content into the HTML.
+                        </p>
+                    </section>
+
+
+                    <!-- =================================================
+                     KEY FEATURES
+                ================================================== -->
+
+                    <section class="project-section">
+                        <h3 class="h3 project-section-title">Key Features</h3>
+
+                        <div class="project-feature-list">
+                            <div class="project-feature">
+                                <strong>AMPscript-First Architecture</strong>
+                                <span>Business and personalization logic is handled in AMPscript rather than hard-coded into the creative.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Multiple DE Lookups</strong>
+                                <span>Subscriber data drives lookups into Pet Personality and Gift Ideas.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Conditional Logic</strong>
+                                <span>First-name fallback, loyalty-tier subject logic and gift fallback logic are handled at send time.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Dynamic Product Content</strong>
+                                <span>Gift name, description, original price, discounted price, image and URL are data-driven.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Reusable Content Model</strong>
+                                <span>Pet personality and gift content live in lookup DEs instead of being duplicated in the email.</span>
+                            </div>
+
+                            <div class="project-feature">
+                                <strong>Responsive Email</strong>
+                                <span>Email structure is developed in MJML and compiled to responsive HTML.</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- =================================================
+                     SOURCE CODE
+                ================================================== -->
+
+                    <section class="project-section github-project">
+                        <h3 class="h3 project-section-title">Source Code</h3>
+
+                        <p class="project-section-text">
+                            The project includes the AMPscript, MJML source and rendered HTML preview used for the portfolio demonstration.
+                        </p>
+
+                        <br />
+
+                        <a
+                            href="https://github.com/pritishx/portfolio/Pawsome_Birthday_Club"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <ion-icon name="logo-github"></ion-icon>
+                            View Portfolio Repository
+                        </a>
+                    </section>
+
+                </article>
+            </div>
+        </main>
+
+        <!-- Existing portfolio JavaScript -->
+        <script src="../../assets/js/script.js"></script>
+
+        <!-- Ionicons -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

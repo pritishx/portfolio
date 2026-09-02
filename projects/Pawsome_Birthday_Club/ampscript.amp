@@ -1,0 +1,81 @@
+%%[
+var @subscriberKey, @firstName, @emailAddress, @petName, @petType, @discountPercent, @loyaltyTier
+
+SET @subscriberKey = AttributeValue("SubscriberKey")
+SET @firstName = AttributeValue("FirstName")
+SET @emailAddress = AttributeValue("EmailAddress")
+SET @petName = AttributeValue("PetName")
+SET @petType = AttributeValue("PetType")
+SET @discountPercent = AttributeValue("DiscountPercent")
+SET @loyaltyTier = AttributeValue("LoyaltyTier")
+SET @date = SystemDateToLocalDate(Now(1))
+SET @offerMonth = FormatDate(@date, 'MMMM')
+SET @offerValidity = FormatDate(@date, 'Y')
+
+/*Validate firstName*/
+IF EMPTY(@firstName) THEN
+	SET @firstName = 'there'
+ENDIF
+
+/*Content(personality) based on pet type*/
+SET @petPersonalityRows = LookupRows('Pet Personality', 'PetType', @petType)
+IF rowCount(@petPersonalityRows) > 0 THEN
+	VAR @row, @birthdayHeadline, @birthdayPersonality, @petDescription
+	SET @row = Row(@petPersonalityRows, 1)
+	SET @birthdayHeadline = Field(@row, 'BirthdayHeadline')
+	SET @birthdayPersonality = Field(@row, 'BirthdayPersonality')
+	SET @petDescription = Field(@row, 'PetDescription')
+	SET @petEmoji = Field(@row, 'petEmoji')
+ENDIF
+
+/*Dynamic subjectline based on loyalty tier*/
+IF @loyaltyTier == 'Platinum' THEN
+	SET @subjectline = Concat('A VIP birthday treat, just for ', @petName, ' ', @petEmoji)
+ELSEIF @loyaltyTier == 'Gold' THEN
+	SET @subjectline = Concat('Celebrate ', @petName,' with a birthday treat from us ', @petEmoji)
+ELSEIF @loyaltyTier == 'Silver' THEN
+	SET @subjectline = Concat("Extra cuddles. Extra treats. It's ", @petName, "'s birthday! ", @petEmoji)
+ELSE
+	SET @subjectline = Concat("It's paw-ty time ", @petName, "! Your birthday treat is waiting ", @petEmoji)
+ENDIF
+
+/*Get 2 gift recommendations*/
+SET @giftIdeasRows = LookupOrderedRows('Gift Ideas', 2, 'Price DESC', 'PetType', @petType)
+SET @giftIdeasCount = rowCount(@giftIdeasRows)
+SET @giftRow1 = Row(@giftIdeasRows, 1)
+SET @giftName1 = Field(@giftRow1, 'GiftName')
+SET @giftPrice1 = Field(@giftRow1, 'Price')
+SET @formatGiftPrice1 = FormatNumber(@giftPrice1, "C")
+SET @finalPrice1 = FormatNumber(Subtract(@giftPrice1, Multiply(@giftPrice1, Divide(@discountPercent, 100))), "C")
+SET @giftDescription1 = Field(@giftRow1, 'Description')
+SET @shopURL1 = Field(@giftRow1, 'ShopURL')
+SET @imageURL1 = Field(@giftRow1, 'ImageURL')
+
+IF @giftIdeasCount == 2 THEN
+	SET @giftRow2 = Row(@giftIdeasRows, 2)
+	SET @giftName2 = Field(@giftRow2, 'GiftName')
+	SET @giftPrice2 = Field(@giftRow2, 'Price')
+	SET @formatGiftPrice2 = FormatNumber(@giftPrice2, "C")
+	SET @finalPrice2 = FormatNumber(Subtract(@giftPrice2, Multiply(@giftPrice2, Divide(@discountPercent, 100))), "C")
+	SET @giftDescription2 = Field(@giftRow2, 'Description')
+	SET @shopURL2 = Field(@giftRow2, 'ShopURL')
+	SET @imageURL2 = Field(@giftRow2, 'ImageURL')
+ELSE
+	SET @giftIdeasRowsAll = LookupOrderedRows('Gift Ideas', 1, 'Price DESC', 'PetType', 'All')
+	SET @giftRow2 = Row(@giftIdeasRowsAll, 1)
+	SET @giftName2 = Field(@giftRow2, 'GiftName')
+	SET @giftPrice2 = Field(@giftRow2, 'Price')
+	SET @formatGiftPrice2 = FormatNumber(@giftPrice2, "C")
+	SET @finalPrice2 = FormatNumber(Subtract(@giftPrice2, Multiply(@giftPrice2, Divide(@discountPercent, 100))), "C")
+	SET @giftDescription2 = Field(@giftRow2, 'Description')
+	SET @shopURL2 = Field(@giftRow2, 'ShopURL')
+	SET @imageURL2 = Field(@giftRow2, 'ImageURL')
+ENDIF
+
+/*Dynamic banner based on pet type*/
+IF @petType == 'Dog' THEN
+	SET @banner = 'https://as1.ftcdn.net/v2/jpg/03/22/78/92/1000_F_322789275_pRYGzHcwPOBFiSD34xXIMILVMGxfqJBV.jpg'
+ELSE
+	SET @banner = 'https://images.ampscriptacademy.com.au/uploads/hero-gemini-removebg-preview.png'
+ENDIF
+]%%
