@@ -1,0 +1,147 @@
+%%[
+SET @firstName = ProperCase(Trim([FirstName]))
+SET @membershipType = [MembershipType]
+SET @lastVisitDate = [LastVisitDate]
+SET @favouriteClass = [FavouriteClass]
+SET @coachName = [CoachName]
+SET @homeStudio = [HomeStudio]
+SET @winBackCode = [WinBackCode]
+SET @imageLocation = 'https://images.ampscriptacademy.com.au/uploads/'
+SET @recommendation = ''
+
+/*Session Information*/
+SET @classCompleted = [ClassesCompleted]
+SET @nextClassCount = Add(@classCompleted, 1)
+
+/*Validate FirstName - if empty, set to Champ*/
+IF EMPTY(@firstName) THEN
+	SET @firstName = 'Champ'
+ENDIF
+
+/*Segment based on last visited*/
+SET @today = Now()
+SET @daysSinceLastVisit = DateDiff(@lastVisitDate, @today, "D")
+
+/*Subject and Hero text based on days since last visit*/
+IF @daysSinceLastVisit < 30 THEN
+	SET @subjectline = Concat(@firstName,', ready for your next class?')
+	SET @hero_text = Concat(@firstName,',<br/> Ready to Sweat Again?')
+ELSEIF @daysSinceLastVisit < 60 THEN
+	SET @subjectline = Concat('We’ve missed you, ',@firstName,'!')
+	SET @hero_text = Concat('Missed us, <br/>',@firstName,'?')
+ELSE
+	SET @subjectline = Concat(@firstName,', let’s get you back in the studio.')
+	SET @hero_text = Concat(@firstName,', <br/>Ready for Your Comeback?')
+ENDIF
+
+/*Hero Banner and Discount based on membership type*/
+IF @membershipType == 'Basic Monthly' THEN
+	SET @membershipDiscount = '15'
+	SET @heroBanner = 'https://images.ampscriptacademy.com.au/uploads/hero-1.png'
+ELSEIF @membershipType == '10-Pack' THEN
+	SET @membershipDiscount = '10'
+	SET @heroBanner = 'https://images.ampscriptacademy.com.au/uploads/hero-2.png'
+ELSE
+	SET @membershipDiscount = '20'
+	SET @heroBanner = 'https://images.ampscriptacademy.com.au/uploads/hero-3.png'
+ENDIF
+
+/*Find Fav Class with Coach at Home Studio if empty(recommendation)*/
+IF EMPTY(@recommendation) THEN
+	SET @classRows = LookupRows('Class Schedule', 'ClassName', @favouriteClass, 'Coach', @coachName, 'Studio', @homeStudio)
+	SET @rowcount = RowCount(@classRows)
+	IF @rowcount > 0 THEN
+		SET @row = Row(@classRows, 1)
+		SET @spotsLeft = Field(@row, 'SpotsLeft')
+
+		IF @spotsLeft > 0 THEN
+			SET @recommendation = 'FavClassCoachStudio'
+			SET @classId = Field(@row, 'ClassId')
+			SET @classDay = Field(@row, 'Day')
+			SET @classTime = Field(@row, 'Time')
+		ENDIF
+	ENDIF
+ENDIF
+
+/*Find Fav Class at Home Studio if empty(recommendation)*/
+IF EMPTY(@recommendation) THEN
+	SET @classRows = LookupRows('Class Schedule', 'ClassName', @favouriteClass, 'Studio', @homeStudio)
+	IF RowCount(@classRows) > 0 THEN
+		SET @row = Row(@classRows, 1)
+		SET @spotsLeft = Field(@row, 'SpotsLeft')
+
+		IF @spotsLeft > 0 THEN
+			SET @recommendation = 'FavClassStudio'
+			SET @classId = Field(@row, 'ClassId')
+			SET @classDay = Field(@row, 'Day')
+			SET @classTime = Field(@row, 'Time')
+		ENDIF
+	ENDIF
+ENDIF
+
+/*Find Home Studio with Coach if empty(recommendation)*/
+IF EMPTY(@recommendation) THEN
+	SET @classRows = LookupRows('Class Schedule', 'Studio', @homeStudio, 'Coach', @coachName)
+	IF RowCount(@classRows) > 0 THEN
+		SET @row = Row(@classRows, 1)
+		SET @spotsLeft = Field(@row, 'SpotsLeft')
+
+		IF @spotsLeft > 0 THEN
+			SET @recommendation = 'FavCoachStudio'
+			SET @classId = Field(@row, 'ClassId')
+			SET @classDay = Field(@row, 'Day')
+			SET @classTime = Field(@row, 'Time')
+			SET @favouriteClass = Field(@row, 'ClassName')
+		ENDIF
+	ENDIF
+ENDIF
+
+/*Find Home Studio with highest Spots Left if empty(recommendation)*/
+IF EMPTY(@recommendation) THEN
+	SET @classRows = LookupOrderedRows('Class Schedule', 1, 'SpotsLeft DESC', 'Studio', @homeStudio)
+	IF RowCount(@classRows) > 0 THEN
+		SET @row = Row(@classRows, 1)
+		SET @recommendation = 'FavStudio'
+		SET @classId = Field(@row, 'ClassId')
+		SET @classDay = Field(@row, 'Day')
+		SET @classTime = Field(@row, 'Time')
+		SET @spotsLeft = Field(@row, 'SpotsLeft')
+		SET @favouriteClass = Field(@row, 'ClassName')
+	ENDIF
+ENDIF
+
+/*Recommended Class Section - Headline and Text*/
+IF @recommendation == 'FavClassCoachStudio' THEN
+	SET @recommendation_text = Concat('We found your favourite class with ', @coachName,' at ', @homeStudio,'. Looks like the perfect way to get back into your routine.')
+	SET @classHeadline = Concat(@favouriteClass, ' with ', @coachName)
+ELSEIF @recommendation == 'FavClassStudio' THEN
+	SET @recommendation_text = Concat('Your favourite class is available at ', @homeStudio,'. Why not make it your comeback class?')
+	SET @classHeadline = Concat(@favouriteClass, ' at ', @homeStudio)
+ELSEIF @recommendation == 'FavCoachStudio' THEN
+	SET @recommendation_text = Concat(@coachName, ' is back at ', @homeStudio,'. It could be a great time to get back into your routine.')
+	SET @classHeadline = Concat('Train with ', @coachName)
+ELSE
+	SET @recommendation_text = Concat("We found a great class for you at ", @homeStudio,". All that's left is to show up. 💪")
+	SET @classHeadline = Concat(@favouriteClass, ' at ', @homeStudio)
+ENDIF
+
+/*
+This code didnt work for image url in html tag.
+Value in DE: Sunrise HIIT
+File named Sunrise HIIT on system.
+When uploaded on ampscriptAcademy, the name of file was changed to sunrise-hiit
+Link did not work: https://images.ampscriptacademy.com.au/uploads/Sunrise-HIIT.jpg
+The code is case sensitive.
+SET @classBanner = Concat(@imageLocation,'', @favouriteClass,'.jpg')
+*/
+
+/*New DE for Recommended Class Image as above code is not working*/
+SET @classBanner = LookUp('Class_Image', 'ImageURL', 'Class', @favouriteClass)
+
+/*Properly format the time*/
+IF INDEXOF(@classTime, 'am') > 0 THEN
+	SET @classTime = Replace(@classTime, 'am', ' AM')
+ELSE
+	SET @classTime = Replace(@classTime, 'pm', ' PM')
+ENDIF
+]%%

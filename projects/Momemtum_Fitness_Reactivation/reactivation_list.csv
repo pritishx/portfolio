@@ -1,0 +1,10 @@
+SubscriberKey,FirstName,EmailAddress,MembershipType,LastVisitDate,FavouriteClass,ClassesCompleted,CoachName,HomeStudio,WinBackCode
+MEM1001,Marcus,marcus@demodata.example.com,Unlimited,24-07-2026,Sunrise HIIT,63,Coach Bianca,Southbank,WELCOMEBACK-MARCUS-24
+MEM1002,Leilani,leilani@demodata.example.com,10-Pack,17-08-2026,Reformer Pilates,22,Coach Nadia,Fitzroy,WELCOMEBACK-LEILANI-02
+MEM1003,Darren,darren@demodata.example.com,Unlimited,21-06-2026,Boxing,88,Coach Theo,Newtown,WELCOMEBACK-DARRAN-33
+MEM1004,Sofia,sofia@demodata.example.com,Unlimited,14-08-2026,Power Yoga,41,Coach Jules,Bondi,WELCOMEBACK-SOFIA-41
+MEM1005,,mem1005@demodata.example.com,10-Pack,14-07-2026,Spin,15,Coach Sam,CBD,WELCOMEBACK-MEM1005-15
+MEM1006,Amara,amara@demodata.example.com,Basic Monthly,06-06-2026,Barre,9,Coach Elena,Brunswick,WELCOMEBACK-AMARA-90
+MEM1007,Noah,noah@demodata.example.com,Unlimited,31-07-2026,Strength & Conditioning,54,Coach Kai,Southbank,WELCOMEBACK-NOAH-35
+MEM1008,Grace,grace@demodata.example.com,10-Pack,19-08-2026,Mobility Flow,27,Coach Nadia,Fitzroy,WELCOMEBACK-GRACE-16
+MEM1009,Kwame,kwame@demodata.example.com,Unlimited,28-06-2026,CrossTraining,71,Coach Theo,Newtown,WELCOMEBACK-KWAME-68

@@ -1,0 +1,109 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"></mj-font>
+    <mj-attributes>
+      <mj-all font-family="'Inter',Helvetica,Arial,sans-serif"></mj-all>
+
+      <mj-text font-weight="400" font-size="18px" line-height="24px"></mj-text>
+    </mj-attributes>
+    <mj-style> td {font-size:18px; line-height:24px} </mj-style>
+  </mj-head>
+  <mj-body background-color="#000">
+    <mj-section background-color="#000" padding="10px">
+      <mj-column>
+
+        <mj-image padding="0px" width="100px" src="./logo.PNG"></mj-image>
+
+      </mj-column>
+    </mj-section>
+    <mj-hero mode="fixed-height" height="300px" background-width="600px" background-height="300px" background-url="./hero_3.PNG" background-color="#000" padding="100px 0px">
+
+      <mj-text padding="20px" color="#ffffff" align="left" font-size="45px" line-height="45px" font-weight="900">
+        <p>Darren,<br />Ready for Your Comeback?</p>
+      </mj-text>
+
+    </mj-hero>
+    <mj-section background-color="#000">
+      <mj-column>
+
+        <mj-text color="#fff" align="center">
+          <p>It’s been <strong>79 days</strong> since your last visit. We know life gets busy, so here’s a little motivation to get you moving again: </p>
+          <h2>20% off your next class!</h2>
+          <p>Your personalized discount code is ready.</p>
+        </mj-text>
+
+        <mj-button href="#" inner-padding="12px" padding="0px" border="2px dashed #000" background-color="#fff" font-size="18px" color="#000" font-weight="800">WELCOMEBACK-DARREN-33</mj-button>
+
+        <mj-divider border-width="1px" padding-top="30px" border-color="lightgrey" />
+
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000" padding-top="0px" padding-bottom="0px">
+      <mj-column width="100%" padding-top="0px">
+
+        <mj-text color="#fff" padding-top="0px">
+          <h3>Your comeback starts here ❤</h3>
+          <p>We found your favourite class with Coach Theo at Newtown. Looks like the perfect way to get back into your routine.</p>
+        </mj-text>
+
+      </mj-column>
+      <mj-column width="90%" background-color="#000">
+
+        <mj-image border-radius="10px" src="./recommendationBanner.PNG"></mj-image>
+
+        <mj-text align="center" padding="0px" line-height="30px" color="#fff">
+          <h2>
+            <u>Boxing with Coach Theo</u>
+          </h2>
+        </mj-text>
+
+        <mj-table color="#fff" align="center" padding-top="0px">
+          <tr>
+            <td align="right">📅 Every Tuesday</td>
+            <td align="center" width="30">|</td>
+            <td align="left">⏰ 6:30 PM</td>
+          </tr>
+          <tr>
+            <td align="right">📍 Newtown Studio</td>
+            <td align="center" width="30">|</td>
+            <td align="left">👟 Coach Theo</td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">⚡ Only 2 spots left!</td>
+          </tr>
+        </mj-table>
+
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000">
+      <mj-column>
+
+        <mj-divider border-width="1px" border-color="lightgrey" />
+
+        <mj-text color="#fff">
+          <h3>Look how far you've come. </h3>
+          <p> You’ve completed <strong>88 classes</strong> with us so far. That’s 88 times you showed up, put in the work, and made time for yourself. </p>
+          <p>Let's make the next one #89.</p>
+        </mj-text>
+
+        <mj-button href="#" inner-padding="15px" padding="0px" font-weight="700" background-color="#fff" font-size="18px" border-radius="0px" color="#000">BOOK MY CLASS</mj-button>
+
+        <mj-text color="#fff">
+          <p>See you back in the studio soon! ❤</p>
+        </mj-text>
+
+        <mj-divider border-color="lightgrey"></mj-divider>
+
+        <mj-text color="#fff" font-size="12px">
+          <p>
+            Momentum Fitness Co. respects your right to privacy. To learn more, please review our <a href="#" style="text-decoration:underline; color:#fff">Privacy Policy</a>. This email is an advertisement. If you no longer wish to receive Momentum promotional emails, you can <a href="#" style="text-decoration:underline; color:#fff">unsubscribe</a> at any time.</p>
+          <p>Please do not reply to this message. It was sent from a notification-only address that cannot accept incoming emai. Visit <a href="#" style="text-decoration:underline; color:#fff">support.momentumfitness.com</a> for help with our products.</p>
+          <p style="text-align:center;">
+            © Momentum Fitness Co. All rights reserved
+          </p>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

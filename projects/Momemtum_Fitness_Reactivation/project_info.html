@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum Fitness Reactivation | Pritish Kumbhare</title>
+    <link rel="shortcut icon" href="../../assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        .project-back-link {
+            display:inline-flex; align-items:center; gap:6px; margin-bottom:20px;
+            color:var(--light-gray); font-size:13px;
+        }
+        .project-back-link:hover { color:var(--orange-yellow-crayola); }
+        .project-intro { margin-bottom:30px; }
+        .project-intro p, .project-section-text { color:var(--light-gray); font-size:13px; line-height:1.8; }
+        .project-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+        .project-tag {
+            padding:5px 12px; border-radius:8px; background:var(--eerie-black-2);
+            border:1px solid var(--jet); color:var(--light-gray); font-size:11px;
+        }
+        .project-section { margin-top:45px; }
+        .project-section-title { margin-bottom:15px; }
+        .email-preview-wrapper {
+            margin-top:25px; padding:20px; background:var(--eerie-black-2);
+            border:1px solid var(--jet); border-radius:14px;
+        }
+        .email-preview-title { margin-bottom:15px; font-size:13px; color:var(--light-gray); }
+        .email-preview {
+            background:#e5e7eb; border-radius:10px; padding:18px 10px;
+            overflow:hidden;
+        }
+        .email-preview iframe {
+            display:block; width:100%; height:1250px; border:0; border-radius:6px;
+            background:#000;
+        }
+        .architecture-box {
+            background:var(--eerie-black-2); border:1px solid var(--jet);
+            border-radius:10px; padding:22px; overflow-x:auto;
+        }
+        .architecture-box pre {
+            margin:0; color:var(--light-gray); font-family:monospace;
+            font-size:12px; line-height:1.8; white-space:pre-wrap;
+        }
+        .de-grid {
+            display:grid; grid-template-columns:repeat(2, 1fr); gap:15px;
+        }
+        .de-card {
+            padding:20px; background:var(--eerie-black-2); border:1px solid var(--jet);
+            border-radius:10px;
+        }
+        .de-card h4 { margin-bottom:12px; }
+        .de-card code { color:var(--light-gray); font-size:11px; line-height:1.9; }
+        .code-container {
+            background:#111; border:1px solid var(--jet); border-radius:10px;
+            padding:20px; overflow-x:auto;
+        }
+        .code-container pre {
+            margin:0; color:#d1d5db; font-family:Consolas,Monaco,monospace;
+            font-size:11px; line-height:1.7; white-space:pre-wrap;
+        }
+        .project-feature-list {
+            display:grid; grid-template-columns:repeat(2, 1fr); gap:12px;
+        }
+        .project-feature {
+            padding:15px; background:var(--eerie-black-2); border:1px solid var(--jet);
+            border-radius:10px;
+        }
+        .project-feature strong {
+            display:block; margin-bottom:5px; color:var(--white-2); font-size:13px;
+        }
+        .project-feature span { color:var(--light-gray); font-size:11px; line-height:1.6; }
+        .github-project { margin-top:50px; text-align:center; }
+        .github-project a {
+            display:inline-flex; align-items:center; gap:8px; padding:12px 18px;
+            border-radius:10px; background:var(--border-gradient-onyx); color:var(--white-2);
+            border:1px solid var(--jet); font-size:12px; transition:.25s ease;
+        }
+        .github-project a:hover { transform:translateY(-2px); }
+
+        .project-credits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .project-credit {
+            padding: 15px;
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 10px;
+        }
+        .project-credit strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--white-2);
+            font-size: 13px;
+        }
+        .project-credit span, .project-credit a {
+            color: var(--light-gray);
+            font-size: 11px;
+            line-height: 1.6;
+        }
+        .project-credit a {
+            text-decoration: underline;
+        }
+        @media (max-width:700px) {
+            .project-credits { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width:700px) {
+            .de-grid, .project-feature-list { grid-template-columns:1fr; }
+            .email-preview-wrapper { padding:10px; }
+            .email-preview iframe { height:1150px; }
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    <div class="main-content project-main-content">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a class="navbar-link active" href="../../index.html">Home</a>
+                </li>
+            </ul>
+        </nav>
+
+        <article class="portfolio active">
+            <header>
+                <h2 class="h2 article-title">Momentum Fitness Co.<br> Member Reactivation</h2>
+            </header>
+
+            <section class="project-intro">
+                <a href="../../index.html" class="project-back-link">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                    Back to Home
+                </a>
+
+                <p>
+                    A personalized member reactivation email built in Salesforce Marketing Cloud using AMPscript,
+                    Data Extension lookups, conditional logic, dynamic class recommendations, MJML and responsive HTML.
+                    The email adapts both the message and offer based on how long a member has been away and their membership type.
+                </p>
+
+                <div class="project-tags">
+                    <span class="project-tag">AMPscript</span><span class="project-tag">Data Extensions</span><span class="project-tag">Personalization</span><span class="project-tag">Conditional Content</span><span class="project-tag">MJML</span><span class="project-tag">HTML Email</span>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Email Preview</h3>
+                <div class="email-preview-wrapper">
+                    <p class="email-preview-title">Sample rendered reactivation email</p>
+                    <div class="email-preview">
+                                <!-- =====================================
+                                 REPLACE THIS WITH YOUR EMAIL HTML
+                            ====================================== -->
+
+                                <!doctype html><html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><title></title><!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style type="text/css">#outlook a{padding:0}body{margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}table, td{border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt}img{border:0;height:auto;line-height:100%;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic}p{display:block;margin:13px 0}</style><!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]--><!--[if lte mso 11]>
+    <style type="text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]--><!--[if !mso]><!--><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" type="text/css"><style type="text/css">@import url(https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap);</style><!--<![endif]--><style type="text/css">@media only screen and (min-width:480px){.mj-column-per-100{width:100%!important;max-width:100%}.mj-column-per-90{width:90%!important;max-width:90%}}</style><style media="screen and (min-width:480px)">.moz-text-html .mj-column-per-100{width:100%!important;max-width:100%}.moz-text-html .mj-column-per-90{width:90%!important;max-width:90%}</style><style type="text/css">@media only screen and (max-width:479px){table.mj-full-width-mobile{width:100%!important}td.mj-full-width-mobile{width:auto!important}}</style><style type="text/css">td{font-size:18px;line-height:24px}</style></head><body style="word-spacing:normal;background-color:#000000"> <div aria-roledescription="email" role="article" lang="und" dir="auto" style="word-spacing:normal;background-color:#000000"> <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#000000" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--> <div style="background:#000000;background-color:#000000;margin:0px auto;max-width:600px"> <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#000000;background-color:#000000;width:100%"> <tbody> <tr> <td style="direction:ltr;font-size:0px;padding:10px;text-align:center"> <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:580px;" ><![endif]--> <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top" width="100%"> <tbody> <tr> <td align="center" style="font-size:0px;padding:0px;word-break:break-word"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px"> <tbody> <tr> <td style="width:100px"> <img alt src="./logo.PNG" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px" width="100" height="auto"> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><![endif]--> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;"><v:image style="border:0;height:300px;mso-position-horizontal:center;position:absolute;top:0;width:600px;z-index:-3;" src="./hero_3.PNG" xmlns:v="urn:schemas-microsoft-com:vml" /><![endif]--> <div style="margin:0 auto;max-width:600px"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%"> <tbody> <tr style="vertical-align:top"> <td background="./hero_3.PNG" style="background:#000000 url('./hero_3.PNG') no-repeat center center /cover;background-position:center center;background-repeat:no-repeat;padding:100px 0px;vertical-align:top;height:100px" height="100"> <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600" ><tr><td style=""><![endif]--> <div class="mj-hero-content" style="margin:0px auto"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;margin:0px"> <tbody> <tr> <td> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;margin:0px"> <tbody> <tr> <td align="left" style="font-size:0px;padding:20px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:45px;font-weight:900;line-height:45px;text-align:left;color:#ffffff"><p>Darren,<br>Ready for Your Comeback?</p></div> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><![endif]--> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#000000" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--> <div style="background:#000000;background-color:#000000;margin:0px auto;max-width:600px"> <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#000000;background-color:#000000;width:100%"> <tbody> <tr> <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center"> <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]--> <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top" width="100%"> <tbody> <tr> <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:center;color:#ffffff"><p>It’s been <strong>79 days</strong> since your last visit. We know life gets busy, so here’s a little motivation to get you moving again: </p> <h2>20% off your next class!</h2> <p>Your personalized discount code is ready.</p></div> </td> </tr> <tr> <td align="center" style="font-size:0px;padding:0px;word-break:break-word"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%"> <tbody> <tr> <td align="center" bgcolor="#ffffff" role="presentation" style="border:2px dashed #000;border-radius:3px;cursor:auto;mso-padding-alt:12px;background:#ffffff" valign="middle"> <a href="#" style="display:inline-block;background:#ffffff;color:#000000;font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:800;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:12px;mso-padding-alt:0px;border-radius:3px" target="_blank"> WELCOMEBACK-DARREN-33 </a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;word-break:break-word"> <p style="border-top:solid 1px lightgrey;font-size:1px;margin:0px auto;width:100%"> </p> <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px lightgrey;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]--> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><![endif]--> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#000000" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--> <div style="background:#000000;background-color:#000000;margin:0px auto;max-width:600px"> <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#000000;background-color:#000000;width:100%"> <tbody> <tr> <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-top:0px;text-align:center"> <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]--> <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"> <tbody> <tr> <td style="vertical-align:top;padding-top:0px"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"> <tbody> <tr> <td align="left" style="font-size:0px;padding:10px 25px;padding-top:0px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#ffffff"><h3>Your comeback starts here ❤</h3> <p>We found your favourite class with Coach Theo at Newtown. Looks like the perfect way to get back into your routine.</p></div> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td><td class="" style="vertical-align:top;width:540px;" ><![endif]--> <div class="mj-column-per-90 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#000000;vertical-align:top" width="100%"> <tbody> <tr> <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px"> <tbody> <tr> <td style="width:490px"> <img alt src="./recommendationBanner.PNG" style="border:0;border-radius:10px;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px" width="490" height="auto"> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="center" style="font-size:0px;padding:0px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;line-height:30px;text-align:center;color:#ffffff"><h2> <u>Boxing with Coach Theo</u> </h2></div> </td> </tr> <tr> <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0px;word-break:break-word"> <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#ffffff;font-family:'Inter',Helvetica,Arial,sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none"> <tr> <td align="right">📅 Every Tuesday</td> <td align="center" width="30">|</td> <td align="left">⏰ 6:30 PM</td> </tr> <tr> <td align="right">📍 Newtown Studio</td> <td align="center" width="30">|</td> <td align="left">👟 Coach Theo</td> </tr> <tr> <td colspan="3" align="center">⚡ Only 2 spots left!</td> </tr> </table> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><![endif]--> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#000000" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--> <div style="background:#000000;background-color:#000000;margin:0px auto;max-width:600px"> <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#000000;background-color:#000000;width:100%"> <tbody> <tr> <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center"> <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]--> <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top" width="100%"> <tbody> <tr> <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word"> <p style="border-top:solid 1px lightgrey;font-size:1px;margin:0px auto;width:100%"> </p> <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 1px lightgrey;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]--> </td> </tr> <tr> <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#ffffff"><h3>Look how far you've come. </h3> <p> You’ve completed <strong>88 classes</strong> with us so far. That’s 88 times you showed up, put in the work, and made time for yourself. </p> <p>Let's make the next one #89.</p></div> </td> </tr> <tr> <td align="center" style="font-size:0px;padding:0px;word-break:break-word"> <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%"> <tbody> <tr> <td align="center" bgcolor="#ffffff" role="presentation" style="border:none;border-radius:0px;cursor:auto;mso-padding-alt:15px;background:#ffffff" valign="middle"> <a href="#" style="display:inline-block;background:#ffffff;color:#000000;font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:700;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:15px;mso-padding-alt:0px;border-radius:0px" target="_blank"> BOOK MY CLASS </a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:18px;font-weight:400;line-height:24px;text-align:left;color:#ffffff"><p>See you back in the studio soon! ❤</p></div> </td> </tr> <tr> <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word"> <p style="border-top:solid 4px lightgrey;font-size:1px;margin:0px auto;width:100%"> </p> <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" style="border-top:solid 4px lightgrey;font-size:1px;margin:0px auto;width:550px;" role="presentation" width="550px" ><tr><td style="height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]--> </td> </tr> <tr> <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word"> <div style="font-family:'Inter',Helvetica,Arial,sans-serif;font-size:12px;font-weight:400;line-height:24px;text-align:left;color:#ffffff"><p> Momentum Fitness Co. respects your right to privacy. To learn more, please review our <u>Privacy Policy</u>. This email is an advertisement. If you no longer wish to receive Momentum promotional emails, you can <u>unsubscribe</u> at any time.</p> <p>Please do not reply to this message. It was sent from a notification-only address that cannot accept incoming emai. Visit <u>support.momentumfitness.com</u> for help with our products.</p> <p style="text-align:center"> © Momentum Fitness Co. All rights reserved </p></div> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><![endif]--> </td> </tr> </tbody> </table> </div> <!--[if mso | IE]></td></tr></table><![endif]--> </div> </body></html>
+
+                                <!-- =====================================
+                                 END EMAIL PLACEHOLDER
+                            ====================================== -->
+                    </div>
+                </div>
+                <p class="project-section-text" style="margin-top:12px;">
+                    The preview uses the supplied rendered email as the visual reference. Dynamic AMPscript values are
+                    represented with the sample content from the provided render.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Project Overview</h3>
+                <p class="project-section-text">
+                    The campaign is designed to bring inactive fitness members back into the studio with a personalized
+                    message, membership-specific discount and one recommended class. Instead of showing a generic class,
+                    the AMPscript progressively broadens the recommendation criteria until it finds an available option.
+                </p>
+                <div class="architecture-box" style="margin-top:15px;">
+                    <pre>Member Reactivation DE
+        ↓
+AMPscript reads member profile
+        ↓
+Days-since-last-visit segmentation
+        ↓
+Membership-based offer + hero banner
+        ↓
+Class Schedule lookups
+        ↓
+Availability check (SpotsLeft &gt; 0)
+        ↓
+Recommended class + image + schedule
+        ↓
+Personalized responsive email</pre>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Data Extensions</h3>
+                <div class="de-grid">
+                    <div class="de-card">
+                        <h4 class="h4">Reactivation List</h4>
+                        <code>FirstName<br />MembershipType<br />LastVisitDate<br />FavouriteClass<br />CoachName<br />HomeStudio<br />WinBackCode<br />ClassesCompleted<br /></code>
+                    </div>
+                    <div class="de-card">
+                        <h4 class="h4">Class Schedule</h4>
+                        <code>ClassId<br />ClassName<br />Day<br />Time<br />Coach<br />Studio<br />SpotsLeft<br /></code>
+                    </div>
+                    <div class="de-card">
+                        <h4 class="h4">Class Image</h4>
+                        <code>Class<br />ImageURL</code>
+                    </div>
+                </div>
+                <p class="project-section-text" style="margin-top:15px;">
+                    The recommendation image is retrieved from the Class_Image Data Extension. This avoids relying on
+                    dynamically constructed filenames, which can fail when asset naming or casing differs.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Personalization &amp; Segmentation</h3>
+                <p class="project-section-text">
+                    The AMPscript calculates the number of days since the member's last visit and uses that value to
+                    change both the subject line and hero copy.
+                </p>
+                <div class="code-container" style="margin-top:15px;">
+                    <pre>IF @daysSinceLastVisit &lt; 30 THEN
+    @subjectline = "FirstName, ready for your next class?"
+    @hero_text = "FirstName, Ready to Sweat Again?"
+
+ELSEIF @daysSinceLastVisit &lt; 60 THEN
+    @subjectline = "We’ve missed you, FirstName!"
+    @hero_text = "Missed us, FirstName?"
+
+ELSE
+    @subjectline = "FirstName, let’s get you back in the studio."
+    @hero_text = "FirstName, Ready for Your Comeback?"
+ENDIF</pre>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Membership-Based Offer</h3>
+                <p class="project-section-text">
+                    The discount and hero image are selected from the member's MembershipType.
+                </p>
+                <div class="project-feature-list" style="margin-top:15px;">
+                    <div class="project-feature"><strong>Basic Monthly</strong><span>15% discount + hero-1.png</span></div>
+                    <div class="project-feature"><strong>10-Pack</strong><span>10% discount + hero-2.png</span></div>
+                    <div class="project-feature"><strong>Other membership types</strong><span>20% discount + hero-3.png</span></div>
+                    <div class="project-feature"><strong>Personalized code</strong><span>WinBackCode is displayed directly in the email.</span></div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Recommendation Logic</h3>
+                <p class="project-section-text">
+                    Only one class is recommended. The lookup starts with the most personalized match and falls back to
+                    broader criteria if no available class is found.
+                </p>
+                <div class="architecture-box" style="margin-top:15px;">
+                    <pre>1. Favourite Class + Coach + Home Studio
+             ↓ if unavailable
+2. Favourite Class + Home Studio
+             ↓ if unavailable
+3. Home Studio + Coach
+             ↓ if unavailable
+4. Home Studio + highest SpotsLeft</pre>
+                </div>
+
+                <div class="project-feature-list" style="margin-top:15px;">
+                    <div class="project-feature"><strong>Reactivation segmentation</strong><span>Calculates days since the last visit and changes the subject line and hero copy for &lt;30, 30–59, and 60+ days.</span></div><div class="project-feature"><strong>Membership offer</strong><span>Selects a 15%, 10%, or 20% discount and matching hero banner based on membership type.</span></div><div class="project-feature"><strong>Class recommendation</strong><span>Tries four fallback combinations, starting with the member’s favourite class + coach + studio, then broader matches.</span></div><div class="project-feature"><strong>Availability check</strong><span>Only accepts recommendations with more than 0 available spots; the final studio fallback is ordered by SpotsLeft.</span></div><div class="project-feature"><strong>Dynamic class image</strong><span>Looks up the recommendation image from the Class_Image Data Extension instead of constructing a case-sensitive filename URL.</span></div><div class="project-feature"><strong>Time formatting</strong><span>Adds spacing and uppercase AM/PM to the schedule time before it is displayed.</span></div>
+                </div>
+            </section>
+
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Email Logic</h3>
+
+                <div class="project-feature-list">
+                    <div class="project-feature">
+                        <strong>Dynamic First Name</strong>
+                        <span>If FirstName is empty, the email defaults to “Champ”.</span>
+                    </div>
+                    <div class="project-feature">
+                        <strong>Visit Based Messaging</strong>
+                        <span>Subject line and hero text change based on the customer's last visit.</span>
+                    </div>
+                    <div class="project-feature">
+                        <strong>Membership Personalization</strong>
+                        <span>Hero banner and membership discount are selected from MembershipType.</span>
+                    </div>
+                    <div class="project-feature">
+                        <strong>Dedicated Image DE</strong>
+                        <span>A separate Data Extension is used to retrieve the image URL for the recommended class.</span>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">AMPscript Functions Used</h3>
+
+                <div class="project-tags">
+                    <span class="project-tag">Lookup</span>
+                    <span class="project-tag">LookupRows</span>
+                    <span class="project-tag">LookupOrderedRows</span>
+                    <span class="project-tag">IndexOf</span>
+                    <span class="project-tag">Replace</span>
+                    <span class="project-tag">Concat</span>
+                    <span class="project-tag">Empty</span>
+                    <span class="project-tag">DateDiff</span>
+                    <span class="project-tag">Add</span>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">AMPscript</h3>
+                <p class="project-section-text">
+                    The full AMPscript handles member attributes, segmentation, membership offers, recommendation
+                    fallbacks, image lookup and time formatting.
+                </p>
+                <div class="code-container" style="margin-top:15px;">
+                    <pre>
+/*Subject and Hero text based on days since last visit*/
+IF @daysSinceLastVisit &lt; 30 THEN
+	SET @subjectline = Concat(@firstName,&#x27;, ready for your next class?&#x27;)
+	SET @hero_text = Concat(@firstName,&#x27;,&lt;br/&gt; Ready to Sweat Again?&#x27;)
+ELSEIF @daysSinceLastVisit &lt; 60 THEN
+	SET @subjectline = Concat(&#x27;We’ve missed you, &#x27;,@firstName,&#x27;!&#x27;)
+	SET @hero_text = Concat(&#x27;Missed us, &lt;br/&gt;&#x27;,@firstName,&#x27;?&#x27;)
+ELSE
+	SET @subjectline = Concat(@firstName,&#x27;, let’s get you back in the studio.&#x27;)
+	SET @hero_text = Concat(@firstName,&#x27;, &lt;br/&gt;Ready for Your Comeback?&#x27;)
+ENDIF
+
+/*Hero Banner and Discount based on membership type*/
+IF @membershipType == &#x27;Basic Monthly&#x27; THEN
+	SET @membershipDiscount = &#x27;15&#x27;
+	SET @heroBanner = &#x27;https://images.ampscriptacademy.com.au/uploads/hero-1.png&#x27;
+ELSEIF @membershipType == &#x27;10-Pack&#x27; THEN
+	SET @membershipDiscount = &#x27;10&#x27;
+	SET @heroBanner = &#x27;https://images.ampscriptacademy.com.au/uploads/hero-2.png&#x27;
+ELSE
+	SET @membershipDiscount = &#x27;20&#x27;
+	SET @heroBanner = &#x27;https://images.ampscriptacademy.com.au/uploads/hero-3.png&#x27;
+ENDIF
+
+/*Recommended Class Section - Headline and Text*/
+IF @recommendation == &#x27;FavClassCoachStudio&#x27; THEN
+	SET @recommendation_text = Concat(&#x27;We found your favourite class with &#x27;, @coachName,&#x27; at &#x27;, @homeStudio,&#x27;. Looks like the perfect way to get back into your routine.&#x27;)
+	SET @classHeadline = Concat(@favouriteClass, &#x27; with &#x27;, @coachName)
+ELSEIF @recommendation == &#x27;FavClassStudio&#x27; THEN
+	SET @recommendation_text = Concat(&#x27;Your favourite class is available at &#x27;, @homeStudio,&#x27;. Why not make it your comeback class?&#x27;)
+	SET @classHeadline = Concat(@favouriteClass, &#x27; at &#x27;, @homeStudio)
+ELSEIF @recommendation == &#x27;FavCoachStudio&#x27; THEN
+	SET @recommendation_text = Concat(@coachName, &#x27; is back at &#x27;, @homeStudio,&#x27;. It could be a great time to get back into your routine.&#x27;)
+	SET @classHeadline = Concat(&#x27;Train with &#x27;, @coachName)
+ELSE
+	SET @recommendation_text = Concat(&quot;We found a great class for you at &quot;, @homeStudio,&quot;. All that&#x27;s left is to show up. 💪&quot;)
+	SET @classHeadline = Concat(@favouriteClass, &#x27; at &#x27;, @homeStudio)
+ENDIF
+
+</pre>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Key Features</h3>
+                <div class="project-feature-list">
+                    <div class="project-feature"><strong>Behavior-Based Messaging</strong><span>Copy changes based on days since the last visit.</span></div>
+                    <div class="project-feature"><strong>Membership Personalization</strong><span>Offer and hero banner change by membership type.</span></div>
+                    <div class="project-feature"><strong>Smart Class Recommendation</strong><span>One recommendation with progressive fallback logic.</span></div>
+                    <div class="project-feature"><strong>Live Availability Check</strong><span>Recommendations are only accepted when SpotsLeft is greater than zero.</span></div>
+                    <div class="project-feature"><strong>Dynamic Class Imagery</strong><span>ImageURL is retrieved from the Class_Image Data Extension.</span></div>
+                    <div class="project-feature"><strong>Member Progress</strong><span>Completed class count and next class number are personalized.</span></div>
+                    <div class="project-feature"><strong>Responsive Email</strong><span>Email structure is developed using MJML and rendered HTML.</span></div>
+                    <div class="project-feature"><strong>Dynamic Schedule</strong><span>Class day, time, studio, coach and spots remaining are populated dynamically.</span></div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h3 class="h3 project-section-title">Design Credits</h3>
+
+                <div class="project-credits">
+                    <div class="project-credit">
+                        <strong>Company Logo</strong>
+                        <span>
+                            Created using
+                            <a href="https://www.design.com/logo-maker" target="_blank" rel="noopener noreferrer">
+                                Design.com Logo Maker
+                            </a>
+                        </span>
+                    </div>
+
+                    <div class="project-credit">
+                        <strong>Email Inspiration</strong>
+                        <span>
+                            Inspired by the
+                            <a href="https://reallygoodemails.com/emails/garmin-virtual-event-launch-reminder"
+                               target="_blank" rel="noopener noreferrer">
+                                Garmin Virtual Event Launch Reminder
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section github-project">
+                <h3 class="h3 project-section-title">Source Code</h3>
+                <p class="project-section-text">
+                    The project source files can be added to the portfolio repository alongside this project page.
+                </p>
+                <br />
+                <a href="https://github.com/pritishx/portfolio/tree/main/projects/momentum_fitness_reactivation"
+                   target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-github"></ion-icon>
+                    View Project on GitHub
+                </a>
+            </section>
+        </article>
+    </div>
+</main>
+
+<script src="../../assets/js/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
