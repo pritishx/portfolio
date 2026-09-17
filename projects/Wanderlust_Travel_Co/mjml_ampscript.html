@@ -1,0 +1,157 @@
+<mjml>
+    <mj-head>
+        <mj-title>Wanderlust Club - Curated Escapes</mj-title>
+        <mj-font name="Montserrat" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" />
+        <mj-font name="Playfair Display" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
+        <mj-attributes>
+            <mj-all font-family="'Montserrat', Helvetica, Arial, sans-serif" color="#2b3338" />
+            <mj-text font-size="13px" line-height="1.7" />
+            <mj-section padding="0px" background-color="#ffffff" />
+        </mj-attributes>
+        <mj-style>
+            @media only screen and (max-width: 480px) {
+            .mobile-pad {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+            }
+            .mobile-center div {
+            text-align: center !important;
+            }
+            }
+        </mj-style>
+    </mj-head>
+    <mj-body width="640px" background-color="#f5f2ee">
+        <!-- BRAND / OFFER BANNER -->
+        <mj-section background-color="#0d1b24" padding="7px 0px 10px 0px">
+            <mj-column width="100%">
+                <mj-text align="center" font-size="10px" color="#8b9ba5" letter-spacing="2px" text-transform="uppercase">
+                    World Tourism Day Collection &bull; Valid Through September 27
+                </mj-text>
+              <mj-text align="center" font-size="14px" font-weight="600" color="#f8f6f2" letter-spacing="4px" text-transform="uppercase">
+                    &#x2B21; &nbsp;WANDERLUST CLUB
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- 1. HERO SECTION -->
+        <mj-section background-url="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" background-color="#0d1b24" background-size="cover" background-position="center center" padding="50px 24px 60px 24px">
+            <mj-column width="100%" background-color="rgba(255, 255, 255, 0.94)" border-radius="10px" padding="36px 28px" border="1px solid #dfd7cc">
+                <mj-text align="center" font-size="10px" font-weight="700" letter-spacing="3px" color="#c59b27" text-transform="uppercase" padding="0 0 10px 0">
+                    Exclusive Member Privilege
+                </mj-text>
+                <mj-text align="center" font-family="'Playfair Display', Georgia, serif" font-size="30px" line-height="1.25" color="#0d1b24" padding="0 0 12px 0">
+                    %%=v(@HomeCity)=%% <span style="font-size: 20px; color: #c59b27; vertical-align: middle;">&#10230;</span> %%=v(@Destination)=%%
+                </mj-text>
+                <mj-divider width="40px" border-width="1px" border-color="#c59b27" padding="0 0 14px 0" />
+                <mj-text align="center" font-size="13px" color="#556066" font-style="italic" line-height="1.6" padding="0 24px 22px 24px">
+                    &ldquo;%%=v(@Tagline)=%%&rdquo;
+                </mj-text>
+                <mj-button background-color="#0d1b24" color="#ffffff" font-size="10px" font-weight="700" letter-spacing="2.5px" text-transform="uppercase" border-radius="0px" inner-padding="14px 28px" href="%%=v(@BookURL)=%%">
+                    REDEEM 20% OFF INVITATION
+                </mj-button>
+            </mj-column>
+        </mj-section>
+<!-- 2. "THEN & NOW" EDITORIAL CONTRAST -->
+<mj-section background-color="#fcfbf9" padding="48px 24px 40px 24px">
+    <!-- Left: The Past Memory -->
+    <mj-column width="50%" padding="12px">
+        <mj-image src="%%=v(@StaggeredImg2)=%%" alt="Past Travel Reflections" border-radius="2px" padding="0 0 20px 0" fluid-on-mobile="true" />
+        <mj-text font-size="9px" font-weight="700" letter-spacing="2.5px" color="#c59b27" text-transform="uppercase" padding="0 0 6px 0">
+            The Next Horizon
+        </mj-text>
+        <mj-text font-family="'Playfair Display', Georgia, serif" font-size="22px" font-weight="400" color="#0d1b24" padding="0 0 10px 0">
+            Why %%=v(@Destination)=%% Next
+        </mj-text>
+        <mj-text font-size="12px" color="#637077" line-height="1.8" padding="0">
+            For travelers drawn to %%=v(@TravelStyle)=%% landscapes, %%=v(@Destination)=%% offers a richer, more secluded extension of what captured you in %%=v(@LastDest)=%%.
+        </mj-text>
+    </mj-column>
+    <!-- Right: The Natural Evolution (Not a repeat package) -->
+    <mj-column width="50%" padding="12px">
+        <mj-text font-size="9px" font-weight="700" letter-spacing="2.5px" color="#c59b27" text-transform="uppercase" padding="0 0 6px 0">
+            The Memory &bull; %%=v(@FormattedTripDate)=%%
+        </mj-text>
+        <mj-text font-family="'Playfair Display', Georgia, serif" font-size="22px" font-weight="400" color="#0d1b24" padding="0 0 10px 0">
+            %%=v(@LastDest)=%%
+        </mj-text>
+        <mj-text font-size="12px" color="#637077" line-height="1.8" padding="0 0 20px 0">
+            You uncovered the spirit of %%=v(@TravelStyle)=%% vibes during your time here. The quiet cadence and memories from this escape remain irreplaceable.
+        </mj-text>
+        <mj-image src="%%=v(@StaggeredImg1)=%%" alt="Selected Destination Atmosphere" border-radius="2px" padding="0" fluid-on-mobile="true" />
+    </mj-column>
+</mj-section>
+        <!-- 3. ITINERARY HEADER -->
+        <mj-section background-color="#fcfbf9" padding="30px 20px 0px 20px">
+            <mj-column width="100%">
+                <mj-text align="center" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="34px" color="#0d1b24" padding="0">
+                    The Bespoke Itinerary
+                </mj-text>
+                <mj-text align="center" font-size="10px" color="#919ea6" letter-spacing="3px" text-transform="uppercase" padding="8px 0 0 0">
+                    Curated Package Details &bull; Private Collection
+                </mj-text>
+                <mj-divider width="30px" border-width="1px" border-color="#c59b27" padding="16px 0 24px 0" />
+            </mj-column>
+        </mj-section>
+        <!-- 4. FULL ITINERARY SHOWCASE CARD -->
+        <mj-section background-color="#fcfbf9" padding="0 24px 50px 24px">
+            <mj-column width="100%" background-color="#ffffff" border="1px solid #e7dfd5" padding="20px" border-radius="12px">
+                <mj-section padding="0">
+                    <mj-column width="55%" padding="6px">
+                        <mj-image src="%%=v(@DiscoverCardImg)=%%" alt="%%=v(@Destination)=%%" padding="0" border-radius="1px" fluid-on-mobile="true" />
+                    </mj-column>
+                    <mj-column width="45%" padding="16px 8px 12px 16px" css-class="mobile-pad">
+                        <mj-text font-size="9px" font-weight="700" letter-spacing="2px" color="#c59b27" text-transform="uppercase" padding="0 0 6px 0">
+                            %%=v(@Region)=%% &bull; PRIVATE RETREAT
+                        </mj-text>
+                        <mj-text font-family="'Playfair Display', Georgia, serif" font-size="20px" color="#0d1b24" padding="0 0 8px 0">
+                            %%=v(@Destination)=%%, %%=v(@Country)=%%
+                        </mj-text>
+                        <mj-text font-size="12px" color="#637077" line-height="1.7" padding="0 0 14px 0">
+                            %%=v(@Tagline)=%%
+                        </mj-text>
+                        <mj-text font-size="11px" font-weight="600" letter-spacing="1px" color="#0d1b24" text-transform="uppercase" padding="0 0 20px 0">
+                            %%=v(@Nights)=%% Nights &bull; From $%%=v(@FromPrice)=%%
+                        </mj-text>
+                        <mj-button href="%%=v(@BookURL)=%%" background-color="#ffffff" color="#0d1b24" border="1px solid #0d1b24" font-size="10px" font-weight="700" letter-spacing="2px" border-radius="0px" inner-padding="10px 18px" align="left" css-class="mobile-center" padding="0">
+                            EXPLORE ITINERARY
+                        </mj-button>
+                    </mj-column>
+                </mj-section>
+            </mj-column>
+        </mj-section>
+        <!-- 5. TIER STATUS & REWARD REDEMPTION -->
+        <mj-section background-color="#f2ede4" padding="36px 28px">
+            <mj-column width="100%">
+                <mj-text align="center" font-size="9px" font-weight="700" color="#7d6a45" letter-spacing="3px" text-transform="uppercase" padding="0 0 8px 0">
+                    TIER PRIVILEGE
+                </mj-text>
+                <mj-text align="center" font-family="'Playfair Display', Georgia, serif" font-size="20px" color="#0d1b24" padding="0 0 8px 0">
+                    %%=v(@LoyaltyTier)=%% Member &bull; %%=v(@FormattedPoints)=%% Balance
+                </mj-text>
+                <mj-text align="center" font-size="12px" color="#6f6b61" line-height="1.6" padding="0 24px">
+                    Apply your club points during checkout toward complimentary private transfers and suite upgrades in %%=v(@Destination)=%%.
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- 6. FOOTER -->
+        <mj-section background-color="#0d1b24" padding="48px 24px 36px 24px">
+            <mj-column width="100%">
+                <mj-social font-size="12px" icon-size="18px" mode="horizontal" align="center" padding="0 0 24px 0">
+                    <mj-social-element name="facebook-noshare" href="https://facebook.com" background-color="#192b36" />
+                    <mj-social-element name="instagram" href="https://instagram.com" background-color="#192b36" />
+                    <mj-social-element name="twitter" href="https://twitter.com" background-color="#192b36" />
+                </mj-social>
+                <mj-text align="center" color="#ffffff" font-size="11px" letter-spacing="3px" text-transform="uppercase" padding="0 0 10px 0">
+                    &#x2B21; WANDERLUST PRIVATE TRAVEL
+                </mj-text>
+                <mj-text align="center" font-size="10px" color="#71828f" line-height="1.8" padding="0 0 16px 0">
+                    Curated journeys delivered to select members.<br />
+                    &copy; Wanderlust Club. All privileges reserved.
+                </mj-text>
+                <mj-text align="center" font-size="10px" padding="0" color="#c59b27">
+                    <a href="%%=v(@UnsubURL)=%%" style="color: #c59b27; text-decoration: none; letter-spacing: 1px;">PREFERENCES</a> &amp;
+                  <a href="%%=v(@UnsubURL)=%%" style="color: #c59b27; text-decoration: none; letter-spacing: 1px;">UNSUBSCRIBE</a>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>
