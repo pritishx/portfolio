@@ -1,119 +1,109 @@
 %%[
-/* --- 1. Subscriber Data Attributes --- */
-SET @SubscriberKey = AttributeValue("SubscriberKey")
-SET @FirstName     = AttributeValue("FirstName")
-SET @EmailAddress  = AttributeValue("EmailAddress")
-SET @LastDest      = AttributeValue("LastDestination")
-SET @RawTripDate   = AttributeValue("LastTripDate")
-SET @TravelStyle   = AttributeValue("TravelStyle")
-SET @LoyaltyTier   = AttributeValue("LoyaltyTier")
-SET @PointsBalance = AttributeValue("PointsBalance")
-SET @HomeCity      = AttributeValue("HomeCity")
+VAR @firstName, @lastDest, @lastTripDate, @travelStyle, @loyaltyTier, @pointsBalance, @homeCity
+SET @firstName = ProperCase(AttributeValue('FirstName'))
+SET @lastDest = AttributeValue('LastDestination')
+SET @lastTripDate = AttributeValue('LastTripDate')
+SET @travelStyle = AttributeValue('TravelStyle')
+SET @loyaltyTier = AttributeValue('LoyaltyTier')
+SET @pointsBalance = AttributeValue('PointsBalance')
+SET @homeCity = AttributeValue('HomeCity')
 
 /* Name Fallback */
-IF NOT EMPTY(@FirstName) THEN
-    SET @GreetingName = ProperCase(Trim(@FirstName))
+IF EMPTY(@firstName) THEN
+  SET @firstName = 'you'
+ENDIF
+
+/* Discount and Subject based on Loyalty Tier */
+IF @loyaltyTier == "Platinum" THEN
+  SET @subjectline = Concat("Your Platinum privilege: 25% sitewide through Sept 27")
+  SET @discountPercent = 25
+ELSEIF @loyaltyTier == "Gold" THEN
+  SET @discountPercent = 20
+  SET @subjectline = Concat("A 20% World Tourism Day privilege for our ", @loyaltyTier, " member!")
+ELSEIF @loyaltyTier == "Silver" THEN
+  SET @discountPercent = 15
+  SET @subjectline = Concat("Celebrate World Tourism Day: Unlock 15% off your next escape")
 ELSE
-    SET @GreetingName = "Traveler"
+  SET @discountPercent = 10
+  SET @subjectline = "Your World Tourism Day invitation: 10% off all itenaries"
 ENDIF
 
 /* Date Formatting */
-IF NOT EMPTY(@RawTripDate) THEN
-    SET @FormattedTripDate = FormatDate(@RawTripDate, "MMMM yyyy")
+IF NOT EMPTY(@lastTripDate) THEN
+  SET @formattedTripDate = FormatDate(@lastTripDate, 'MMMM yyyy')
 ELSE
-    SET @FormattedTripDate = "your last trip"
+  SET @formattedTripDate = 'Your Last Trip'
 ENDIF
 
-/* Loyalty & Points */
-IF NOT EMPTY(@PointsBalance) THEN
-    SET @FormattedPoints = FormatNumber(@PointsBalance, "N0")
+/* Number Formatting */
+IF NOT EMPTY(@pointsBalance) THEN
+  SET @formattedPoints = FormatNumber(@pointsBalance, 'N0')
 ELSE
-    SET @FormattedPoints = "0"
+  SET @formattedPoints = 100
 ENDIF
 
-IF EMPTY(@LoyaltyTier) THEN
-    SET @LoyaltyTier = "Member"
-ENDIF
-
-IF EMPTY(@LastDest) THEN
-    SET @LastDest = "your past journey"
-ENDIF
-
-/* --- 2. Dynamic Images & Backgrounds Based on TravelStyle --- */
-IF @TravelStyle == "Beach" THEN
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
-ELSEIF @TravelStyle == "Adventure" THEN
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
-ELSEIF @TravelStyle == "City" THEN
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1477959858617-67f30bc75b82?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&q=80"
-ELSEIF @TravelStyle == "Culture" THEN
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1528164344705-475426879c0d?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&q=80"
-ELSEIF @TravelStyle == "Foodie" THEN
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
-ELSEIF @TravelStyle == "Wildlife" THEN
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=800&q=80"
+/* Lookup Curated Destination */
+SET @destinationRows = LookupRows('Destinations', 'TravelStyle', @travelStyle)
+IF RowCount(@destinationRows) > 0 THEN
+  SET @destRow = Row(@destinationRows, 1)
+  SET @destination = Field(@destRow, 'Destination')
+  SET @country = Field(@destRow, 'Country')
+  SET @region = Field(@destRow, 'Region')
+  SET @nights = Field(@destRow, 'Nights')
+  SET @fromPrice = Field(@destRow, 'FromPrice')
+  SET @tagline = Field(@destRow, 'Tagline')
+  SET @bookURL = Field(@destRow, 'BookURL')
 ELSE
-    SET @HeroBgImage     = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80"
-    SET @StaggeredImg1   = "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80"
-    SET @StaggeredImg2   = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-    SET @DiscoverCardImg = "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+  SET @destinationRows = LookupOrderedRows('Destinations', 1, 'FromPrice DESC', 'TravelStyle', 'All')
+  SET @destRow = Row(@destinationRows, 1)
+  SET @destination = Field(@destRow, 'Destination')
+  SET @country = Field(@destRow, 'Country')
+  SET @region = Field(@destRow, 'Region')
+  SET @nights = Field(@destRow, 'Nights')
+  SET @fromPrice = Field(@destRow, 'FromPrice')
+  SET @tagline = Field(@destRow, 'Tagline')
+  SET @bookURL = Field(@destRow, 'BookURL')
 ENDIF
 
-/* --- 3. Lookup Dynamic Destination --- */
-SET @DestRows = LookupRows("Destinations", "TravelStyle", @TravelStyle)
+/* Price Formatting */
+SET @formattedFromPrice = FormatNumber(@fromPrice, "C0", 'en-US')
 
-IF RowCount(@DestRows) > 0 THEN
-    SET @DestRow     = Row(@DestRows, 1)
-    SET @Destination = Field(@DestRow, "Destination")
-    SET @Country     = Field(@DestRow, "Country")
-    SET @Region      = Field(@DestRow, "Region")
-    SET @Nights      = Field(@DestRow, "Nights")
-    SET @FromPrice   = Field(@DestRow, "FromPrice")
-    SET @Tagline     = Field(@DestRow, "Tagline")
-    SET @BookURL     = Field(@DestRow, "BookURL")
+/* Dynamic background based on travel style */
+IF @travelStyle == "Beach" THEN
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/beach.png"
+  SET @staggeredImg1   = "https://images.unsplash.com/photo-1571984405176-5958bd9ac31d?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1655719647300-5142977bfa79?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&h=750&q=80"
+ELSEIF @travelStyle == "Adventure" THEN
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/adventure.png"
+  SET @staggeredImg1   = "https://images.unsplash.com/photo-1586414840734-a570ab4ce4c4?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1528543606781-2f6e6857f318?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&h=750&q=80"
+ELSEIF @travelStyle == "City" THEN
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/city.png"
+  SET @staggeredImg1   = "https://plus.unsplash.com/premium_photo-1661914240950-b0124f20a5c1?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1541336032412-2048a678540d?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&h=750&q=80"
+ELSEIF @travelStyle == "Culture" THEN
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/culture.png"
+  SET @staggeredImg1   = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&h=750&q=80"
+ELSEIF @travelStyle == "Foodie" THEN
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/foodie.png"
+  SET @staggeredImg1   = "https://images.unsplash.com/photo-1636391886989-da35ee18cbdb?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1707387868341-71a74960222b?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&h=750&q=80"
+ELSEIF @travelStyle == "Wildlife" THEN
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/wildlife.png"
+  SET @staggeredImg1   = "https://images.unsplash.com/photo-1707410436230-d4b2fba910e7?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1784437759430-d6685a3fced9?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=800&h=750&q=80"
 ELSE
-    SET @DestRowsFallback = LookupRows("Destinations", "TravelStyle", "All")
-    IF RowCount(@DestRowsFallback) > 0 THEN
-    SET @DestRowFallback = Row(@DestRowsFallback, 1)
-    SET @Destination     = Field(@DestRowFallback, "Destination")
-    SET @Country         = Field(@DestRowFallback, "Country")
-    SET @Region          = Field(@DestRowFallback, "Region")
-    SET @Nights          = Field(@DestRowFallback, "Nights")
-    SET @FromPrice       = Field(@DestRowFallback, "FromPrice")
-    SET @Tagline         = Field(@DestRowFallback, "Tagline")
-    SET @BookURL         = Field(@DestRowFallback, "BookURL")
-    ELSE
-    SET @Destination     = "Kyoto"
-    SET @Country         = "Japan"
-    SET @Region          = "Asia"
-    SET @Nights          = "6"
-    SET @FromPrice       = "1,850"
-    SET @Tagline         = "Immerse yourself in authentic tradition and peaceful gardens."
-    SET @BookURL         = "https://wanderlustclub.com"
-    ENDIF
+  SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/adventure.png"
+  SET @staggeredImg1   = "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @staggeredImg2   = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&h=400&q=80"
+  SET @discoverCardImg = "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&h=750&q=80"
 ENDIF
 
-/* Static Link URLs */
-SET @PackageURL = "https://wanderlustclub.com/packages"
-SET @StoriesURL = "https://wanderlustclub.com/stories"
-SET @VideoURL   = "https://wanderlustclub.com/video"
-SET @UnsubURL   = "https://wanderlustclub.com/unsubscribe"
 ]%%
