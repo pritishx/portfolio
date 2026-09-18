@@ -1,6 +1,6 @@
 %%[
-VAR @firstName, @lastDest, @lastTripDate, @travelStyle, @loyaltyTier, @pointsBalance, @homeCity
-SET @firstName = ProperCase(AttributeValue('FirstName'))
+/* Attributes and Variables */
+SET @name = Trim(AttributeValue('FirstName'))
 SET @lastDest = AttributeValue('LastDestination')
 SET @lastTripDate = AttributeValue('LastTripDate')
 SET @travelStyle = AttributeValue('TravelStyle')
@@ -8,34 +8,55 @@ SET @loyaltyTier = AttributeValue('LoyaltyTier')
 SET @pointsBalance = AttributeValue('PointsBalance')
 SET @homeCity = AttributeValue('HomeCity')
 
-/* Name Fallback */
-IF EMPTY(@firstName) THEN
-  SET @firstName = 'you'
+/* Fallback Values */
+IF EMPTY(@homeCity) THEN SET @homeCity = 'Your City' ENDIF
+IF EMPTY(@travelStyle) THEN SET @travelStyle = 'Adventure' ENDIF
+IF EMPTY(@loyaltyTier) THEN SET @loyaltyTier = 'Bronze' ENDIF
+
+IF EMPTY(@name) THEN
+  SET @firstName = 'Backpacker'
+  SET @greetingName = 'you'
+ELSE
+  SET @firstName = ProperCase(@name)
+  SET @greetingName = @firstName
+ENDIF
+
+/* Offer Expiry */
+SET @today = Now()
+SET @promoEndDate = '2026-09-27'
+SET @daysRemaining = DateDiff(@today, @promoEndDate, 'D')
+
+IF @daysRemaining > 2 THEN
+  SET @urgencyBadge = Concat('• ', @daysRemaining, ' Days Remaining <br> Valid Through Sept 27')
+ELSEIF @daysRemaining >= 0 THEN
+  SET @urgencyBadge = "• Final Call <br><span style = 'color:#c59b27; font-weight:700;'>Ends Sptember 27</span>"
+ELSE
+  SET @urgencyBadge = ''
 ENDIF
 
 /* Discount and Subject based on Loyalty Tier */
-IF @loyaltyTier == "Platinum" THEN
-  SET @subjectline = Concat("Your Platinum privilege: 25% sitewide through Sept 27")
+IF @loyaltyTier == 'Platinum' THEN
+  SET @subjectline = Concat(@firstName, ', your Platinum privilege: 25% sitewide through Sept 27')
   SET @discountPercent = 25
-ELSEIF @loyaltyTier == "Gold" THEN
+ELSEIF @loyaltyTier == 'Gold' THEN
   SET @discountPercent = 20
-  SET @subjectline = Concat("A 20% World Tourism Day privilege for our ", @loyaltyTier, " member!")
-ELSEIF @loyaltyTier == "Silver" THEN
+  SET @subjectline = Concat('A 20% World Tourism Day privilege for our Gold member!')
+ELSEIF @loyaltyTier == 'Silver' THEN
   SET @discountPercent = 15
-  SET @subjectline = Concat("Celebrate World Tourism Day: Unlock 15% off your next escape")
+  SET @subjectline = Concat(@firstName, ', unlock 15% off your next escape')
 ELSE
   SET @discountPercent = 10
-  SET @subjectline = "Your World Tourism Day invitation: 10% off all itenaries"
+  SET @subjectline = 'Your World Tourism Day invitation: 10% off all itenaries'
 ENDIF
 
 /* Date Formatting */
 IF NOT EMPTY(@lastTripDate) THEN
   SET @formattedTripDate = FormatDate(@lastTripDate, 'MMMM yyyy')
 ELSE
-  SET @formattedTripDate = 'Your Last Trip'
+  SET @formattedTripDate = 'Recent Journey'
 ENDIF
 
-/* Number Formatting */
+/* Points Formatting and Defaulting to 100 Points*/
 IF NOT EMPTY(@pointsBalance) THEN
   SET @formattedPoints = FormatNumber(@pointsBalance, 'N0')
 ELSE
@@ -67,43 +88,44 @@ ENDIF
 
 /* Price Formatting */
 SET @formattedFromPrice = FormatNumber(@fromPrice, "C0", 'en-US')
+SET @calcDiscountPrice = Multiply(@fromPrice, Subtract(1, Divide(@discountPercent, 100)))
+SET @formattedDiscountPrice = FormatNumber(@calcDiscountPrice, 'C0', 'en-US')
 
 /* Dynamic background based on travel style */
 IF @travelStyle == "Beach" THEN
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/beach.png"
   SET @staggeredImg1   = "https://images.unsplash.com/photo-1571984405176-5958bd9ac31d?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1655719647300-5142977bfa79?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://images.ampscriptacademy.com.au/uploads/beach.gif"
 ELSEIF @travelStyle == "Adventure" THEN
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/adventure.png"
   SET @staggeredImg1   = "https://images.unsplash.com/photo-1586414840734-a570ab4ce4c4?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1528543606781-2f6e6857f318?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://images.ampscriptacademy.com.au/uploads/adventure.gif"
 ELSEIF @travelStyle == "City" THEN
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/city.png"
   SET @staggeredImg1   = "https://plus.unsplash.com/premium_photo-1661914240950-b0124f20a5c1?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1541336032412-2048a678540d?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://media1.tenor.com/m/lzHsqifZjxQAAAAC/city.gif"
 ELSEIF @travelStyle == "Culture" THEN
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/culture.png"
   SET @staggeredImg1   = "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1555993539-1732b0258235?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://images.ampscriptacademy.com.au/uploads/culture.gif"
 ELSEIF @travelStyle == "Foodie" THEN
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/foodie.png"
   SET @staggeredImg1   = "https://images.unsplash.com/photo-1636391886989-da35ee18cbdb?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1707387868341-71a74960222b?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://images.ampscriptacademy.com.au/uploads/mystery.gif"
 ELSEIF @travelStyle == "Wildlife" THEN
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/wildlife.png"
   SET @staggeredImg1   = "https://images.unsplash.com/photo-1707410436230-d4b2fba910e7?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1784437759430-d6685a3fced9?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://images.ampscriptacademy.com.au/uploads/wildlife.gif"
 ELSE
   SET @heroBgImage     = "https://images.ampscriptacademy.com.au/uploads/adventure.png"
   SET @staggeredImg1   = "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&h=400&q=80"
   SET @staggeredImg2   = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&h=400&q=80"
-  SET @discoverCardImg = "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&h=750&q=80"
+  SET @discoverCardImg = "https://images.ampscriptacademy.com.au/uploads/mystery.gif"
 ENDIF
-
 ]%%

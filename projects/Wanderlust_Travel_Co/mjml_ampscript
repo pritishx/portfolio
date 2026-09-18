@@ -27,7 +27,7 @@
     <mj-section background-color="#0d1b24" padding="10px 20px">
       <mj-column width="100%">
         <mj-text align="center" font-size="10px" color="#c59b27" letter-spacing="2px" text-transform="uppercase">
-          World Tourism Day Collection &bull; 9 Days Remaining<br>Valid Through Sept 27
+          World Tourism Day Collection %%=v(@urgencyBadge)=%%
         </mj-text>
       </mj-column>
     </mj-section>
@@ -42,24 +42,24 @@
     </mj-section>
 
     <!-- 1. HERO SECTION WITH FLOATING CARD -->
-    <mj-section background-url="./city.png" background-color="#0d1b24" background-size="cover" background-position="center center" padding="50px 24px 60px 24px">
+    <mj-section background-url="%%=v(@heroBgImage)=%%" background-color="#0d1b24" background-size="cover" background-position="center center" padding="50px 24px 60px 24px">
       <mj-column width="100%" background-color="rgba(255, 255, 255, 0.95)" border-radius="2px" padding="36px 28px" border="1px solid #dfd7cc">
         
         <mj-text align="center" font-size="10px" font-weight="700" letter-spacing="3px" color="#c59b27" text-transform="uppercase" padding="0 0 10px 0">
-          Exclusive Member Privilege &bull; Bronze
+          Exclusive Member Privilege &bull; %%=v(@loyaltyTier)=%%
         </mj-text>
 
         <mj-text align="center" font-family="'Playfair Display', Georgia, serif" font-size="30px" line-height="1.25" color="#0d1b24" padding="0 0 12px 0">
-          Brisbane <span style="font-size: 20px; color: #c59b27; vertical-align: middle;">&#10230;</span> Tokyo
+          %%=v(@homeCity)=%% <span style="font-size: 20px; color: #c59b27; vertical-align: middle;">&#10230;</span> %%=v(@destination)=%%
         </mj-text>
 
         <!-- Personalized Lead-In Copy -->
         <mj-text align="center" font-size="13px" color="#556066" font-style="italic" line-height="1.6" padding="0 24px 22px 24px">
-          Specially curated for you in celebration of World Tourism Day.
+          Specially curated for %%=v(@greetingName)=%% in celebration of World Tourism Day.
         </mj-text>
 
         <mj-button background-color="#0d1b24" color="#ffffff" font-size="10px" font-weight="700" letter-spacing="2.5px" text-transform="uppercase" border-radius="0px" inner-padding="14px 28px" href="#">
-          ENJOY 10% OFF SITEWIDE
+          ENJOY %%=v(@discountPercent)=%%% OFF SITEWIDE
         </mj-button>
 
         <mj-text align="center" font-size="10px" color="#8b9ba5" letter-spacing="0.5px" padding-top="10px" padding-bottom="0px">
@@ -74,35 +74,35 @@
       
       <!-- Left Column: The Memory -->
       <mj-column width="50%" padding="12px">
-        <mj-image src="https://images.unsplash.com/photo-1541336032412-2048a678540d?auto=format&fit=crop&w=600&h=400&q=80" alt="Past Travel Reflections" border-radius="2px" padding="0 0 20px 0" fluid-on-mobile="true" />
+        <mj-image src="%%=v(@staggeredImg2)=%%" alt="Past Travel Reflections" border-radius="2px" padding="0 0 20px 0" fluid-on-mobile="true" />
 
         <mj-text font-size="9px" font-weight="700" letter-spacing="2.5px" color="#c59b27" text-transform="uppercase" padding="0 0 6px 0">
-          The Memory &bull; April 2026
+          The Memory &bull; %%=v(@formattedTripDate)=%%
         </mj-text>
 
         <mj-text font-family="'Playfair Display', Georgia, serif" font-size="22px" font-weight="400" color="#0d1b24" padding="0 0 10px 0">
-          Singapore
+          %%=v(@lastDest)=%%
         </mj-text>
 
         <mj-text font-size="12px" color="#637077" line-height="1.8" padding="0">
-          You uncovered the spirit of City travel during your time here. The quiet cadence and memories from this escape remain irreplaceable.
+          You uncovered the spirit of %%=v(@travelStyle)=%% travel during your time here. The quiet cadence and memories from this escape remain irreplaceable.
         </mj-text>
       </mj-column>
 
       <!-- Right Column: The Next Horizon (Natural progression) -->
       <mj-column width="50%" padding="12px">
-        <mj-image src="https://plus.unsplash.com/premium_photo-1661914240950-b0124f20a5c1?auto=format&fit=crop&w=600&h=400&q=80" alt="Selected Destination Atmosphere" border-radius="2px" padding="0 0 20px 0" fluid-on-mobile="true" />
+        <mj-image src="%%=v(@staggeredImg1)=%%" alt="Selected Destination Atmosphere" border-radius="2px" padding="0 0 20px 0" fluid-on-mobile="true" />
 
         <mj-text font-size="9px" font-weight="700" letter-spacing="2.5px" color="#c59b27" text-transform="uppercase" padding="0 0 6px 0">
           The Next Horizon
         </mj-text>
 
         <mj-text font-family="'Playfair Display', Georgia, serif" font-size="22px" font-weight="400" color="#0d1b24" padding="0 0 10px 0">
-          Why Tokyo Next
+          Why %%=v(@destination)=%% Next
         </mj-text>
 
         <mj-text font-size="12px" color="#637077" line-height="1.8" padding="0">
-          For travelers drawn to City landscapes, Tokyo offers a richer, more secluded extension of what captured you in Singapore.
+          For travelers drawn to %%=v(@travelStyle)=%% landscapes, %%=v(@destination)=%% offers a richer, more secluded extension of what captured you in %%=v(@lastDest)=%%.
         </mj-text>
       </mj-column>
 
@@ -127,32 +127,32 @@
         <mj-section padding="0">
           
           <mj-column width="55%" padding="6px">
-            <mj-image src="./city.gif" alt="Tokyo" padding="0" border-radius="1px" fluid-on-mobile="true" />
+            <mj-image src="%%=v(@discoverCardImg)=%%" alt="%%=v(@destination)=%%" padding="0" border-radius="1px" fluid-on-mobile="true" />
           </mj-column>
 
           <mj-column width="45%" padding="16px 8px 12px 16px" css-class="mobile-pad">
             <mj-text font-size="9px" font-weight="700" letter-spacing="2px" color="#c59b27" text-transform="uppercase" padding="0 0 6px 0">
-              Asia &bull; PRIVATE RETREAT
+              %%=v(@region)=%% &bull; PRIVATE RETREAT
             </mj-text>
 
             <mj-text font-family="'Playfair Display', Georgia, serif" font-size="20px" color="#0d1b24" padding="0 0 8px 0">
-              Tokyo, Japan
+              %%=v(@destination)=%%, %%=v(@country)=%%
             </mj-text>
 
             <mj-text font-size="12px" color="#637077" line-height="1.7" padding="0 0 12px 0">
-              Neon nights and world-class food
+              %%=v(@tagline)=%%
             </mj-text>
 
             <!-- Price with Dynamic Member Tariff Strikethrough -->
             <mj-text font-size="11px" color="#919ea6" padding="0 0 2px 0">
-              6 Nights &bull; <span style="text-decoration: line-through;">$1,899</span>
+              %%=v(@nights)=%% Nights &bull; <span style="text-decoration: line-through;">%%=v(@formattedFromPrice)=%%</span>
             </mj-text>
 
             <mj-text font-size="13px" font-weight="700" color="#0d1b24" letter-spacing="0.5px" padding="0 0 18px 0">
-              Member Rate: $1,709
+              Member Rate: %%=v(@formattedDiscountPrice)=%%
             </mj-text>
 
-            <mj-button href="#" background-color="#0d1b24" color="#ffffff" font-size="10px" font-weight="700" letter-spacing="2px" border-radius="0px" inner-padding="12px 20px" align="left" css-class="mobile-center" padding="0">
+            <mj-button href="%%=v(@bookURL)=%%" background-color="#0d1b24" color="#ffffff" font-size="10px" font-weight="700" letter-spacing="2px" border-radius="0px" inner-padding="12px 20px" align="left" css-class="mobile-center" padding="0">
               EXPLORE ITINERARY
             </mj-button>
           </mj-column>
@@ -169,11 +169,11 @@
         </mj-text>
 
         <mj-text align="center" font-family="'Playfair Display', Georgia, serif" font-size="20px" color="#0d1b24" padding="0 0 8px 0">
-          Bronze Member &bull; 3,100 Balance
+          %%=v(@loyaltyTier)=%% Member &bull; %%=v(@formattedPoints)=%% Balance
         </mj-text>
 
         <mj-text align="center" font-size="12px" color="#6f6b61" line-height="1.6" padding="0 24px">
-          Apply your club points during checkout toward complimentary private transfers and suite upgrades in Tokyo.
+          Apply your club points during checkout toward complimentary private transfers and suite upgrades in %%=v(@destination)=%%.
         </mj-text>
       </mj-column>
     </mj-section>
