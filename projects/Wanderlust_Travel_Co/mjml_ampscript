@@ -9,6 +9,7 @@
       <mj-section padding="0px" background-color="#ffffff" />
     </mj-attributes>
     <mj-style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
       @media only screen and (max-width: 480px) {
         .mobile-pad {
           padding-left: 20px !important;
@@ -35,7 +36,7 @@
     <!-- BRAND BAR -->
     <mj-section background-color="#0d1b24" padding="18px 24px">
       <mj-column width="100%">
-        <mj-text align="center" font-size="14px" font-weight="600" color="#f8f6f2" letter-spacing="4px" text-transform="uppercase">
+        <mj-text align="center" font-size="18px" font-weight="700" color="#f8f6f2" letter-spacing="4px" text-transform="uppercase" font-family="'Cormorant Garamond', Georgia, serif">
           &#x2B21; &nbsp;WANDERLUST CLUB
         </mj-text>
       </mj-column>
@@ -179,28 +180,49 @@
     </mj-section>
 
     <!-- 6. FOOTER -->
-    <mj-section background-color="#0d1b24" padding="48px 24px 36px 24px">
-      <mj-column width="100%">
-        <mj-social font-size="12px" icon-size="18px" mode="horizontal" align="center" padding="0 0 24px 0">
-          <mj-social-element name="facebook-noshare" href="https://facebook.com" background-color="#192b36" />
-          <mj-social-element name="instagram" href="https://instagram.com" background-color="#192b36" />
-          <mj-social-element name="twitter" href="https://twitter.com" background-color="#192b36" />
-        </mj-social>
-
-        <mj-text align="center" color="#ffffff" font-size="11px" letter-spacing="3px" text-transform="uppercase" padding="0 0 10px 0">
-          WANDERLUST PRIVATE TRAVEL
-        </mj-text>
-
-        <mj-text align="center" font-size="10px" color="#71828f" line-height="1.8" padding="0 0 16px 0">
-          Curated journeys delivered to select members.<br/>
-          &copy; Wanderlust Club. All privileges reserved.
-        </mj-text>
-
-        <mj-text align="center" font-size="10px" padding="0">
-          <a href="#" style="color: #c59b27; text-decoration: none; letter-spacing: 1px;">PREFERENCES &amp; UNSUBSCRIBE</a>
-        </mj-text>
-      </mj-column>
-    </mj-section>
-
+<!-- Footer -->
+        <mj-section background-color="#0B1C25" padding="0">
+            <mj-column padding="0">
+                <!-- Large Brand Block -->
+                <mj-text align="center" color="#F4F0E6" font-family="'Cormorant Garamond', Georgia, serif" font-size="48px" font-weight="700" letter-spacing="2px" line-height="68px" padding="28px 10px 0">
+                    WANDERLUST
+                </mj-text>
+                <mj-text align="center" color="#C8952E" font-family="Arial, Helvetica, sans-serif" font-size="11px" font-weight="600" letter-spacing="3px" line-height="18px" padding="0 20px 12px">
+                    TRAVEL CO.
+                </mj-text>
+                <mj-text align="center" color="#D6DEE1" font-family="Arial, Helvetica, sans-serif" font-size="12px" line-height="18px" padding="0 35px 28px">
+                    CURATED EXPERIENCES
+                    <span style="color:#536A75;">&nbsp;&nbsp;FOR&nbsp;&nbsp;</span>
+                    THOSE WHO TRAVEL DIFFERENTLY
+                </mj-text>
+                <mj-social mode="horizontal" align="center" icon-size="20px" icon-padding="8px" padding="0 0 24px">
+                    <mj-social-element name="facebook" href="#" background-color="#172D38" />
+                    <mj-social-element name="instagram" href="#" background-color="#172D38" />
+                    <mj-social-element name="twitter" href="#" background-color="#172D38" />
+                </mj-social>
+                <mj-divider border-color="#C8952E" border-width="1px" width="92%" padding="0" />
+                <mj-text align="center" color="#8297A1" font-family="Arial, Helvetica, sans-serif" font-size="9px" letter-spacing="1px" line-height="16px" padding="15px 20px 10px">
+                    © WANDERLUST CLUB. 
+                    ALL RIGHTS RESERVED
+                </mj-text>
+                <mj-text align="center" color="#7D98A8" font-family="Arial, Helvetica, sans-serif" font-size="10px" line-height="16px" padding="0 20px 18px">
+                    <a href="#" style="color:#C8952E; text-decoration:none;">
+                        Unsubscribe
+                    </a>
+                    &nbsp;&nbsp;•&nbsp;&nbsp;
+                    <a href="#" style="color:#C8952E; text-decoration:none;">
+                        Preferences
+                    </a>
+                </mj-text>
+                <!-- Bottom Gold Accent -->
+                <mj-section background-color="#C8952E" padding="0">
+                    <mj-column padding="0">
+                        <mj-text align="center" color="#0B1C25" font-family="Arial, Helvetica, sans-serif" font-size="8px" font-weight="600" letter-spacing="2px" padding="7px 10px">
+                            TRAVEL WELL • TRAVEL DIFFERENTLY
+                        </mj-text>
+                    </mj-column>
+                </mj-section>
+            </mj-column>
+        </mj-section>
   </mj-body>
 </mjml>
