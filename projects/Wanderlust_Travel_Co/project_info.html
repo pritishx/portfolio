@@ -1186,39 +1186,7 @@ Dynamic Editorial Image Matrix & Calculations
 </pre>
                         </div>
                     </section>
-
-                    <!-- =================================================
-                     SQL
-                ================================================== -->
-
-                    <section class="project-section">
-                        <h3 class="h3 project-section-title">Audience Segmentation SQL</h3>
-
-                        <p class="project-section-text">
-                            Pre-send query selecting active loyalty members with valid travel preferences, standardizing null
-                            fields, and compiling the campaign target list.
-                        </p>
-
-                        <div class="code-container">
-                            <pre>
-SELECT
-    m.SubscriberKey,
-    m.EmailAddress,
-    m.FirstName,
-    COALESCE(m.HomeCity, 'Your City') AS HomeCity,
-    COALESCE(m.LoyaltyTier, 'Club') AS LoyaltyTier,
-    COALESCE(m.PointsBalance, 100) AS PointsBalance,
-    COALESCE(m.TravelStyle, 'Adventure') AS TravelStyle,
-    m.LastDestination,
-    m.LastTripDate
-FROM Wanderlust_Members m
-WHERE m.Status = 'Active'
-  AND m.EmailAddress IS NOT NULL
-  AND (m.Unsubscribed IS NULL OR m.Unsubscribed = 0)
-</pre>
-                        </div>
-                    </section>
-
+                    
                     <!-- =================================================
                      AMPSCRIPT
                 ================================================== -->
