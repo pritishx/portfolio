@@ -1,10 +1,10 @@
-Drink,Category,Temperature,Tagline
-Oat Flat White,Milk-based,Hot,"Smooth, creamy, quietly iconic"
-Long Black,Espresso,Hot,"No frills, all focus"
-Caramel Latte,Sweet,Hot,"Dessert that counts as breakfast"
-Cold Brew,Cold Brew,Cold,"Slow-steeped, seriously smooth"
-Cappuccino,Milk-based,Hot,"The classic, foam and all"
-Matcha Latte,Tea,Hot,"Green, grounded, glowing"
-Espresso,Espresso,Hot,"Pure, punchy, no apologies"
-Mocha,Sweet,Hot,"Coffee meets chocolate, everybody wins"
-Piccolo,Espresso,Hot,"Small cup, big personality"
+Drink,Category,Temperature,Tagline,ImageURL
+Oat Flat White,Milk-based,Hot,"Smooth, creamy, quietly iconic",https://images.ampscriptacademy.com.au/uploads/drinkoatflatwhite.png
+Long Black,Espresso,Hot,"No frills, all focus",https://images.ampscriptacademy.com.au/uploads/drinklongblack.png
+Caramel Latte,Sweet,Hot,"Dessert that counts as breakfast",https://images.ampscriptacademy.com.au/uploads/drinkcaramellatte.png
+Cold Brew,Cold Brew,Cold,"Slow-steeped, seriously smooth",https://images.ampscriptacademy.com.au/uploads/drinkcoldbrew.png
+Cappuccino,Milk-based,Hot,"The classic, foam and all",https://images.ampscriptacademy.com.au/uploads/drinkcappuccino.png
+Matcha Latte,Tea,Hot,"Green, grounded, glowing",https://images.ampscriptacademy.com.au/uploads/drinkmatchalatte.png
+Espresso,Espresso,Hot,"Pure, punchy, no apologies",https://images.ampscriptacademy.com.au/uploads/drinkespresso.png
+Mocha,Sweet,Hot,"Coffee meets chocolate, everybody wins",https://images.ampscriptacademy.com.au/uploads/drinkmocha.png
+Piccolo,Espresso,Hot,"Small cup, big personality",https://images.ampscriptacademy.com.au/uploads/drinkpiccolo.png

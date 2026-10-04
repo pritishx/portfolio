@@ -1,0 +1,1435 @@
+<mjml>
+  <mj-head>
+    <mj-font
+      name="Fredoka"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+    />
+    <mj-attributes>
+      <mj-all
+        font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      />
+      <mj-text line-height="1.5" />
+    </mj-attributes>
+    <mj-style>
+      * { box-sizing: border-box; } .vip-pill { background-color: #27332A;
+      text-transform: uppercase; border: 1px solid #D4A373; padding: 6px 16px;
+      border-radius: 20px; letter-spacing: 2px; font-weight: 600; font-family:
+      'Fredoka', sans-serif; display: inline-block; color: #D4A373; font-size:
+      11px; } .personality-card { background: linear-gradient(180deg, #25372A
+      0%, #1A2820 100%); border-radius: 20px; border: 1px solid rgba(212, 163,
+      115, 0.35); padding: 24px 16px; } .reward-card { background:
+      linear-gradient(135deg, #2A3D2F 0%, #1E2D23 100%); border-radius: 20px;
+      border: 1.5px dashed #D4A373; padding: 28px 20px; } .voucher-code {
+      background-color: #16221B; border: 1px solid #D4A373; border-radius: 10px;
+      color: #F5EFE7; font-family: 'Fredoka', sans-serif; font-size: 18px;
+      font-weight: 700; letter-spacing: 3px; padding: 12px 24px; display:
+      inline-block; } .share-story-card { border-radius: 24px; background:
+      linear-gradient(180deg, #25382B 0%, #19271E 100%); border: 2px solid
+      #D4A373; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45); } .qr-container {
+      background-color: #F5EFE7; border-radius: 14px; padding: 10px; display:
+      inline-block; } .chubby-title { font-family: 'Fredoka', sans-serif
+      !important; font-weight: 700 !important; line-height: 1.05 !important;
+      text-transform: uppercase !important; letter-spacing: -0.5px !important; }
+      .photo-round img { border-radius: 16px !important; } .serif-quote {
+      font-family: 'Playfair Display', Georgia, serif; font-style: italic; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#0E1612">
+    <!-- Hero Section -->
+    <mj-hero
+      mode="fixed-height"
+      height="330px"
+      background-width="600px"
+      background-height="330px"
+      background-url="%%=v(@heroBgImage)=%%"
+      background-color="#1C2B22"
+      padding="15px 24px 30px 24px"
+    >
+      <mj-text
+        align="center"
+        color="#F5EFE7"
+        font-weight="700"
+        letter-spacing="3px"
+        font-size="26px"
+        font-family="'Fredoka', sans-serif"
+        padding="0 0 10px 0"
+        padding-bottom="70px"
+        >⋆☕︎⋆ BEAN THERE</mj-text
+      >
+
+      <mj-text
+        padding="0 0 6px 0"
+        color="#F5EFE7"
+        align="left"
+        font-family="'Fredoka', sans-serif"
+        font-size="64px"
+        line-height="1.0"
+        font-weight="900"
+        >%%=v(@displayName)=%%
+      </mj-text>
+      <mj-text
+        color="#D4A373"
+        font-family="'Fredoka', sans-serif"
+        font-size="28px"
+        font-weight="600"
+        padding="0 0 16px 0"
+        >2026 in Coffee ☕</mj-text
+      >
+    </mj-hero>
+
+    <!-- Warm Introduction & Headline Numbers -->
+    <mj-section
+      border-top="1px solid rgba(212, 163, 115, 0.2)"
+      background-color="#1C2B22"
+      padding="20px 28px 20px 28px"
+    >
+      <mj-column width="100%">
+        <mj-text
+          align="left"
+          font-family="'Playfair Display', Georgia, serif"
+          font-size="24px"
+          font-weight="700"
+          color="#F5EFE7"
+          padding="0 0 10px 0"
+        >
+          Hey %%=v(@greetingName)=%%,
+        </mj-text>
+        <mj-text
+          align="left"
+          font-size="15px"
+          line-height="1.7"
+          color="#D2DBD5"
+          padding="0 0 20px 0"
+        >
+          You made every single cup count this year. From brisk dawn extractions
+          to restorative afternoon resets, here is the official recap of the
+          flavors, rituals, and milestones that fueled your 2026.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Big Number Highlight Card -->
+    <mj-section
+      background-color="#1C2B22"
+      padding="0 24px 30px 24px"
+      id="stats-breakdown"
+    >
+      <mj-column
+        background-color="#223528"
+        border-radius="18px"
+        border="1px solid rgba(212, 163, 115, 0.3)"
+        padding="26px 18px"
+      >
+        <mj-text
+          align="center"
+          font-size="11px"
+          font-weight="700"
+          letter-spacing="2.5px"
+          color="#D4A373"
+          text-transform="uppercase"
+          padding="0 0 6px 0"
+        >
+          ANNUAL BREW COUNT
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="68px"
+          font-weight="900"
+          font-family="'Fredoka', sans-serif"
+          color="#FFFFFF"
+          line-height="1.0"
+          padding="0 0 4px 0"
+        >
+          %%=v(@totalCups)=%%
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="13px"
+          font-weight="700"
+          color="#D4A373"
+          letter-spacing="2px"
+          text-transform="uppercase"
+          padding="0 0 12px 0"
+        >
+          CUPS OF CRAFT COFFEE ENJOYED
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="14px"
+          line-height="1.6"
+          color="#F5EFE7"
+          padding="0 14px 0 14px"
+          css-class="serif-quote"
+        >
+          "That’s %%=v(@totalCups)=%% good mornings, afternoon resets, and
+          brighter days."
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 01. CIRCADIAN STATS JOURNEY (TIMELINE STORY) -->
+    <mj-section
+      background-color="#1C2B22"
+      padding="30px 28px 12px 28px"
+      border-top="1px solid rgba(212, 163, 115, 0.2)"
+    >
+      <mj-column width="100%">
+        <mj-text
+          align="center"
+          font-size="11px"
+          font-weight="700"
+          letter-spacing="2.5px"
+          color="#D4A373"
+          text-transform="uppercase"
+          padding="0 0 6px 0"
+        >
+          CIRCADIAN CADENCE
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="32px"
+          color="#FFFFFF"
+          css-class="chubby-title"
+          padding="0 0 6px 0"
+        >
+          A Day in Your Coffee Year
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="14px"
+          line-height="1.6"
+          color="#C2C9C4"
+          padding="0 16px 20px 16px"
+        >
+          How %%=v(@totalCups)=%% extractions mapped onto your daily rhythms and
+          seasonal sprints.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- TIMELINE STEP 1: PEAK HOUR -->
+    <mj-section background-color="#1C2B22" padding="14px 28px 10px 28px">
+      <mj-column width="52%" vertical-align="middle" padding="0 16px 0 0">
+        <mj-text padding="0 0 8px 0">
+          <span class="vip-pill">%%=v(@peakHourFormatted)=%%</span>
+        </mj-text>
+        <mj-text
+          font-family="'Fredoka', sans-serif"
+          font-size="22px"
+          font-weight="700"
+          color="#FFFFFF"
+          padding="0 0 8px 0"
+        >
+          %%=v(@circadianStep1Title)=%%
+        </mj-text>
+        <mj-text
+          font-size="13px"
+          line-height="1.6"
+          color="#C2C9C4"
+          padding="0 0 10px 0"
+        >
+          %%=v(@circadianStep1Copy)=%%
+        </mj-text>
+        <mj-text
+          font-size="11px"
+          font-weight="700"
+          color="#D4A373"
+          letter-spacing="0.5px"
+          padding="4px 0 0 0"
+        >
+          ⏰ %%=v(@peakHourFormatted)=%% · Your most loyal peak hour
+        </mj-text>
+      </mj-column>
+
+      <mj-column width="48%" vertical-align="middle">
+        <mj-image
+          src="%%=v(@circadianStep1Image)=%%"
+          width="240px"
+          height="160px"
+          alt="Coffee Extraction Moment"
+          css-class="photo-round"
+          padding="6px 0"
+        />
+      </mj-column>
+    </mj-section>
+
+    <!-- CONNECTOR ARROW 1 -> 2 -->
+    <mj-section background-color="#1C2B22" padding="4px 28px">
+      <mj-column>
+        <mj-text
+          align="center"
+          font-size="18px"
+          font-weight="800"
+          color="#D4A373"
+          letter-spacing="4px"
+        >
+          · · · ⇣ · · ·
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- TIMELINE STEP 2: FAVOURITE DRINK -->
+    <mj-section background-color="#1C2B22" padding="10px 28px 10px 28px">
+      <mj-column width="48%" vertical-align="middle">
+        <mj-image
+          src="%%=v(@circadianStep2Image)=%%"
+          width="240px"
+          height="160px"
+          alt="%%=v(@favDrink)=%%"
+          css-class="photo-round"
+          padding="6px 0"
+        />
+      </mj-column>
+
+      <mj-column width="52%" vertical-align="middle" padding="0 0 0 16px">
+        <mj-text padding="0 0 8px 0">
+          <span class="vip-pill">%%=v(@favDrinkUpper)=%%</span>
+        </mj-text>
+        <mj-text
+          font-family="'Fredoka', sans-serif"
+          font-size="22px"
+          font-weight="700"
+          color="#FFFFFF"
+          padding="0 0 8px 0"
+        >
+          %%=v(@circadianStep2Title)=%%
+        </mj-text>
+        <mj-text
+          font-size="13px"
+          line-height="1.6"
+          color="#C2C9C4"
+          padding="0 0 10px 0"
+        >
+          %%=v(@circadianStep2Copy)=%%
+        </mj-text>
+        <mj-text
+          font-size="11px"
+          font-weight="700"
+          color="#D4A373"
+          letter-spacing="0.5px"
+          padding="4px 0 0 0"
+        >
+          ☕ #1 Most Ordered Drink (%%=v(@drink1Count)=%% orders)
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- CONNECTOR ARROW 2 -> 3 -->
+    <mj-section background-color="#1C2B22" padding="4px 28px">
+      <mj-column>
+        <mj-text
+          align="center"
+          font-size="18px"
+          font-weight="800"
+          color="#D4A373"
+          letter-spacing="4px"
+        >
+          · · · ⇣ · · ·
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- TIMELINE STEP 3: PEAK SPRINT MONTH -->
+    <mj-section background-color="#1C2B22" padding="10px 28px 28px 28px">
+      <mj-column width="52%" vertical-align="middle" padding="0 16px 0 0">
+        <mj-text padding="0 0 8px 0">
+          <span class="vip-pill">%%=v(@activeMonthUpper)=%% SPRINT</span>
+        </mj-text>
+        <mj-text
+          font-family="'Fredoka', sans-serif"
+          font-size="22px"
+          font-weight="700"
+          color="#FFFFFF"
+          padding="0 0 8px 0"
+        >
+          %%=v(@circadianStep3Title)=%%
+        </mj-text>
+        <mj-text
+          font-size="13px"
+          line-height="1.6"
+          color="#C2C9C4"
+          padding="0 0 10px 0"
+        >
+          %%=v(@circadianStep3Copy)=%%
+        </mj-text>
+        <mj-text
+          font-size="11px"
+          font-weight="700"
+          color="#D4A373"
+          letter-spacing="0.5px"
+          padding="4px 0 0 0"
+        >
+          ⚡ Top %%=v(@topPercent)=%%% Nationwide · %%=v(@loyaltyTier)=%% Tier
+          Member
+        </mj-text>
+      </mj-column>
+
+      <mj-column width="48%" vertical-align="middle">
+        <mj-image
+          src="%%=v(@circadianStep3Image)=%%"
+          width="240px"
+          height="160px"
+          alt="Peak Roastery Season"
+          css-class="photo-round"
+          padding="6px 0"
+        />
+      </mj-column>
+    </mj-section>
+
+    <!-- PLAYFUL LIFESTYLE CALLOUT BANNER -->
+    <mj-section
+      background-color="#17261E"
+      padding="22px 24px"
+      border-top="1px solid rgba(212, 163, 115, 0.2)"
+      border-bottom="1px solid rgba(212, 163, 115, 0.2)"
+    >
+      <mj-column width="100%">
+        <mj-text
+          align="center"
+          font-size="18px"
+          color="#F5EFE7"
+          line-height="1.5"
+          css-class="serif-quote"
+          padding="0"
+        >
+          ☕ "At this point, coffee isn't just your daily routine — it's an art
+          form."
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 02. MERGED PERSONALITY & FULL STATS DASHBOARD -->
+    <mj-section background-color="#1C2B22" padding="34px 24px 30px 24px">
+      <mj-column css-class="personality-card" padding="28px 16px">
+        <mj-text
+          align="center"
+          color="#D4A373"
+          letter-spacing="2.5px"
+          font-weight="700"
+          font-size="11px"
+          text-transform="uppercase"
+          padding="0 0 8px 0"
+          >YOUR 2026 ARCHETYPE</mj-text
+        >
+        <mj-text
+          color="#F5EFE7"
+          align="center"
+          text-transform="uppercase"
+          font-family="'Fredoka', sans-serif"
+          font-weight="700"
+          font-size="34px"
+          line-height="1.1"
+          padding="0 0 10px 0"
+          >⋆ %%=v(@personalityBadge)=%% ⋆</mj-text
+        >
+        <mj-text
+          color="#C2C9C4"
+          align="center"
+          font-size="14px"
+          line-height="1.6"
+          padding="0 18px 24px 18px"
+        >
+          %%=v(@personalityDesc)=%%
+        </mj-text>
+
+        <!-- Nested Stats Grid: Row 1 (3-Col) -->
+        <mj-table padding="0 8px 10px 8px">
+          <tr>
+            <td style="width: 33.33%; padding: 4px">
+              <div
+                style="
+                  background: linear-gradient(180deg, #1d2d23 0%, #141f18 100%);
+                  border: 1px solid rgba(212, 163, 115, 0.25);
+                  border-radius: 14px;
+                  padding: 14px 6px;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="https://img.icons8.com/material-rounded/48/D4A373/clock.png"
+                  width="20"
+                  height="20"
+                  style="display: block; margin: 0 auto 6px auto"
+                  alt="Clock"
+                />
+                <div
+                  style="
+                    font-size: 20px;
+                    color: #f5efe7;
+                    font-weight: 700;
+                    font-family: 'Fredoka', sans-serif;
+                    line-height: 1.1;
+                  "
+                >
+                  %%=v(@peakHourFormatted)=%%
+                </div>
+                <div
+                  style="
+                    font-size: 9px;
+                    color: #8b967e;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    margin-top: 5px;
+                  "
+                >
+                  PEAK HOUR
+                </div>
+              </div>
+            </td>
+            <td style="width: 33.33%; padding: 4px">
+              <div
+                style="
+                  background: linear-gradient(180deg, #1d2d23 0%, #141f18 100%);
+                  border: 1px solid rgba(212, 163, 115, 0.25);
+                  border-radius: 14px;
+                  padding: 14px 6px;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="https://img.icons8.com/material-rounded/48/D4A373/calendar.png"
+                  width="20"
+                  height="20"
+                  style="display: block; margin: 0 auto 6px auto"
+                  alt="Calendar"
+                />
+                <div
+                  style="
+                    font-size: 20px;
+                    color: #d4a373;
+                    font-weight: 700;
+                    font-family: 'Fredoka', sans-serif;
+                    line-height: 1.1;
+                  "
+                >
+                  %%=v(@activeMonthUpper)=%%
+                </div>
+                <div
+                  style="
+                    font-size: 9px;
+                    color: #8b967e;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    margin-top: 5px;
+                  "
+                >
+                  TOP MONTH
+                </div>
+              </div>
+            </td>
+            <td style="width: 33.33%; padding: 4px">
+              <div
+                style="
+                  background: linear-gradient(180deg, #1d2d23 0%, #141f18 100%);
+                  border: 1px solid rgba(212, 163, 115, 0.25);
+                  border-radius: 14px;
+                  padding: 14px 6px;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="https://img.icons8.com/material-rounded/48/D4A373/like--v1.png"
+                  width="20"
+                  height="20"
+                  style="display: block; margin: 0 auto 6px auto"
+                  alt="Points"
+                />
+                <div
+                  style="
+                    font-size: 20px;
+                    color: #f5efe7;
+                    font-weight: 700;
+                    font-family: 'Fredoka', sans-serif;
+                    line-height: 1.1;
+                  "
+                >
+                  %%=FormatNumber(@pointsEarned, "N0")=%%
+                </div>
+                <div
+                  style="
+                    font-size: 9px;
+                    color: #8b967e;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    margin-top: 5px;
+                  "
+                >
+                  POINTS EARNED
+                </div>
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+
+        <!-- Nested Stats Grid: Row 2 (3-Col with Loyalty Tier) -->
+        <mj-table padding="0 8px">
+          <tr>
+            <td style="width: 33.33%; padding: 4px">
+              <div
+                style="
+                  background: linear-gradient(180deg, #1d2d23 0%, #141f18 100%);
+                  border: 1px solid rgba(212, 163, 115, 0.25);
+                  border-radius: 14px;
+                  padding: 14px 6px;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="https://img.icons8.com/material-rounded/48/D4A373/crown.png"
+                  width="20"
+                  height="20"
+                  style="display: block; margin: 0 auto 6px auto"
+                  alt="Tier"
+                />
+                <div
+                  style="
+                    font-size: 19px;
+                    color: #d4a373;
+                    font-weight: 700;
+                    font-family: 'Fredoka', sans-serif;
+                    line-height: 1.1;
+                  "
+                >
+                  %%=v(@loyaltyTier)=%%
+                </div>
+                <div
+                  style="
+                    font-size: 9px;
+                    color: #8b967e;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    margin-top: 5px;
+                  "
+                >
+                  LOYALTY TIER
+                </div>
+              </div>
+            </td>
+            <td style="width: 33.33%; padding: 4px">
+              <div
+                style="
+                  background: linear-gradient(180deg, #1d2d23 0%, #141f18 100%);
+                  border: 1px solid rgba(212, 163, 115, 0.25);
+                  border-radius: 14px;
+                  padding: 14px 6px;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="https://img.icons8.com/material-rounded/48/D4A373/guarantee--v1.png"
+                  width="20"
+                  height="20"
+                  style="display: block; margin: 0 auto 6px auto"
+                  alt="Member"
+                />
+                <div
+                  style="
+                    font-size: 19px;
+                    color: #f5efe7;
+                    font-weight: 700;
+                    font-family: 'Fredoka', sans-serif;
+                    line-height: 1.1;
+                  "
+                >
+                  %%=v(@memberSince)=%%
+                </div>
+                <div
+                  style="
+                    font-size: 9px;
+                    color: #8b967e;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    margin-top: 5px;
+                  "
+                >
+                  MEMBER SINCE
+                </div>
+              </div>
+            </td>
+            <td style="width: 33.33%; padding: 4px">
+              <div
+                style="
+                  background: linear-gradient(180deg, #1d2d23 0%, #141f18 100%);
+                  border: 1px solid rgba(212, 163, 115, 0.25);
+                  border-radius: 14px;
+                  padding: 14px 6px;
+                  text-align: center;
+                "
+              >
+                <img
+                  src="https://img.icons8.com/material-rounded/48/D4A373/trophy.png"
+                  width="20"
+                  height="20"
+                  style="display: block; margin: 0 auto 6px auto"
+                  alt="Rank"
+                />
+                <div
+                  style="
+                    font-size: 19px;
+                    color: #d4a373;
+                    font-weight: 700;
+                    font-family: 'Fredoka', sans-serif;
+                    line-height: 1.1;
+                  "
+                >
+                  TOP %%=v(@topPercent)=%%%
+                </div>
+                <div
+                  style="
+                    font-size: 9px;
+                    color: #8b967e;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    margin-top: 5px;
+                  "
+                >
+                  NATIONAL RANK
+                </div>
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- 03. TOP 3 DRINKS PODIUM SECTION -->
+    <mj-section
+      background-color="#1C2B22"
+      padding="30px 20px 10px 20px"
+      border-top="1px solid rgba(212, 163, 115, 0.2)"
+    >
+      <mj-column width="100%">
+        <mj-text
+          align="center"
+          font-size="11px"
+          font-weight="700"
+          letter-spacing="2.5px"
+          color="#D4A373"
+          text-transform="uppercase"
+          padding="0 0 6px 0"
+        >
+          SIPS OF THE YEAR
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="32px"
+          color="#FFFFFF"
+          css-class="chubby-title"
+          padding="0 0 6px 0"
+        >
+          Your 2026 Drink Podium
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="14px"
+          line-height="1.6"
+          color="#C2C9C4"
+          padding="0 18px 20px 18px"
+        >
+          Some orders just hit different. Here are the three brews that defined
+          your year.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 3-COLUMNS DRINK PODIUM -->
+    <mj-section background-color="#1C2B22" padding="0px 14px 36px 14px">
+      <!-- Drink #1 (Centerpiece / Gold Highlight) -->
+      <mj-column width="33.33%" padding="5px">
+        <mj-text padding="0">
+          <div
+            style="
+              background: linear-gradient(180deg, #2a3e30 0%, #1a2820 100%);
+              border: 1.5px solid #d4a373;
+              border-radius: 16px;
+              box-shadow: 0 8px 24px rgba(212, 163, 115, 0.15);
+              padding: 16px 10px;
+              text-align: center;
+              box-sizing: border-box;
+            "
+          >
+            <div
+              style="
+                background: linear-gradient(135deg, #d4a373 0%, #b38250 100%);
+                color: #101712;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 4px 12px;
+                border-radius: 20px;
+                display: inline-block;
+                letter-spacing: 1px;
+              "
+            >
+              🥇 #1 Favourite
+            </div>
+            <div
+              style="
+                width: 130px;
+                height: 72px;
+                margin: 10px auto;
+                overflow: hidden;
+                border-radius: 10px;
+              "
+            >
+              <img
+                src="%%=v(@drink1Image)=%%"
+                width="130"
+                height="72"
+                style="
+                  display: block;
+                  width: 130px;
+                  height: 72px;
+                  max-width: 130px;
+                  max-height: 72px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="%%=v(@drink1Name)=%%"
+              />
+            </div>
+            <div
+              style="
+                font-size: 15px;
+                font-family: 'Fredoka', sans-serif;
+                color: #ffffff;
+                font-weight: 700;
+                margin-bottom: 2px;
+              "
+            >
+              %%=v(@drink1Name)=%%
+            </div>
+            <div
+              style="
+                font-size: 12px;
+                color: #d4a373;
+                font-weight: 700;
+                margin-bottom: 8px;
+              "
+            >
+              %%=v(@drink1Count)=%% orders
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: #c2c9c4;
+                line-height: 1.4;
+                min-height: 48px;
+              "
+            >
+              %%=v(@drink1Tagline)=%%
+            </div>
+            <div style="margin-top: 12px">
+              <a
+                href="#"
+                style="
+                  display: inline-block;
+                  background-color: #d4a373;
+                  color: #101712;
+                  font-family: 'Fredoka', sans-serif;
+                  font-size: 9px;
+                  font-weight: 700;
+                  letter-spacing: 1px;
+                  padding: 8px 12px;
+                  border-radius: 16px;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                "
+                >REORDER ➔</a
+              >
+            </div>
+          </div>
+        </mj-text>
+      </mj-column>
+
+      <!-- Drink #2 -->
+      <mj-column width="33.33%" padding="5px">
+        <mj-text padding="0">
+          <div
+            style="
+              background: linear-gradient(180deg, #223327 0%, #17241d 100%);
+              border: 1px solid rgba(212, 163, 115, 0.25);
+              border-radius: 16px;
+              padding: 16px 10px;
+              text-align: center;
+              box-sizing: border-box;
+            "
+          >
+            <div
+              style="
+                background-color: #27332a;
+                color: #d4a373;
+                border: 1px solid #d4a373;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                padding: 4px 10px;
+                border-radius: 20px;
+                display: inline-block;
+                letter-spacing: 1px;
+              "
+            >
+              🥈 #2
+            </div>
+            <div
+              style="
+                width: 130px;
+                height: 72px;
+                margin: 10px auto;
+                overflow: hidden;
+                border-radius: 10px;
+              "
+            >
+              <img
+                src="%%=v(@drink2Image)=%%"
+                width="130"
+                height="72"
+                style="
+                  display: block;
+                  width: 130px;
+                  height: 72px;
+                  max-width: 130px;
+                  max-height: 72px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="%%=v(@drink2Name)=%%"
+              />
+            </div>
+            <div
+              style="
+                font-size: 15px;
+                font-family: 'Fredoka', sans-serif;
+                color: #ffffff;
+                font-weight: 700;
+                margin-bottom: 2px;
+              "
+            >
+              %%=v(@drink2Name)=%%
+            </div>
+            <div
+              style="
+                font-size: 12px;
+                color: #d4a373;
+                font-weight: 700;
+                margin-bottom: 8px;
+              "
+            >
+              %%=v(@drink2Count)=%% orders
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: #c2c9c4;
+                line-height: 1.4;
+                min-height: 48px;
+              "
+            >
+              %%=v(@drink2Tagline)=%%
+            </div>
+            <div style="margin-top: 12px">
+              <a
+                href="#"
+                style="
+                  display: inline-block;
+                  border: 1px solid #d4a373;
+                  color: #d4a373;
+                  font-family: 'Fredoka', sans-serif;
+                  font-size: 9px;
+                  font-weight: 700;
+                  letter-spacing: 1px;
+                  padding: 7px 11px;
+                  border-radius: 16px;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                "
+                >REORDER ➔</a
+              >
+            </div>
+          </div>
+        </mj-text>
+      </mj-column>
+
+      <!-- Drink #3 -->
+      <mj-column width="33.33%" padding="5px">
+        <mj-text padding="0">
+          <div
+            style="
+              background: linear-gradient(180deg, #223327 0%, #17241d 100%);
+              border: 1px solid rgba(212, 163, 115, 0.25);
+              border-radius: 16px;
+              padding: 16px 10px;
+              text-align: center;
+              box-sizing: border-box;
+            "
+          >
+            <div
+              style="
+                background-color: #27332a;
+                color: #d4a373;
+                border: 1px solid #d4a373;
+                font-family: 'Fredoka', sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                padding: 4px 10px;
+                border-radius: 20px;
+                display: inline-block;
+                letter-spacing: 1px;
+              "
+            >
+              🥉 #3
+            </div>
+            <div
+              style="
+                width: 130px;
+                height: 72px;
+                margin: 10px auto;
+                overflow: hidden;
+                border-radius: 10px;
+              "
+            >
+              <img
+                src="%%=v(@drink3Image)=%%"
+                width="130"
+                height="72"
+                style="
+                  display: block;
+                  width: 130px;
+                  height: 72px;
+                  max-width: 130px;
+                  max-height: 72px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+                alt="%%=v(@drink3Name)=%%"
+              />
+            </div>
+            <div
+              style="
+                font-size: 15px;
+                font-family: 'Fredoka', sans-serif;
+                color: #ffffff;
+                font-weight: 700;
+                margin-bottom: 2px;
+              "
+            >
+              %%=v(@drink3Name)=%%
+            </div>
+            <div
+              style="
+                font-size: 12px;
+                color: #d4a373;
+                font-weight: 700;
+                margin-bottom: 8px;
+              "
+            >
+              %%=v(@drink3Count)=%% orders
+            </div>
+            <div
+              style="
+                font-size: 11px;
+                color: #c2c9c4;
+                line-height: 1.4;
+                min-height: 48px;
+              "
+            >
+              %%=v(@drink3Tagline)=%%
+            </div>
+            <div style="margin-top: 12px">
+              <a
+                href="#"
+                style="
+                  display: inline-block;
+                  border: 1px solid #d4a373;
+                  color: #d4a373;
+                  font-family: 'Fredoka', sans-serif;
+                  font-size: 9px;
+                  font-weight: 700;
+                  letter-spacing: 1px;
+                  padding: 7px 11px;
+                  border-radius: 16px;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                "
+                >REORDER ➔</a
+              >
+            </div>
+          </div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 04. CUSTOMER REWARD / LOYALTY INCENTIVE CARD -->
+    <mj-section background-color="#1C2B22" padding="24px 24px 30px 24px">
+      <mj-column css-class="reward-card" padding="28px 18px">
+        <mj-text
+          align="center"
+          font-size="11px"
+          font-weight="700"
+          letter-spacing="2.5px"
+          color="#D4A373"
+          text-transform="uppercase"
+          padding="0 0 8px 0"
+        >
+          ★ TOP %%=v(@topPercent)=%%% VIP PERK UNLOCKED ★
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="28px"
+          color="#FFFFFF"
+          css-class="chubby-title"
+          padding="0 0 10px 0"
+        >
+          20% OFF YOUR NEXT ROAST
+        </mj-text>
+        <mj-text
+          align="center"
+          font-size="14px"
+          line-height="1.6"
+          color="#C2C9C4"
+          padding="0 12px 18px 12px"
+        >
+          To celebrate your loyalty and %%=v(@totalCups)=%% extractions in 2026,
+          enjoy 20% off your entire next order of single-origin beans, cafe
+          drinks, or brew gear.
+        </mj-text>
+
+        <mj-text align="center" padding="0 0 16px 0">
+          <span class="voucher-code">%%=v(@couponCode)=%%</span>
+        </mj-text>
+
+        <mj-button
+          background-color="#D4A373"
+          color="#101712"
+          font-family="'Fredoka', sans-serif"
+          font-size="12px"
+          font-weight="700"
+          letter-spacing="1.5px"
+          border-radius="30px"
+          inner-padding="14px 28px"
+          href="https://beanthere.coffee/redeem?code=%%=v(@couponCode)=%%"
+          align="center"
+          text-transform="uppercase"
+          >CLAIM YOUR 20% REWARD ➔</mj-button
+        >
+        <mj-text
+          align="center"
+          font-size="11px"
+          color="#8A9990"
+          padding="10px 0 0 0"
+        >
+          Valid online &amp; across all roasteries until Jan 31, 2027
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- 05. 4:5 SHARABLE STORY CARD (INSTAGRAM READY + QR CODE) -->
+    <mj-section
+      background-color="#1C2B22"
+      padding="30px 20px 40px 20px"
+      border-top="1px solid rgba(212, 163, 115, 0.2)"
+    >
+      <mj-column css-class="share-story-card" padding="32px 20px">
+        <!-- Top Story Header -->
+        <mj-text
+          align="center"
+          font-size="11px"
+          font-weight="700"
+          letter-spacing="3px"
+          color="#D4A373"
+          text-transform="uppercase"
+          padding="0 0 6px 0"
+          >BEAN THERE // 2026 PASSPORT</mj-text
+        >
+        <mj-text
+          color="#F5EFE7"
+          align="center"
+          font-family="'Fredoka', sans-serif"
+          font-size="28px"
+          font-weight="800"
+          padding="0 0 16px 0"
+          >%%=v(@displayName)=%% Coffee Year</mj-text
+        >
+
+        <!-- Stats Breakdown (Receipt Style) -->
+        <mj-table padding="0 10px 18px 10px">
+          <tr style="border-bottom: 1px solid #35473b">
+            <td
+              style="
+                font-weight: 600;
+                font-size: 12px;
+                padding: 10px 0;
+                color: #8b967e;
+                letter-spacing: 1px;
+              "
+            >
+              TOTAL CUPS
+            </td>
+            <td
+              style="
+                padding: 10px 0;
+                text-align: right;
+                font-size: 15px;
+                font-weight: 700;
+                color: #ffffff;
+                font-family: 'Fredoka', sans-serif;
+              "
+            >
+              %%=v(@totalCups)=%%
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #35473b">
+            <td
+              style="
+                font-weight: 600;
+                font-size: 12px;
+                padding: 10px 0;
+                color: #8b967e;
+                letter-spacing: 1px;
+              "
+            >
+              PEAK HOUR
+            </td>
+            <td
+              style="
+                padding: 10px 0;
+                text-align: right;
+                font-size: 15px;
+                font-weight: 700;
+                color: #ffffff;
+                font-family: 'Fredoka', sans-serif;
+              "
+            >
+              %%=v(@peakHourFormatted)=%%
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #35473b">
+            <td
+              style="
+                font-weight: 600;
+                font-size: 12px;
+                padding: 10px 0;
+                color: #8b967e;
+                letter-spacing: 1px;
+              "
+            >
+              #1 DRINK
+            </td>
+            <td
+              style="
+                padding: 10px 0;
+                text-align: right;
+                font-size: 15px;
+                font-weight: 700;
+                color: #ffffff;
+                font-family: 'Fredoka', sans-serif;
+              "
+            >
+              %%=v(@drink1Name)=%% (%%=v(@drink1Count)=%%x)
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #35473b">
+            <td
+              style="
+                font-weight: 600;
+                font-size: 12px;
+                padding: 10px 0;
+                color: #8b967e;
+                letter-spacing: 1px;
+              "
+            >
+              CLUB STATUS
+            </td>
+            <td
+              style="
+                padding: 10px 0;
+                text-align: right;
+                font-size: 15px;
+                font-weight: 700;
+                color: #d4a373;
+                font-family: 'Fredoka', sans-serif;
+              "
+            >
+              %%=v(@loyaltyTier)=%% Member · Top %%=v(@topPercent)=%%%
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                font-weight: 600;
+                font-size: 12px;
+                padding: 10px 0;
+                color: #8b967e;
+                letter-spacing: 1px;
+              "
+            >
+              ARCHETYPE
+            </td>
+            <td
+              style="
+                padding: 10px 0;
+                text-align: right;
+                font-size: 14px;
+                font-weight: 700;
+                color: #ffffff;
+                font-family: 'Fredoka', sans-serif;
+              "
+            >
+              %%=v(@personalityBadge)=%%
+            </td>
+          </tr>
+        </mj-table>
+
+        <!-- QR Code Section (Scan to View Portfolio) -->
+        <mj-table padding="10px 0 16px 0">
+          <tr>
+            <td style="text-align: center">
+              <div class="qr-container">
+                <img
+                  src="%%=v(@qrCodeUrl)=%%"
+                  width="100"
+                  height="100"
+                  style="display: block; margin: 0 auto; border-radius: 6px"
+                  alt="Scan or tap to visit portfolio"
+                />
+              </div>
+              <div
+                style="
+                  font-size: 10px;
+                  color: #d4a373;
+                  font-weight: 700;
+                  letter-spacing: 1.5px;
+                  margin-top: 8px;
+                  text-transform: uppercase;
+                "
+              >
+                SCAN OR TAP TO VIEW ONLINE
+              </div>
+            </td>
+          </tr>
+        </mj-table>
+
+        <!-- Screenshot Prompt & Instagram CTA -->
+        <mj-text
+          align="center"
+          font-size="12px"
+          line-height="1.5"
+          color="#C2C9C4"
+          padding="0 14px 16px 14px"
+        >
+          📸 <strong>Screenshot this card</strong> or tap below to post to your
+          Instagram Story. Tag <strong>@BeanThereCoffee</strong> to get a free
+          batch brew on your next visit!
+        </mj-text>
+
+        <mj-button
+          background-color="#F5EFE7"
+          color="#1C2B22"
+          font-family="'Fredoka', sans-serif"
+          font-weight="700"
+          font-size="13px"
+          border-radius="30px"
+          letter-spacing="1.2px"
+          inner-padding="14px 24px"
+          href="https://instagram.com"
+          align="center"
+          text-transform="uppercase"
+          >📸 SHARE TO INSTAGRAM STORY</mj-button
+        >
+      </mj-column>
+    </mj-section>
+
+    <!-- 06. COHESIVE FOOTER -->
+    <mj-section
+      background-color="#141E18"
+      padding="36px 20px 24px 20px"
+      border-top="1px solid rgba(212, 163, 115, 0.25)"
+    >
+      <mj-column width="100%">
+        <mj-text
+          align="center"
+          font-family="'Fredoka', sans-serif"
+          font-size="20px"
+          font-weight="700"
+          letter-spacing="3px"
+          color="#F5EFE7"
+          text-transform="uppercase"
+          padding="0 0 6px 0"
+        >
+          ⋆☕︎⋆ BEAN THERE
+        </mj-text>
+        <mj-text
+          font-size="12px"
+          align="center"
+          color="#8B967E"
+          padding="0 0 16px 0"
+        >
+          The artisanal daily ritual you never had to think about.
+        </mj-text>
+
+        <!-- Quick Navigation Links -->
+        <mj-table padding="0 0 16px 0">
+          <tr>
+            <td
+              style="
+                text-align: center;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: 1px;
+              "
+            >
+              <a
+                href="#"
+                style="color: #d4a373; text-decoration: none; padding: 0 8px"
+                >VISIT STORE</a
+              >
+              <span style="color: #455249">·</span>
+              <a
+                href="#"
+                style="color: #d4a373; text-decoration: none; padding: 0 8px"
+                >CAFE LOCATIONS</a
+              >
+              <span style="color: #455249">·</span>
+              <a
+                href="#"
+                style="color: #d4a373; text-decoration: none; padding: 0 8px"
+                >MY CLUB ACCOUNT</a
+              >
+            </td>
+          </tr>
+        </mj-table>
+
+        <mj-text
+          align="center"
+          font-size="11px"
+          color="#6C7A71"
+          line-height="1.6"
+          padding="0 0 14px 0"
+        >
+          755 Craft Street, Roastery District, Sector 4<br />
+          You received this email because you are a registered Bean There Club
+          member.
+        </mj-text>
+
+        <mj-text
+          align="center"
+          font-size="11px"
+          color="#5B6860"
+          padding="10px 0 0 0"
+        >
+          <a href="#" style="color: #7e8d83; text-decoration: underline"
+            >Unsubscribe</a
+          >
+          &nbsp;·&nbsp;
+          <a href="#" style="color: #7e8d83; text-decoration: underline"
+            >Manage Preferences</a
+          >
+          &nbsp;·&nbsp;
+          <a href="#" style="color: #7e8d83; text-decoration: underline"
+            >Privacy Policy</a
+          >
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,156 @@
+%%[
+/* Assigning Values */
+SET @firstName = AttributeValue("FirstName")
+SET @totalCups = AttributeValue("TotalCups")
+SET @favDrink = AttributeValue("FavouriteDrink")
+SET @favDrinkUpper = Uppercase(@favDrink)
+SET @topThreeDrinks = AttributeValue("TopThreeDrinks")
+SET @peakHour = AttributeValue("PeakHour")
+SET @activeMonth = AttributeValue("MostActiveMonth")
+SET @activeMonthUpper = Uppercase(@activeMonth)
+SET @topPercent = AttributeValue("TopPercent")
+SET @pointsEarned = AttributeValue("PointsEarned")
+SET @memberSince = AttributeValue("MemberSince")
+SET @imgURL = 'https://images.ampscriptacademy.com.au/uploads/'
+
+/* First Name Greeting */
+IF NOT Empty(@firstName) THEN
+    SET @greetingName = ProperCase(Trim(@firstName))
+    SET @displayName = Concat(@greetingName, "'s")
+ELSE
+    SET @greetingName = "Coffee Addict"
+    SET @displayName = "Your"
+ENDIF
+
+/* Peak Hour Format */
+IF @peakHour < 12 THEN
+    SET @peakHourFormatted = Concat(@peakHour, ":00 AM")
+ELSEIF @peakHour == 12 THEN
+    SET @peakHourFormatted = "12:00 PM"
+ELSE
+    SET @peakHourFormatted = Concat(Subtract(@peakHour, 12), ":00 PM")
+ENDIF
+
+/* Favourite Drink Lookup */
+SET @favDrinkRows = LookupRows("Drinks", "Drink", @favDrink)
+IF RowCount(@favDrinkRows) > 0 THEN
+    SET @favDrinkRow = Row(@favDrinkRows, 1)
+    SET @category = Field(@favDrinkRow, "Category")
+    SET @temperature = Field(@favDrinkRow, "Temperature")
+    SET @tagline = Field(@favDrinkRow, "Tagline")
+    SET @favDrinkImage = Field(@favDrinkRow, "ImageURL")
+ENDIF
+
+IF @temperature == "Hot" THEN
+    SET @heroBgImage = Concat(@imgURL, "hero-hot2.png")
+ELSE
+    SET @heroBgImage = Concat(@imgURL, "hero-cold2.png")
+ENDIF
+
+/* Personality Type */
+IF @totalCups >= 300 THEN
+    SET @personalityBadge = "Caffeine Royalty"
+    SET @personalityDesc = Concat(@totalCups, " cups logged. You don't just drink coffee, you run on it. Pure, punchy, no apologies.")
+ELSEIF @peakHour <= 7 THEN
+    SET @personalityBadge = "Dawn Purist"
+    SET @personalityDesc = Concat("Awake before the sun at ", @peakHourFormatted, " with zero frills and 100% focus. An uncompromising espresso purist.")
+ELSEIF @category == "Milk-based" THEN
+    SET @personalityBadge = "Creamy Connoisseur"
+    SET @personalityDesc = Concat("Crafted from ", @totalCups, " silky extractions, consistent ", @peakHourFormatted, " rituals, and unwavering ", @favDrink, " devotion.")
+ELSEIF @category == "Sweet" THEN
+    SET @personalityBadge = "Sweet Tooth Alchemist"
+    SET @personalityDesc = "Dessert that proudly counts as breakfast. Life is far too short for bitter coffee."
+ELSEIF @temperature == "Cold" THEN
+    SET @personalityBadge = "Ice Cold Icon"
+    SET @personalityDesc = "Slow-steeped, chilled to perfection, always dialed in no matter what the weather is outside."
+ELSEIF @peakHour >= 21 THEN
+    SET @personalityBadge = "Night Owl Barista"
+    SET @personalityDesc = Concat("Who says ", @peakHourFormatted, " isn't prime coffee time? Rules were made to be broken.")
+ELSE
+    SET @personalityBadge = "Specialty Devotee"
+    SET @personalityDesc = Concat("Balanced taste, mindful mornings, and ", @totalCups, " cups of pure artisanal appreciation.")
+ENDIF
+
+/* Circadian Cadence */
+/* Step 1 */
+IF @peakHour <= 8 THEN
+    SET @circadianStep1Title = "The Dawn Extraction"
+    SET @circadianStep1Copy = "While the rest of the world was hitting snooze, your first espresso extraction was already filling the air."
+    SET @circadianStep1Image = Concat(@imgURL, "time-morning.png")
+ELSEIF @peakHour <= 12 THEN
+    SET @circadianStep1Title = "The Midday Dial-In"
+    SET @circadianStep1Copy = "Your mid-morning precision break. Calibrated extractions to keep your momentum running at full peak."
+    SET @circadianStep1Image = Concat(@imgURL, "time-midday.png")
+ELSEIF @peakHour <= 17 THEN
+    SET @circadianStep1Title = "The Afternoon Reset"
+    SET @circadianStep1Copy = "Your post-lunch restorative pause. Smooth, balanced coffee craft to power through the rest of the afternoon."
+    SET @circadianStep1Image = Concat(@imgURL, "time-afternoon.png")
+ELSE
+    SET @circadianStep1Title = "The Moonlight Brew"
+    SET @circadianStep1Copy = "Who said evenings aren't for coffee? Cozy late-night pours dialed in long after the rush."
+    SET @circadianStep1Image = Concat(@imgURL, "time-night.png")
+ENDIF
+
+/* Step 2 */
+SET @circadianStep2Title = Concat('"', @tagline, '"')
+SET @circadianStep2Copy = Concat("Your undisputed daily signature. Folded into your routine, ", @favDrink, " became the official soundtrack of your 2026.")
+SET @circadianStep2Image = @favDrinkImage
+
+/* Step 3 */
+IF @activeMonth == "June" OR @activeMonth == "July" OR @activeMonth == "August" THEN
+    SET @circadianStep3Title = Concat(@activeMonth, " Summer Sprint")
+    SET @circadianStep3Copy = "Cold brews, extra iced shots, and sunny terrace breaks pushed this to your highest volume of the year."
+    SET @circadianStep3Image = Concat(@imgURL, "season-summer.png")
+ELSEIF @activeMonth == "September" OR @activeMonth == "October" OR @activeMonth == "November" THEN
+    SET @circadianStep3Title = Concat(@activeMonth, " Autumn Roast")
+    SET @circadianStep3Copy = "Comforting espresso pulls and brisk morning rituals made this your most flavor-packed season."
+    SET @circadianStep3Image = Concat(@imgURL, "season-autumn.png")
+ELSEIF @activeMonth == "December" OR @activeMonth == "January" OR @activeMonth == "February" THEN
+    SET @circadianStep3Title = Concat(@activeMonth, " Winter Warm-Up")
+    SET @circadianStep3Copy = "Steaming mugs and rich dark roasts kept you warm as this became your highest coffee volume of the whole year."
+    SET @circadianStep3Image = Concat(@imgURL, "season-winter.png")
+ELSE
+    SET @circadianStep3Title = Concat(@activeMonth, " Spring Awakening")
+    SET @circadianStep3Copy = "Fresh roastery batches and bright morning extractions made this your most energized sprint of 2026."
+    SET @circadianStep3Image = Concat(@imgURL, "season-spring.png")
+ENDIF
+
+/* Top 3 Drinks */
+SET @drinkRows = BuildRowSetFromString(@topThreeDrinks, "|")
+
+/* Drink 1 */
+SET @d1 = BuildRowSetFromString(Field(Row(@drinkRows, 1), 1), ":")
+SET @drink1Name = Trim(Field(Row(@d1, 1), 1))
+SET @drink1Count = Trim(Field(Row(@d1, 2), 1))
+SET @drink1Image = @favDrinkImage
+SET @drink1Tagline = Concat("Looks like you and ", @drink1Name, " were practically inseparable this year.")
+
+/* Drink 2 */
+SET @d2 = BuildRowSetFromString(Field(Row(@drinkRows, 2), 1), ":")
+SET @drink2Name = Trim(Field(Row(@d2, 1), 1))
+SET @drink2Count = Trim(Field(Row(@d2, 2), 1))
+SET @drink2Image = Lookup("Drinks", "ImageURL", "Drink", @drink2Name)
+SET @drink2Tagline = Lookup("Drinks", "Tagline", "Drink", @drink2Name)
+
+/* Drink 3 */
+SET @d3 = BuildRowSetFromString(Field(Row(@drinkRows, 3), 1), ":")
+SET @drink3Name = Trim(Field(Row(@d3, 1), 1))
+SET @drink3Count = Trim(Field(Row(@d3, 2), 1))
+SET @drink3Image = Lookup("Drinks", "ImageURL", "Drink", @drink3Name)
+SET @drink3Tagline = Lookup("Drinks", "Tagline", "Drink", @drink3Name)
+
+/* Loyalty, Rewards & Dynamic Subject Line */
+IF @topPercent <= 5 THEN
+    SET @loyaltyTier = "GOLD"
+    SET @subjectline = Concat("🏆 Top ", @topPercent, "% nationwide! Your 2026 Coffee Wrapped is here")
+ELSEIF @topPercent <= 15 THEN
+    SET @loyaltyTier = "SILVER"
+    SET @subjectline = Concat("☕ Top ", @topPercent, "%! See your 2026 year in coffee!")
+ELSE
+    SET @loyaltyTier = "Bronze"
+    SET @subjectline = Concat("☕ Your 2026 Year in Coffee Wrapped is here!")
+ENDIF
+
+SET @couponCode = Concat("WRAPPED-TOP", @topPercent, "-2026")
+SET @qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://pritish.is-my.id/&color=1c2b22&bgcolor=f5efe7"
+]%%

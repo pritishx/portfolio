@@ -1,0 +1,10 @@
+SubscriberKey,FirstName,EmailAddress,TotalCups,FavouriteDrink,TopThreeDrinks,PeakHour,MostActiveMonth,TopPercent,PointsEarned,MemberSince
+BEAN1001,Olivia,olivia@demodata.example.com,312,Oat Flat White,"Oat Flat White:196|Cold Brew:78|Espresso:38",7,July,4,3120,2021
+BEAN1002,Ethan,ethan@demodata.example.com,268,Long Black,"Long Black:172|Espresso:64|Cold Brew:32",6,June,7,2680,2020
+BEAN1003,,bean1003@demodata.example.com,141,Caramel Latte,"Caramel Latte:88|Mocha:34|Cappuccino:19",15,September,22,1410,2023
+BEAN1004,Sofia,sofia@demodata.example.com,205,Cold Brew,"Cold Brew:130|Oat Flat White:52|Long Black:23",14,January,11,2050,2022
+BEAN1005,Liam,liam@demodata.example.com,97,Cappuccino,"Cappuccino:58|Mocha:24|Caramel Latte:15",21,March,41,970,2024
+BEAN1006,Aria,aria@demodata.example.com,178,Matcha Latte,"Matcha Latte:112|Oat Flat White:44|Cold Brew:22",9,August,15,1780,2023
+BEAN1007,Noah,noah@demodata.example.com,356,Espresso,"Espresso:240|Piccolo:76|Long Black:40",8,May,2,3560,2019
+BEAN1008,Maya,maya@demodata.example.com,120,Mocha,"Mocha:75|Caramel Latte:30|Cappuccino:15",22,November,33,1200,2024
+BEAN1009,Kai,kai@demodata.example.com,233,Piccolo,"Piccolo:152|Long Black:54|Espresso:27",11,February,9,2330,2021

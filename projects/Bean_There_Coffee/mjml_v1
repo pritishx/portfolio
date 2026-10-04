@@ -1,0 +1,367 @@
+<mjml>
+  <mj-head>
+    <mj-title>Bean There Coffee Co. — Your 2026 Wrapped</mj-title>
+    <mj-preview>Your 2026 Coffee Feed is ready. 312 cups, top 4%, and a personality reveal.</mj-preview>
+    <mj-font name="Syne" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" />
+      <mj-text padding="0" color="#211812" />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+    </mj-attributes>
+    <mj-style>
+      .display-num {
+        font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -3px !important;
+        line-height: 0.9 !important;
+      }
+      .display-text {
+        font-family: 'Syne', -apple-system, BlinkMacSystemFont, 'Arial Black', sans-serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -1.5px !important;
+        line-height: 0.95 !important;
+        text-transform: uppercase !important;
+      }
+      .share-card-border {
+        border: 2px solid #211812 !important;
+      }
+      @media only screen and (max-width: 480px) {
+        .mobile-hero-num {
+          font-size: 82px !important;
+        }
+        .mobile-head {
+          font-size: 40px !important;
+        }
+      }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#E9E0D4" width="600px">
+
+    <!-- TOP META BAR -->
+    <mj-section background-color="#E9E0D4" padding="24px 28px 12px 28px">
+      <mj-column width="60%">
+        <mj-text font-size="11px" font-weight="700" letter-spacing="1.5px" color="#806A5C">
+          BEAN THERE COFFEE CO. ☕
+        </mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text align="right" font-size="11px" font-weight="700" letter-spacing="1.5px" color="#806A5C">
+          2026 ARCHIVE · VOL. 04
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- PROFILE HEADER (FEED INTRODUCTION) -->
+    <mj-section background-color="#F7EFE5" padding="36px 28px 28px 28px">
+      <mj-column>
+        <!-- Profile Identity Meta -->
+        <mj-table padding="0 0 20px 0">
+          <tr style="vertical-align: middle;">
+            <td style="width: 54px;">
+              <div style="width: 46px; height: 46px; background-color: #C96A42; border-radius: 50%; text-align: center; line-height: 46px; font-weight: 800; font-size: 20px; color: #F7EFE5; font-family: 'Syne', sans-serif;">
+                O
+              </div>
+            </td>
+            <td style="padding-left: 12px;">
+              <p style="margin: 0; font-size: 15px; font-weight: 700; color: #211812; letter-spacing: -0.2px;">olivia.coffee.feed</p>
+              <p style="margin: 2px 0 0 0; font-size: 11px; font-weight: 600; color: #806A5C; letter-spacing: 0.8px; text-transform: uppercase;">Member Since 2021</p>
+            </td>
+            <td style="text-align: right;">
+              <span style="display: inline-block; padding: 4px 10px; background-color: #E9E0D4; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px;">PRO VERIFIED</span>
+            </td>
+          </tr>
+        </mj-table>
+
+        <mj-text font-size="28px" font-weight="800" line-height="1.1" padding="10px 0 6px 0" css-class="display-text">
+          A year of rituals, extracted.
+        </mj-text>
+        <mj-text font-size="13px" line-height="1.5" color="#806A5C" padding="0 0 24px 0">
+          365 days of pour-overs, quick morning fixes, and mid-afternoon revivals. Here is your private archive.
+        </mj-text>
+
+        <!-- Quick Glaze Stats Bar -->
+        <mj-table padding="16px 0 0 0" container-background-color="#E9E0D4" style="border-radius: 6px;">
+          <tr style="text-align: center;">
+            <td style="padding: 12px 8px; border-right: 1px solid #D6CBC0;">
+              <div style="font-size: 20px; font-weight: 800; color: #211812; font-family: 'Syne', sans-serif;">312</div>
+              <div style="font-size: 9px; font-weight: 700; color: #806A5C; letter-spacing: 1px;">CUPS</div>
+            </td>
+            <td style="padding: 12px 8px; border-right: 1px solid #D6CBC0;">
+              <div style="font-size: 20px; font-weight: 800; color: #C96A42; font-family: 'Syne', sans-serif;">TOP 4%</div>
+              <div style="font-size: 9px; font-weight: 700; color: #806A5C; letter-spacing: 1px;">TIER</div>
+            </td>
+            <td style="padding: 12px 8px;">
+              <div style="font-size: 20px; font-weight: 800; color: #211812; font-family: 'Syne', sans-serif;">7:00 AM</div>
+              <div style="font-size: 9px; font-weight: 700; color: #806A5C; letter-spacing: 1px;">RITUAL</div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- POST 01: TOTAL CUPS (TERRACOTTA THEME) -->
+    <mj-section background-color="#C96A42" padding="44px 28px 36px 28px">
+      <mj-column>
+        <mj-text font-size="11px" font-weight="700" letter-spacing="1.5px" color="#F7EFE5" padding="0 0 16px 0">
+          POST 01 / CONSUMPTION VOLUME
+        </mj-text>
+        <mj-text font-size="12px" font-weight="700" letter-spacing="2px" color="#211812" text-transform="uppercase" padding="0 0 8px 0">
+          Total Cups Poured
+        </mj-text>
+        <mj-text font-size="116px" color="#F7EFE5" css-class="display-num mobile-hero-num" padding="0">
+          312
+        </mj-text>
+        <mj-text font-size="16px" font-weight="800" letter-spacing="3px" color="#211812" padding="4px 0 24px 0">
+          CUPS LOGGED IN 2026
+        </mj-text>
+        
+        <!-- Post Caption -->
+        <mj-table padding="16px 0 0 0" style="border-top: 1px solid rgba(247, 239, 229, 0.35);">
+          <tr>
+            <td style="font-size: 16px; width: 48px; color: #F7EFE5;">♡ &nbsp; ↗</td>
+            <td style="font-size: 13px; color: #F7EFE5; line-height: 1.4; padding-left: 10px;">
+              <strong>beanthere:</strong> At this point, coffee isn't just a part of your daily routine. You <em>are</em> the routine.
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- POST 02: PEAK HOUR (PRIMARY ESPRESSO THEME) -->
+    <mj-section background-color="#211812" padding="44px 28px 36px 28px">
+      <mj-column>
+        <mj-text font-size="11px" font-weight="700" letter-spacing="1.5px" color="#B9A99A" padding="0 0 16px 0">
+          POST 02 / CIRCADIAN CADENCE
+        </mj-text>
+        <mj-text font-size="12px" font-weight="700" letter-spacing="2px" color="#E6B84F" text-transform="uppercase" padding="0 0 8px 0">
+          Your Peak Active Hour
+        </mj-text>
+        <mj-text font-size="96px" color="#F7EFE5" css-class="display-num mobile-hero-num" padding="0">
+          07:00
+        </mj-text>
+        <mj-text font-size="28px" font-weight="800" color="#E6B84F" letter-spacing="2px" padding="0 0 24px 0">
+          A.M. SHARP
+        </mj-text>
+
+        <!-- Post Caption -->
+        <mj-table padding="16px 0 0 0" style="border-top: 1px solid rgba(185, 169, 154, 0.25);">
+          <tr>
+            <td style="font-size: 16px; width: 48px; color: #E6B84F;">♡ &nbsp; ↗</td>
+            <td style="font-size: 13px; color: #B9A99A; line-height: 1.4; padding-left: 10px;">
+              <strong style="color: #F7EFE5;">beanthere:</strong> While everyone else was still hitting snooze, you were already dialed in, pulled, and fully operational.
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- POST 03: SIGNATURE DRINK (WARM CREAM + PHOTO FOCUS) -->
+    <mj-section background-color="#F7EFE5" padding="44px 28px 24px 28px">
+      <mj-column>
+        <mj-text font-size="11px" font-weight="700" letter-spacing="1.5px" color="#806A5C" padding="0 0 12px 0">
+          POST 03 / SIGNATURE SELECTION
+        </mj-text>
+        <mj-text font-size="12px" font-weight="700" letter-spacing="2px" color="#C96A42" text-transform="uppercase" padding="0 0 8px 0">
+          Go-To Order
+        </mj-text>
+        <mj-text font-size="52px" color="#211812" css-class="display-text mobile-head" padding="0 0 20px 0">
+          OAT FLAT<br/>WHITE.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#F7EFE5" padding="0 28px 36px 28px">
+      <mj-column>
+        <mj-image 
+          src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=1000&q=80" 
+          alt="Artisanal Oat Flat White with clean latte art" 
+          border-radius="4px" 
+          padding="0 0 20px 0" />
+        
+        <!-- Post Caption -->
+        <mj-table padding="16px 0 0 0" style="border-top: 1px solid #D6CBC0;">
+          <tr>
+            <td style="font-size: 16px; width: 48px; color: #211812;">♡ &nbsp; ↗</td>
+            <td style="font-size: 13px; color: #211812; line-height: 1.4; padding-left: 10px;">
+              <strong>beanthere:</strong> Silky microfoam, double ristretto backbone, zero fuss. An undeniable everyday staple.
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- POST 04 & 05: TWO-COLUMN EDITORIAL SPLIT (RANKING + MONTH) -->
+    <mj-section background-color="#E9E0D4" padding="20px 20px">
+      <!-- Left: Standing -->
+      <mj-column width="48%" background-color="#F7EFE5" padding="28px 22px" border-radius="4px">
+        <mj-text font-size="10px" font-weight="700" letter-spacing="1.5px" color="#806A5C">
+          CLUB STANDING
+        </mj-text>
+        <mj-text font-size="64px" color="#C96A42" css-class="display-num" padding="10px 0 0 0">
+          4%
+        </mj-text>
+        <mj-text font-size="11px" font-weight="800" letter-spacing="1.5px" color="#211812" padding="0 0 12px 0">
+          TOP BEAN THERE ELITE
+        </mj-text>
+        <mj-text font-size="12px" color="#806A5C" line-height="1.4">
+          Statistically speaking, you drink circles around the rest of the city.
+        </mj-text>
+      </mj-column>
+
+      <!-- Spacer -->
+      <mj-column width="4%">
+        <mj-spacer height="16px" />
+      </mj-column>
+
+      <!-- Right: Coffee Month -->
+      <mj-column width="48%" background-color="#211812" padding="28px 22px" border-radius="4px">
+        <mj-text font-size="10px" font-weight="700" letter-spacing="1.5px" color="#B9A99A">
+          PEAK MONTH
+        </mj-text>
+        <mj-text font-size="44px" color="#E6B84F" css-class="display-text" padding="20px 0 8px 0">
+          JULY
+        </mj-text>
+        <mj-text font-size="11px" font-weight="800" letter-spacing="1.5px" color="#F7EFE5" padding="0 0 12px 0">
+          41 EXTRACTED CUPS
+        </mj-text>
+        <mj-text font-size="12px" color="#B9A99A" line-height="1.4">
+          Mid-year deadlines or cold-brew heatwave survival? Either way, you showed up.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- POST 06: PERSONALITY REVEAL (GOLDEN YELLOW ACCENT MOMENT) -->
+    <mj-section background-color="#E6B84F" padding="52px 28px 44px 28px">
+      <mj-column>
+        <mj-text font-size="11px" font-weight="800" letter-spacing="2px" color="#211812" text-transform="uppercase" padding="0 0 16px 0">
+          THE DIAGNOSIS · PERSONALITY PROFILE
+        </mj-text>
+        <mj-text font-size="13px" font-weight="700" letter-spacing="1px" color="#211812" padding="0 0 4px 0">
+          AFTER RUNNING THE NUMBERS, YOU ARE OFFICIALLY A:
+        </mj-text>
+        <mj-text font-size="56px" color="#211812" css-class="display-text mobile-head" padding="0 0 16px 0">
+          CREAMY<br/>CONNOISSEUR
+        </mj-text>
+
+        <mj-text font-size="42px" padding="0 0 16px 0">
+          🥛
+        </mj-text>
+
+        <mj-text font-size="17px" font-weight="600" line-height="1.45" color="#211812" padding="0 0 24px 0">
+          Comfort, but make it artisanal. You appreciate the warmth of texture, velvety balance, and properly stretched milk over raw bitterness every single time.
+        </mj-text>
+
+        <mj-table padding="16px 0 0 0" style="border-top: 1px solid rgba(33, 24, 18, 0.25);">
+          <tr>
+            <td style="font-size: 16px; width: 48px; color: #211812;">♡ &nbsp; ↗</td>
+            <td style="font-size: 13px; color: #211812; line-height: 1.4; padding-left: 10px;">
+              <strong>beanthere:</strong> Never let anyone tell you flat whites aren't real coffee. Your standard is undisputed.
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- POST 07: BEAN BANK & POINTS -->
+    <mj-section background-color="#F7EFE5" padding="40px 28px">
+      <mj-column width="65%">
+        <mj-text font-size="11px" font-weight="700" letter-spacing="1.5px" color="#806A5C" padding="0 0 6px 0">
+          BEAN BANK ACCUMULATION
+        </mj-text>
+        <mj-text font-size="46px" color="#211812" css-class="display-num" padding="0 0 4px 0">
+          3,120
+        </mj-text>
+        <mj-text font-size="12px" font-weight="800" letter-spacing="1px" color="#C96A42">
+          REWARD POINTS CURRENTLY ACCRUED
+        </mj-text>
+      </mj-column>
+      <mj-column width="35%">
+        <mj-text font-size="12px" line-height="1.5" color="#806A5C" padding="16px 0 0 0">
+          Redeemable towards fresh single-origin bags, brewing gear, or seasonal bar drops.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- THE PAYOFF: SCREENSHOT SHARE CARD -->
+    <mj-section background-color="#E9E0D4" padding="36px 20px 48px 20px">
+      <mj-column background-color="#F7EFE5" padding="36px 28px" css-class="share-card-border">
+        
+        <!-- Share Card Header -->
+        <mj-table padding="0 0 24px 0">
+          <tr>
+            <td style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; color: #211812;">
+              BEAN THERE · 2026 WRAPPED
+            </td>
+            <td style="text-align: right; font-size: 11px; font-weight: 700; color: #C96A42;">
+              #MYBEANTHERE
+            </td>
+          </tr>
+        </mj-table>
+
+        <mj-text font-size="38px" color="#211812" css-class="display-text" padding="0 0 4px 0">
+          OLIVIA'S
+        </mj-text>
+        <mj-text font-size="46px" color="#C96A42" css-class="display-text" padding="0 0 28px 0">
+          COFFEE FEED.
+        </mj-text>
+
+        <!-- Stat Rows Inside Screenshot Card -->
+        <mj-table padding="0 0 24px 0" style="border-top: 2px solid #211812; border-bottom: 2px solid #211812;">
+          <tr style="border-bottom: 1px solid #E9E0D4;">
+            <td style="padding: 12px 0; font-size: 12px; font-weight: 700; color: #806A5C; text-transform: uppercase;">Volume</td>
+            <td style="padding: 12px 0; text-align: right; font-size: 16px; font-weight: 800; color: #211812;">312 Cups</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #E9E0D4;">
+            <td style="padding: 12px 0; font-size: 12px; font-weight: 700; color: #806A5C; text-transform: uppercase;">Go-To Drink</td>
+            <td style="padding: 12px 0; text-align: right; font-size: 16px; font-weight: 800; color: #211812;">Oat Flat White</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #E9E0D4;">
+            <td style="padding: 12px 0; font-size: 12px; font-weight: 700; color: #806A5C; text-transform: uppercase;">Percentile</td>
+            <td style="padding: 12px 0; text-align: right; font-size: 16px; font-weight: 800; color: #C96A42;">Top 4%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 0; font-size: 12px; font-weight: 700; color: #806A5C; text-transform: uppercase;">Persona</td>
+            <td style="padding: 12px 0; text-align: right; font-size: 16px; font-weight: 800; color: #211812;">Creamy Connoisseur 🥛</td>
+          </tr>
+        </mj-table>
+
+        <mj-text align="center" font-size="11px" font-weight="700" letter-spacing="2px" color="#806A5C" padding="16px 0 20px 0">
+          SCREENSHOT TO SHARE YOUR ARCHIVE
+        </mj-text>
+
+        <mj-button 
+          background-color="#211812" 
+          color="#F7EFE5" 
+          font-size="13px" 
+          font-weight="700" 
+          letter-spacing="1px" 
+          inner-padding="16px 28px" 
+          border-radius="4px" 
+          href="https://beantherecoffee.example/wrapped/olivia" 
+          align="center">
+          VIEW INTERACTIVE FEED ↗
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- FOOTER -->
+    <mj-section background-color="#211812" padding="40px 28px 48px 28px">
+      <mj-column>
+        <mj-text font-size="12px" font-weight="700" letter-spacing="1.5px" color="#E6B84F" padding="0 0 12px 0">
+          BEAN THERE COFFEE CO.
+        </mj-text>
+        <mj-text font-size="11px" line-height="1.6" color="#B9A99A" padding="0 0 16px 0">
+          Data calculated based on registered roastery visits, mobile orders, and bean purchases between Jan 1, 2026 and Dec 15, 2026. Keep fueling your curiosity.
+        </mj-text>
+        <mj-text font-size="10px" color="#806A5C">
+          <a href="%%unsubscribe%%" style="color: #B9A99A; text-decoration: underline;">Unsubscribe</a> &nbsp;·&nbsp; 
+          <a href="%%profile_center%%" style="color: #B9A99A; text-decoration: underline;">Preferences</a> &nbsp;·&nbsp; 
+          Bean There Coffee Roasters, Craft District
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

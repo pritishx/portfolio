@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bean There // 2026 VIP Wrapped - Figma Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #0B0F0C;
+      --bg-container: #18221B;
+      --bg-card: #212D26;
+      --bg-cream: #F7F4EE;
+      --accent: #D4A373;
+      --white: #FFFFFF;
+      --ink: #101712;
+      --muted: #C2C9C4;
+      --submuted: #8A9990;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-body);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #F7F4EE;
+      display: flex;
+      justify-content: center;
+      padding: 40px 10px;
+    }
+
+    .email-canvas {
+      width: 600px;
+      background-color: var(--bg-container);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    }
+
+    /* TYPOGRAPHY */
+    .chubby-title {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      text-align: center;
+    }
+
+    .vip-pill {
+      display: inline-block;
+      background-color: #26332B;
+      border: 1px solid rgba(212, 163, 115, 0.4);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin: 16px auto 0;
+    }
+
+    /* BUTTONS */
+    .btn-pill-white {
+      display: block;
+      background-color: var(--white);
+      color: var(--ink);
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 16px 34px;
+      text-decoration: none;
+      font-size: 13px;
+      text-align: center;
+      width: fit-content;
+      margin: 0 auto 12px auto;
+    }
+
+    .btn-pill-outline {
+      display: block;
+      background-color: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 700;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 34px;
+      text-decoration: none;
+      font-size: 12px;
+      text-align: center;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    /* GRIDS & CARDS */
+    .section-pad { padding: 32px; }
+    .divider { border-top: 1px solid rgba(212, 163, 115, 0.2); }
+    .content-card {
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid rgba(212, 163, 115, 0.15);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .stats-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .stats-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .stat-panel {
+      background-color: var(--bg-card);
+      border-radius: 14px;
+      border: 1px solid rgba(212, 163, 115, 0.15);
+      padding: 18px 8px;
+      text-align: center;
+    }
+
+    .shelf-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 0 24px 44px 24px;
+    }
+
+    .share-card {
+      background-color: var(--bg-card);
+      border-radius: 18px;
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      padding: 32px 26px;
+      margin: 0 24px 44px 24px;
+    }
+
+    .share-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+    }
+    .share-table td {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+    }
+    .share-table tr:last-child td { border-bottom: none; }
+
+    /* FOOTER */
+    .footer-cream {
+      background-color: var(--bg-cream);
+      padding: 44px 32px 48px 32px;
+      text-align: center;
+      color: #5A665E;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="email-canvas">
+
+    <!-- HEADER -->
+    <div style="padding: 36px 32px 20px 32px; text-align: center;">
+      <div style="font-family: 'Fredoka', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 3px; color: #FFFFFF; text-transform: uppercase;">
+        BEAN THERE
+      </div>
+      <div class="vip-pill">★ VIP EARLY ACCESS ARCHIVE</div>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div style="padding: 0 32px 24px 32px;">
+      <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=1000&q=80" alt="Hero Tumbler" style="width: 100%; height: auto; border-radius: 16px; display: block;">
+    </div>
+
+    <!-- HERO HEADLINE -->
+    <div style="padding: 10px 32px 20px 32px;">
+      <h1 class="chubby-title" style="font-size: 54px; margin-bottom: 16px;">
+        MEET YOUR<br><span style="color: var(--accent);">2026 WRAPPED</span>
+      </h1>
+      <p style="text-align: center; font-size: 15px; line-height: 1.6; color: var(--muted); padding: 0 12px 14px 12px;">
+        Your private 2026 archive just dropped, Olivia. As a Coffee Club member, you get first look at your year in coffee before anyone else.
+      </p>
+    </div>
+
+    <!-- HERO NUMBER -->
+    <div style="padding: 10px 32px 6px 32px; text-align: center;">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 2.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 6px;">
+        Your Headline Number
+      </div>
+      <div style="font-family: 'Fredoka', sans-serif; font-size: 108px; font-weight: 700; line-height: 0.85; color: #FFFFFF;">
+        312
+      </div>
+      <div style="font-size: 14px; font-weight: 500; color: var(--muted); margin: 12px 0 30px 0;">
+        extractions pulled in 2026 — that's your morning, dialed in
+      </div>
+    </div>
+
+    <!-- CTAS -->
+    <div style="padding: 0 32px 34px 32px;">
+      <a href="#" class="btn-pill-white">View My Full Archive →</a>
+      <a href="#" class="btn-pill-outline">Redeem 3,120 Points</a>
+    </div>
+
+    <!-- PERSONALITY -->
+    <div class="divider section-pad" style="text-align: center;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 10px;">
+        Your 2026 Personality
+      </div>
+      <h2 class="chubby-title" style="font-size: 32px; margin-bottom: 16px;">CREAMY CONNOISSEUR</h2>
+      <p style="font-size: 14px; line-height: 1.7; color: var(--muted); padding: 0 12px 20px 12px;">
+        Crafted from 312 cups, a 7:00 AM first order most days, and top-4% club status. Comfort, but elevated into pure craft.
+      </p>
+      <div style="font-size: 40px; margin-bottom: 10px;">🥛</div>
+    </div>
+
+    <!-- STATS PANEL GRID -->
+    <div class="divider" style="padding: 30px 24px 40px 24px;">
+      <div style="text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 18px;">
+        The Rest of Your Stats
+      </div>
+      <div class="stats-3col">
+        <div class="stat-panel">
+          <div style="font-size: 22px; font-weight: 700; font-family: 'Fredoka', sans-serif;">7:00 AM</div>
+          <div style="font-size: 9px; font-weight: 700; color: var(--submuted); letter-spacing: 1.5px; text-transform: uppercase; padding-top: 6px;">Peak Hour</div>
+        </div>
+        <div class="stat-panel">
+          <div style="font-size: 22px; font-weight: 700; color: var(--accent); font-family: 'Fredoka', sans-serif;">July</div>
+          <div style="font-size: 9px; font-weight: 700; color: var(--submuted); letter-spacing: 1.5px; text-transform: uppercase; padding-top: 6px;">Top Month</div>
+        </div>
+        <div class="stat-panel">
+          <div style="font-size: 20px; font-weight: 700; font-family: 'Fredoka', sans-serif;">3,120</div>
+          <div style="font-size: 9px; font-weight: 700; color: var(--submuted); letter-spacing: 1.5px; text-transform: uppercase; padding-top: 6px;">Points</div>
+        </div>
+      </div>
+      <div class="stats-2col">
+        <div class="stat-panel">
+          <div style="font-size: 20px; font-weight: 700; font-family: 'Fredoka', sans-serif;">2021</div>
+          <div style="font-size: 9px; font-weight: 700; color: var(--submuted); letter-spacing: 1.5px; text-transform: uppercase; padding-top: 6px;">Member Since</div>
+        </div>
+        <div class="stat-panel">
+          <div style="font-size: 20px; font-weight: 700; color: var(--accent); font-family: 'Fredoka', sans-serif;">TOP 4%</div>
+          <div style="font-size: 9px; font-weight: 700; color: var(--submuted); letter-spacing: 1.5px; text-transform: uppercase; padding-top: 6px;">Club Rank</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-COL SHELF -->
+    <div class="shelf-grid">
+      <div class="content-card">
+        <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=400&h=300&q=80" style="width: 100%; height: 165px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;" alt="Flat White">
+        <div style="font-size: 11px; font-weight: 700; color: var(--accent); font-family: 'Fredoka', sans-serif; letter-spacing: 1.5px; text-transform: uppercase;">#1 GO-TO DRINK</div>
+        <div style="font-size: 18px; font-family: 'Fredoka', sans-serif; margin: 4px 0 6px 0;">Oat Flat White</div>
+        <div style="font-size: 12px; color: var(--muted); min-height: 36px;">Silky microfoam & double ristretto.</div>
+        <a href="#" style="display: inline-block; background-color: var(--accent); color: var(--ink); font-family: 'Fredoka', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 10px 18px; border-radius: 20px; text-decoration: none; text-transform: uppercase; margin-top: 14px;">REORDER FAVOURITE</a>
+      </div>
+
+      <div class="content-card">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&h=300&q=80" style="width: 100%; height: 165px; object-fit: cover; border-radius: 12px; margin-bottom: 16px;" alt="Cold Brew">
+        <div style="font-size: 11px; font-weight: 700; color: var(--muted); font-family: 'Fredoka', sans-serif; letter-spacing: 1.5px; text-transform: uppercase;">SUMMER PEAK</div>
+        <div style="font-size: 18px; font-family: 'Fredoka', sans-serif; margin: 4px 0 6px 0;">Nitro Cold Brew</div>
+        <div style="font-size: 12px; color: var(--muted); min-height: 36px;">Slow 18-hour cold immersion extraction.</div>
+        <a href="#" style="display: inline-block; border: 1px solid var(--accent); color: var(--accent); font-family: 'Fredoka', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 9px 17px; border-radius: 20px; text-decoration: none; text-transform: uppercase; margin-top: 14px;">EXPLORE COLD</a>
+      </div>
+    </div>
+
+    <!-- BARISTA DISPATCH -->
+    <div class="divider section-pad">
+      <div style="text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 10px;">
+        BARISTA DISPATCH
+      </div>
+      <h2 class="chubby-title" style="font-size: 34px; margin-bottom: 24px;">What the Crew is Saying</h2>
+      <div class="content-card" style="text-align: left; display: flex; gap: 14px;">
+        <div style="width: 40px; height: 40px; background-color: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ink); font-weight: 800; flex-shrink: 0;">
+          ★
+        </div>
+        <div>
+          <div style="font-size: 14px; font-weight: 700; font-family: 'Fredoka', sans-serif;">Marco V. (Lead Roaster)</div>
+          <div style="font-size: 12px; color: var(--accent); margin: 2px 0 8px 0; letter-spacing: 1px;">★★★★★ · VERIFIED PATRON</div>
+          <div style="font-size: 13px; line-height: 1.6; color: var(--muted); font-style: italic;">
+            "Olivia doesn't even need to order anymore. When she steps in at 7:00 AM sharp, her oat flat white is already pulling. Certified Creamy Connoisseur."
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHARE CARD -->
+    <div class="share-card">
+      <div style="text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: var(--accent); text-transform: uppercase; margin-bottom: 10px;">
+        Bean There // 2026
+      </div>
+      <h3 class="chubby-title" style="font-size: 26px; margin-bottom: 22px;">Olivia's Coffee Year</h3>
+
+      <table class="share-table">
+        <tr>
+          <td style="font-size: 11px; font-weight: 700; color: var(--submuted); letter-spacing: 1px; text-transform: uppercase;">Cups</td>
+          <td style="text-align: right; font-size: 14px; font-weight: 700;">312</td>
+        </tr>
+        <tr>
+          <td style="font-size: 11px; font-weight: 700; color: var(--submuted); letter-spacing: 1px; text-transform: uppercase;">Peak Time</td>
+          <td style="text-align: right; font-size: 14px; font-weight: 700;">7:00 AM</td>
+        </tr>
+        <tr>
+          <td style="font-size: 11px; font-weight: 700; color: var(--submuted); letter-spacing: 1px; text-transform: uppercase;">Go-To Order</td>
+          <td style="text-align: right; font-size: 14px; font-weight: 700;">Oat Flat White</td>
+        </tr>
+        <tr>
+          <td style="font-size: 11px; font-weight: 700; color: var(--submuted); letter-spacing: 1px; text-transform: uppercase;">Rank</td>
+          <td style="text-align: right; font-size: 14px; font-weight: 700; color: var(--accent);">Top 4%</td>
+        </tr>
+        <tr>
+          <td style="font-size: 11px; font-weight: 700; color: var(--submuted); letter-spacing: 1px; text-transform: uppercase;">Personality</td>
+          <td style="text-align: right; font-size: 14px; font-weight: 700;">Creamy Connoisseur 🥛</td>
+        </tr>
+      </table>
+
+      <div style="text-align: center; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--accent); text-transform: uppercase; margin-bottom: 20px;">
+        📸 Screenshot to share your year
+      </div>
+      <a href="#" class="btn-pill-white" style="font-size: 12px; padding: 15px 30px;">Shop My #1 Drink</a>
+    </div>
+
+    <!-- CREAM FOOTER -->
+    <div class="footer-cream">
+      <div style="font-family: 'Fredoka', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: 3px; color: var(--ink); text-transform: uppercase; margin-bottom: 8px;">
+        BEAN THERE
+      </div>
+      <div style="font-size: 12px; margin-bottom: 20px;">The All-In-One Coffee Ritual & Archive</div>
+      <div style="font-size: 11px; font-weight: 700; color: var(--ink); letter-spacing: 1.5px; margin-bottom: 24px;">
+        <a href="#" style="color: var(--ink); text-decoration: none; margin: 0 10px;">SHOP</a> · 
+        <a href="#" style="color: var(--ink); text-decoration: none; margin: 0 10px;">MY WRAPPED</a> · 
+        <a href="#" style="color: var(--ink); text-decoration: none; margin: 0 10px;">REWARDS</a>
+      </div>
+      <div style="font-size: 11px; line-height: 1.6; margin-bottom: 12px;">
+        755 Craft Street, Roastery District, Sector 4<br>This is a promotional VIP message.
+      </div>
+      <div style="font-size: 10px; color: #8A9990;">
+        <a href="#" style="color: #5A665E; text-decoration: underline;">Manage preferences</a> | 
+        <a href="#" style="color: #5A665E; text-decoration: underline;">Unsubscribe</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

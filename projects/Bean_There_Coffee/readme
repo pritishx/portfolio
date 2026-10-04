@@ -1,0 +1,19 @@
+The Client:
+Bean There Coffee Co. is a specialty coffee brand. At the end of every year they send members a 'Wrapped' - a fun, personal recap of their year in coffee. It is their most-shared, most-loved email of the year, the one people screenshot and post to their stories.
+
+Your Objective:
+Build the 'Your Year, Wrapped' email. Turn each member's stats into a fun, personal recap - their headline number, their #1 drink, and a playful 'type' that says something about them.
+
+Your Data:
+- 'Coffee Club.csv' - the send audience - 9 members and their year-in-coffee stats
+- 'Drinks.csv' - a lookup table of drink details, to enrich each member's #1 drink
+
+Make it yours:
+No rules here. Code it however you like - use your AMPscript skills, get creative, and make it your own. (This will be added later on ampscript for dynamic content. we will be just using ampscript, html and css. )
+
+The fun this week:
+Give each member a personality from their stats. A big cup count makes a Caffeine Legend, an early peak hour makes an Early Bird, a sweet top category makes a Sweet Tooth - your call. Invent the badges and let the copy change to match.
+
+Go all in on the design. Wrapped emails live and die on how they look - big bold stats, punchy colours, screenshot-worthy. Bring your own images, add your own stats and fields in the Toolbox, and make it something people would actually share.
+
+The email is being created using MJML. so if needed take help of any mjml documentation(https://documentation.mjml.io/). But the email should be created using only html and css. No other tools are allowed. No Content builder is allowed. No drag and drop editor is allowed. No templates are allowed. Only html and css. Once the design, content, dynamic values, dynamic images are finalized, then we will add ampscript for dynamic content and dynamic values. But for now just create the email using html and css. once done, i will ask you to add ampscript for dynamic content and dynamic values. Use Coffee Club.csv and Drinks.csv for dynamic content, you can add more columns in the csv as you need to make it more interesting. Add some creative unique sections and elements as you want but make sure it is relevant to the brand and the content.
