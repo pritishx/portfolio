@@ -51,11 +51,4 @@ This repository contains a fully responsive personal portfolio website (vCard) b
 
 ## Demo
 
-Check out my portfolio at [https://pritish.is-my.id/](https://pritish.is-my.id/) or view the screenshots below:
-
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
-
-## License
-
-MIT
+Check out my portfolio at [https://pritish.is-my.id/](https://pritish.is-my.id/)
