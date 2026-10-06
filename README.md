@@ -19,7 +19,6 @@ This repository contains a fully responsive personal portfolio website (vCard) b
 - **LinkedIn**: https://www.linkedin.com/in/pritishkumbhare/
 - **GitHub**: https://github.com/pritishx
 - **Trailblazer**: https://www.salesforce.com/trailblazer/pritishkumbhare
-- **WhatsApp**: https://wa.me/918657143989?text=Hi%20Pritish%2C%20I%20came%20across%20your%20online%20personal%20profile%20and%20would%20love%20to%20connect%20with%20you.
 
 ## Technical Expertise
 
@@ -50,38 +49,12 @@ This repository contains a fully responsive personal portfolio website (vCard) b
 - Salesforce Certified Experience Cloud
 - Email Marketing Professional Certificate by Intuit Mailchimp
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
-
 ## Demo
+
+Check out my portfolio at [https://pritish.is-my.id/](https://pritish.is-my.id/) or view the screenshots below:
 
 ![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
 ![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
-
-## Installing vCard
-
-To install **vCard**, follow these steps:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-## Contact
-
-For more details about my profile, visit [https://pritish.is-my.id/](https://pritish.is-my.id/). You can also reach me at [Twitter](https://www.x.com/codewithsadee_).
 
 ## License
 
